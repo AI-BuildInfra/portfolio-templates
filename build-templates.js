@@ -1875,6 +1875,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 `;
 
-fs.writeFileSync(path.join(ROOT_DIR, 'portal.js'), catalogJS, 'utf8');
+// Write Catalog Data JS
+const catalogExportJS = `// 150 Template Items Data
+var TEMPLATES_CATALOG = ${JSON.stringify(allCatalogEntries, null, 2)};
+
+if (typeof window !== 'undefined') {
+  window.TEMPLATES_CATALOG = TEMPLATES_CATALOG;
+}
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = TEMPLATES_CATALOG;
+}
+`;
+
+fs.writeFileSync(path.join(ROOT_DIR, 'catalog-data.js'), catalogExportJS, 'utf8');
 
 console.log(`Successfully generated ${allCatalogEntries.length} templates across 15 professions!`);

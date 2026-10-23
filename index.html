@@ -4,42 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>150 Open Source Portfolio Website Templates | AI BuildInfra</title>
-  <meta name="description" content="150 free, dynamic JSON-powered portfolio website templates across 15 professions (10 unique design variants per profession). Zero build tools, ready for GitHub Pages.">
+  <meta name="description" content="150 free, dynamic JSON-powered portfolio website templates across 15 professions (10 unique design archetypes per profession). Zero build tools, 100% responsive, ready for GitHub Pages.">
+  <meta name="keywords" content="portfolio templates, open source portfolio, developer portfolio, photographer portfolio, doctor portfolio, ui ux portfolio, json portfolio, aibuildinfra">
+  <meta name="author" content="AI BuildInfra">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="150 Open Source Portfolio Website Templates | AI BuildInfra">
+  <meta property="og:description" content="15 Curated Professions x 10 Distinct Design Archetypes = 150 JSON-Powered Templates. Pure vanilla web stack, zero build tools.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aibuildinfra.com/services/web-development">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="150 Open Source Portfolio Website Templates | AI BuildInfra">
+  <meta name="twitter:description" content="15 Professions x 10 Design Archetypes = 150 Dynamic Templates. Hydrated by data.json.">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="portal.css">
+
+  <!-- Structured Data JSON-LD with SEO Backlinks -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "AI BuildInfra 150 Portfolio Templates",
-    "url": "https://aibuildinfra.com/services/web-development",
-    "provider": {
-      "@type": "Organization",
-      "name": "AI BuildInfra",
-      "url": "https://aibuildinfra.com"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://aibuildinfra.com/#website",
+        "url": "https://aibuildinfra.com",
+        "name": "AI BuildInfra",
+        "publisher": {
+          "@type": "Organization",
+          "name": "AI BuildInfra",
+          "url": "https://aibuildinfra.com",
+          "logo": "https://aibuildinfra.com/logo.png"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "AI BuildInfra Portfolio Template Engine",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "150 production-grade open source portfolio templates split profession-wise across 15 careers and template-wise across 10 design archetypes.",
+        "creator": {
+          "@type": "Organization",
+          "name": "AI BuildInfra Web Development Services",
+          "url": "https://aibuildinfra.com/services/web-development"
+        }
+      }
+    ]
   }
   </script>
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- Top Glassmorphic Navigation -->
   <header class="hub-header">
     <div class="container hub-nav">
-      <div class="hub-brand">
-        <span class="hub-logo">⚡</span>
+      <a href="index.html" class="hub-brand" title="Portfolio Templates Hub">
+        <div class="hub-logo-mark">⚡</div>
         <div class="brand-text">
           <span class="brand-main">PORTFOLIO TEMPLATES</span>
-          <span class="brand-sub">BY AI BUILDINFRA</span>
+          <span class="brand-sub">ENGINEERED BY AI BUILDINFRA</span>
         </div>
-      </div>
+      </a>
+      
       <div class="hub-actions">
         <a href="https://github.com/AI-BuildInfra/portfolio-templates" target="_blank" rel="noopener" class="btn btn-github">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          Star on GitHub
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>Star on GitHub</span>
         </a>
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="btn btn-primary">Custom Web Architecture</a>
+        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="btn btn-primary">
+          <span>Custom Web Architecture</span> &nearr;
+        </a>
       </div>
     </div>
   </header>
@@ -47,115 +95,172 @@
   <!-- Hero Section -->
   <section class="hub-hero">
     <div class="container hero-shell">
-      <span class="hub-badge">15 PROFESSIONS &bull; 10 DESIGN VARIANTS EACH &bull; 150 TEMPLATES</span>
-      <h1 class="hero-h1">150 Dynamic Open-Source Portfolio Templates</h1>
-      <p class="hero-desc">15 curated professions, each featuring 10 distinctive design archetypes (Obsidian, Bento Grid, Minimalist, Brutalist, Glassmorphism, and more). Simply edit <code>data.json</code> to personalize any design dynamically. Zero build tools required.</p>
-      
+      <div class="hero-badge-wrap">
+        <span class="hub-badge">✦ 15 PROFESSIONS &bull; 10 DESIGN ARCHETYPES EACH &bull; 150 TEMPLATES</span>
+      </div>
+      <h1 class="hero-h1">Profession-Wise &amp; Template-Wise Portfolio Catalog</h1>
+      <p class="hero-desc">
+        Explore 15 distinct professions, each split into 10 unique design archetypes (Obsidian Dark, Nordic Light, Bento Grid, Neo-Brutalist, Glassmorphic Aura, and more). Non-coders simply edit <code>data.json</code> to personalize content in seconds.
+      </p>
+
+      <!-- Key Metrics -->
       <div class="hero-stats">
-        <div class="h-stat"><strong>15</strong><span>Unique Professions</span></div>
-        <div class="h-stat"><strong>150</strong><span>Design Templates</span></div>
-        <div class="h-stat"><strong>100%</strong><span>JSON Hydrated</span></div>
-        <div class="h-stat"><strong>0</strong><span>Build Steps (Vanilla)</span></div>
+        <div class="h-stat">
+          <strong>15</strong>
+          <span>Professions</span>
+        </div>
+        <div class="h-stat">
+          <strong>10</strong>
+          <span>Design Archetypes</span>
+        </div>
+        <div class="h-stat">
+          <strong>150</strong>
+          <span>Ready Websites</span>
+        </div>
+        <div class="h-stat">
+          <strong>100%</strong>
+          <span>JSON Hydrated</span>
+        </div>
+        <div class="h-stat">
+          <strong>0</strong>
+          <span>Build Tools Needed</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Filter & Search Controls -->
-  <section class="catalog-section">
+  <!-- Sticky Controls Bar & Profession Navigation Rail -->
+  <nav class="sticky-controls-wrapper" id="sticky-controls" aria-label="Catalog Navigation">
     <div class="container">
-      <div class="filter-toolbar">
-        <div class="search-box">
-          <input type="text" id="search-input" placeholder="Search by name, profession, or style (e.g. Developer, Bento, Doctor, Minimalist)...">
+      <!-- Search & Status Row -->
+      <div class="controls-toolbar">
+        <div class="search-input-shell">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            id="global-search-input" 
+            placeholder="Search by profession, archetype, persona, or keyword (e.g. Bento, Developer, Doctor, Brutalist)..."
+            aria-label="Filter templates"
+          >
         </div>
-        <div class="dropdown-box">
-          <select id="profession-select">
-            <option value="all">All 15 Professions (Select Specific)</option>
-            <option value="01-photographer">01. Photographers & Cinematographers</option>
-            <option value="02-doctor">02. Doctors & Medical Specialists</option>
-            <option value="03-ui-ux-designer">03. UI/UX & Product Designers</option>
-            <option value="04-developer">04. Software Engineers & Developers</option>
-            <option value="05-gamer">05. Gamers & Esports Streamers</option>
-            <option value="06-architect">06. Architects & Spatial Designers</option>
-            <option value="07-lawyer">07. Lawyers & Legal Consultants</option>
-            <option value="08-fitness-trainer">08. Fitness Coaches & Personal Trainers</option>
-            <option value="09-content-creator">09. Content Creators & Filmmakers</option>
-            <option value="10-chef">10. Chefs & Culinary Artists</option>
-            <option value="11-musician">11. Musicians, DJs & Audio Producers</option>
-            <option value="12-copywriter">12. Copywriters & Authors</option>
-            <option value="13-fashion-model">13. Fashion Models & Stylists</option>
-            <option value="14-cybersecurity">14. Cybersecurity & Ethical Hackers</option>
-            <option value="15-financial-advisor">15. Financial Advisors & Wealth Planners</option>
-          </select>
+        <div class="catalog-status-badge">
+          <span class="pulse-dot"></span>
+          <span id="catalog-counter-text">Loading 150 Templates...</span>
         </div>
       </div>
 
-      <div class="filter-controls">
-        <button class="cat-pill active" data-filter="all">All Disciplines</button>
-        <button class="cat-pill" data-filter="creative">Creative & Arts</button>
-        <button class="cat-pill" data-filter="tech">Tech, Code & Gaming</button>
-        <button class="cat-pill" data-filter="business">Corporate, Finance & Legal</button>
-        <button class="cat-pill" data-filter="wellness">Medical & Fitness</button>
-      </div>
-
-      <div class="counter-row">
-        <span class="count-badge" id="template-count-badge">Loading 150 Templates...</span>
-      </div>
-
-      <!-- Templates Grid -->
-      <div class="templates-grid" id="templates-grid">
-        <!-- Rendered dynamically via portal.js -->
+      <!-- Horizontal Quick-Jump Profession Rail -->
+      <div class="nav-rail-outer">
+        <div class="nav-rail" id="professions-nav-rail">
+          <!-- Hydrated dynamically by portal.js -->
+        </div>
       </div>
     </div>
-  </section>
+  </nav>
 
-  <!-- How It Works & Deployment Guide -->
-  <section class="guide-section">
+  <!-- Main Profession-Wise & Template-Wise Showcase Container -->
+  <main class="catalog-main" id="catalog-main">
+    <div class="container" id="professions-container">
+      <!-- Dynamically generated sections for each profession with their 10 design templates -->
+    </div>
+  </main>
+
+  <!-- How It Works & Architecture Guide -->
+  <section class="guide-section" id="how-it-works">
     <div class="container guide-box">
       <div class="guide-header">
-        <span class="hub-badge">QUICK START GUIDE</span>
-        <h2>How to Customize & Launch in 3 Simple Steps</h2>
-        <p>No npm, no react, no compilation. Just pure, bulletproof HTML, CSS, and dynamic JavaScript.</p>
+        <span class="hub-badge">NON-CODER FRIENDLY ARCHITECTURE</span>
+        <h2>How to Customize &amp; Deploy Any Template in 3 Minutes</h2>
+        <p>No Node.js, no build scripts, no complicated bundlers. Every template runs directly in any browser and on GitHub Pages.</p>
       </div>
 
       <div class="steps-grid">
         <div class="step-card">
           <div class="step-num">01</div>
-          <h3>Choose Your Variant</h3>
-          <p>Browse your profession (e.g. <code>professions/04-developer/</code>) and pick any of the 10 design variants (e.g. <code>template-03/</code> for Bento Grid).</p>
+          <h3>Pick Your Profession &amp; Style</h3>
+          <p>Browse your discipline (e.g. <code>professions/04-developer/</code>) and choose between 10 archetypes like Bento Grid, Obsidian Dark, or Monospace Terminal.</p>
         </div>
+        
         <div class="step-card">
           <div class="step-num">02</div>
-          <h3>Edit <code>data.json</code></h3>
-          <p>Open <code>data.json</code> in Notepad or VS Code. Replace the names, text, pricing, and image URLs with your own.</p>
+          <h3>Update <code>data.json</code></h3>
+          <p>Open <code>data.json</code> in VS Code or Notepad. Edit your name, bio, projects, skills, pricing, and social media links. The website updates instantly.</p>
         </div>
+
         <div class="step-card">
           <div class="step-num">03</div>
-          <h3>Deploy 100% Free</h3>
-          <p>Push to GitHub and enable <strong>GitHub Pages</strong> in repository Settings. Your custom portfolio is live worldwide in 30 seconds.</p>
+          <h3>Deploy Free on GitHub Pages</h3>
+          <p>Push your folder to GitHub and enable <strong>GitHub Pages</strong> under Settings &gt; Pages. Your portfolio is published to a global CDN at zero cost.</p>
         </div>
+      </div>
+
+      <!-- JSON Data Preview Card -->
+      <div class="code-preview-card">
+        <div class="code-preview-header">
+          <div class="code-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="code-title">Sample data.json (Personalize without touching HTML or CSS)</span>
+        </div>
+        <pre class="code-body"><code>{
+  <span class="json-key">"name"</span>: <span class="json-str">"Your Name"</span>,
+  <span class="json-key">"title"</span>: <span class="json-str">"Your Professional Headline"</span>,
+  <span class="json-key">"bio"</span>: <span class="json-str">"Crafting modern digital experiences..."</span>,
+  <span class="json-key">"stats"</span>: [
+    { <span class="json-key">"value"</span>: <span class="json-str">"8+ Years"</span>, <span class="json-key">"label"</span>: <span class="json-str">"Industry Experience"</span> },
+    { <span class="json-key">"value"</span>: <span class="json-str">"120+"</span>, <span class="json-key">"label"</span>: <span class="json-str">"Shipped Deployments"</span> }
+  ],
+  <span class="json-key">"projects"</span>: [
+    { <span class="json-key">"title"</span>: <span class="json-str">"Project Alpha"</span>, <span class="json-key">"metrics"</span>: <span class="json-str">"+340% Performance"</span> }
+  ]
+}</code></pre>
       </div>
     </div>
   </section>
 
-  <!-- Footer with Backlinks -->
+  <!-- Footer with SEO Backlinks & Attribution -->
   <footer class="hub-footer">
     <div class="container footer-shell">
       <div class="f-brand">
-        <h3>AI BuildInfra</h3>
-        <p>Architecting enterprise digital platforms, custom websites, and autonomous agent infrastructure.</p>
+        <div class="f-brand-header">
+          <span class="f-brand-logo">⚡</span>
+          <h3>AI BuildInfra</h3>
+        </div>
+        <p>Enterprise digital platforms, custom high-performance web development, autonomous agent infrastructure, and scalable cloud engineering.</p>
+        <div class="verified-badge-pill">
+          <span class="badge-icon">🛡️</span>
+          <span>Verified Backlink Engine Active</span>
+        </div>
       </div>
-      <div class="f-links">
-        <a href="https://aibuildinfra.com" target="_blank" rel="noopener">Home</a>
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener">Web Development Services</a>
-        <a href="https://github.com/AI-BuildInfra/portfolio-templates" target="_blank" rel="noopener">GitHub Repository</a>
+
+      <div class="f-nav-groups">
+        <div class="f-group">
+          <h4>Repository &amp; Docs</h4>
+          <a href="https://github.com/AI-BuildInfra/portfolio-templates" target="_blank" rel="noopener">GitHub Repository</a>
+          <a href="https://github.com/AI-BuildInfra/portfolio-templates#readme" target="_blank" rel="noopener">Quickstart Guide</a>
+          <a href="https://github.com/AI-BuildInfra/portfolio-templates/blob/main/LICENSE" target="_blank" rel="noopener">MIT License &amp; Attribution</a>
+        </div>
+        <div class="f-group">
+          <h4>Enterprise Services</h4>
+          <a href="https://aibuildinfra.com" target="_blank" rel="noopener">AI BuildInfra Platform</a>
+          <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener">Custom Web Development</a>
+          <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener">Full-Stack Cloud Architecture</a>
+        </div>
       </div>
     </div>
+
     <div class="container footer-sub">
-      <p>&copy; 2026 AI BuildInfra. Open-source under MIT License.</p>
-      <p>Engineered with ⚡ by <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener">AI BuildInfra Web Development</a></p>
+      <p>&copy; 2026 AI BuildInfra. Released open source under the MIT License.</p>
+      <p class="footer-attribution">
+        Engineered with high performance by <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener">AI BuildInfra Web Development Services</a>.
+      </p>
     </div>
   </footer>
 
+  <!-- Scripts: Catalog Data first, then UI Controller -->
+  <script src="catalog-data.js"></script>
   <script src="portal.js"></script>
 </body>
 </html>
