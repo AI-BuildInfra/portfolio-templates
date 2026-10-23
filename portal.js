@@ -123,7 +123,7 @@ function renderSections() {
           ${filteredTemplates.map(t => {
             const vInfo = DESIGN_VARIANTS_INFO[t.variantId] || { label: t.variantName, badge: t.variantType };
             return `
-              <div class="template-variant-card" id="card-${p.id}-${t.variantId}">
+              <div class="template-variant-card archetype-${t.variantId}" id="card-${p.id}-${t.variantId}">
                 <div class="variant-media">
                   <img src="${t.image}" alt="${t.variantName}" loading="lazy">
                   <div class="variant-media-overlay">
