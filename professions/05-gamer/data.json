@@ -1,0 +1,60 @@
+{
+  "gamer": {
+    "gamertag": "ViperX",
+    "realName": "Kai Thorne",
+    "team": "Team Phantom Esports",
+    "role": "Entry Fragger & Team Captain",
+    "game": "Valorant & Apex Legends",
+    "tagline": "Top 10 Radiant FPS Athlete & Content Creator bringing aggressive tactical play and high-energy broadcasts.",
+    "isLive": true,
+    "liveGame": "Valorant Champions Tour Ranked",
+    "streamUrl": "https://twitch.tv",
+    "heroImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "avatar": "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=600&q=80",
+    "bio": "Kai 'ViperX' Thorne has been competing in top-tier FPS circuits for over 6 years. With 4 Major Championship titles and over 850k followers across Twitch & YouTube, ViperX is one of the most recognized competitive personalities in esports."
+  },
+  "stats": [
+    { "val": "850K+", "label": "Twitch & YouTube Followers" },
+    { "val": "$280K+", "label": "Tournament Prize Earnings" },
+    { "val": "#4", "label": "Global Radiant Peak Rank" },
+    { "val": "4", "label": "Major MVP Trophies" }
+  ],
+  "socials": [
+    { "platform": "Twitch", "url": "https://twitch.tv", "handle": "ViperX" },
+    { "platform": "YouTube", "url": "https://youtube.com", "handle": "ViperXClips" },
+    { "platform": "Twitter", "url": "https://twitter.com", "handle": "@KaiViperX" },
+    { "platform": "Discord", "url": "https://discord.gg", "handle": "ViperNest" }
+  ],
+  "trophies": [
+    {
+      "tournament": "VCT Masters Berlin 2025",
+      "placement": "1st Place Champions 🏆",
+      "prize": "$100,000",
+      "award": "Tournament Finals MVP"
+    },
+    {
+      "tournament": "Red Bull Campus Clutch World Cup",
+      "placement": "1st Place Champions 🏆",
+      "prize": "$45,000",
+      "award": "Highest K/D Ratio (1.68)"
+    },
+    {
+      "tournament": "Apex Global Series Invitational",
+      "placement": "Runner-Up 🥈",
+      "prize": "$30,000",
+      "award": "Apex Predator Fragger"
+    }
+  ],
+  "setup": [
+    { "category": "Gaming Rig", "specs": ["Intel Core i9-14900KS", "NVIDIA RTX 4090 24GB", "64GB DDR5 7200MHz", "Custom Liquid Loop"] },
+    { "category": "Display", "specs": ["ASUS ROG Swift OLED 360Hz", "0.03ms G-to-G Response", "27-inch 1440p QHD"] },
+    { "category": "Peripherals", "specs": ["Wooting 60HE Rapid Trigger Keyboard", "Razer DeathAdder V3 Pro (800 DPI)", "Artisan Zero Soft Mousepad", "Sennheiser HD660S2 + Shure SM7B"] }
+  ],
+  "schedule": [
+    { "day": "Monday & Tuesday", "time": "5:00 PM - 11:00 PM EST", "activity": "Radiant Ranked Solo Queue & Pro Scrims" },
+    { "day": "Thursday", "time": "6:00 PM - 12:00 AM EST", "activity": "Community Tournaments & Viewer Matches" },
+    { "day": "Friday & Saturday", "time": "4:00 PM - Late Night", "activity": "Championship Watch Parties & High Stakes Wagers" },
+    { "day": "Sunday", "time": "Off Air", "activity": "VOD Review & Aim Lab Regimen" }
+  ],
+  "sponsors": ["HyperX", "Red Bull Gaming", "Secretlab Chairs", "Logitech G"]
+}

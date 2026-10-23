@@ -1,0 +1,78 @@
+{
+  "coach": {
+    "name": "Marcus Drake",
+    "handle": "@marcus_ironpulse",
+    "credentials": "CSCS, CPT, Precision Nutrition L2",
+    "location": "Miami, FL & Worldwide Online",
+    "tagline": "Evidence-based hypertrophy, fat loss recomposition, and elite athletic conditioning.",
+    "bio": "Marcus Drake is an NSCA Certified Strength & Conditioning Specialist (CSCS) with 11+ years transforming over 1,400 executives, collegiate athletes, and everyday lifters. His coaching methodology discards bro-science in favor of progressive overload, bioenergetic nutrition, and sustainable habits.",
+    "heroImage": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "whatsapp": "+13055550188",
+    "email": "marcus@ironpulsecoaching.com"
+  },
+  "metrics": [
+    { "val": "1,400+", "label": "Clients Transformed" },
+    { "val": "11+", "label": "Years Strength Coaching" },
+    { "val": "94%", "label": "Client Goal Success Rate" },
+    { "val": "CSCS", "label": "NSCA Elite Certified" }
+  ],
+  "programs": [
+    {
+      "name": "1-on-1 VIP Elite Coaching",
+      "price": "$499 / mo",
+      "tag": "Most Popular",
+      "features": [
+        "Fully tailored progressive overload training program",
+        "Macro & micronutrient meal plan with weekly adjustments",
+        "Weekly 1-on-1 video form analysis & accountability audit",
+        "Direct 24/7 private WhatsApp messaging with Coach Marcus",
+        "Supplements & blood panel optimization protocol"
+      ],
+      "highlight": true
+    },
+    {
+      "name": "Hybrid Online Blueprint",
+      "price": "$199 / mo",
+      "tag": "Flexible",
+      "features": [
+        "Periodized 12-week hypertrophy or fat loss split",
+        "Custom calorie & macronutrient target framework",
+        "Bi-weekly digital check-ins with progress photo analysis",
+        "Exercise video library access for perfect lifting mechanics",
+        "Community Discord group access"
+      ],
+      "highlight": false
+    },
+    {
+      "name": "Executive Athletic Conditioning",
+      "price": "$750 / mo",
+      "tag": "Private High-Performance",
+      "features": [
+        "In-person Miami private studio training sessions",
+        "Comprehensive mobility & structural injury prevention",
+        "Executive travel workout regimens for busy itineraries",
+        "Personalized recovery & sleep architecture tracking",
+        "Concierge meal prep coordination"
+      ],
+      "highlight": false
+    }
+  ],
+  "transformations": [
+    {
+      "name": "Derek H., 38",
+      "profession": "Tech Founder",
+      "stats": "-32 lbs Fat &bull; +9 lbs Lean Mass",
+      "duration": "16 Weeks",
+      "quote": "Marcus tailored everything around my grueling 60-hour work weeks. The energy and strength gains were remarkable.",
+      "image": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "Sophia M., 29",
+      "profession": "Creative Director",
+      "stats": "-24 lbs &bull; 1st Marathon Completed",
+      "duration": "20 Weeks",
+      "quote": "I stopped crash dieting and finally learned sustainable nutritional science. Best physical shape of my life.",
+      "image": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80"
+    }
+  ]
+}

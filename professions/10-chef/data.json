@@ -1,0 +1,70 @@
+{
+  "chef": {
+    "name": "Antoine Laurent",
+    "title": "Two-Michelin-Starred Executive Chef & Culinary Director",
+    "restaurant": "Maison Laurent & Atelier Umami",
+    "location": "Paris & San Francisco",
+    "tagline": "Reimagining classical French gastronomy through biodynamic terroir, wild foraging, and ancestral fermentation.",
+    "bio": "Chef Antoine Laurent trained under legendary masters in Lyon and Tokyo before establishing Maison Laurent. Honored with Two Michelin Stars and a Green Star for Sustainable Gastronomy, Antoine bridges precise technique with respectful stewardship of seasonal agriculture.",
+    "heroImage": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "avatar": "https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=800&q=80",
+    "email": "concierge@maisonlaurent.fr",
+    "phone": "+33 1 42 68 55 00"
+  },
+  "metrics": [
+    { "val": "2", "label": "Michelin Stars Awarded" },
+    { "val": "18+", "label": "Years Culinary Mastery" },
+    { "val": "100%", "label": "Biodynamic & Local Farms" },
+    { "val": "#28", "label": "World's 50 Best Discovery" }
+  ],
+  "tastingMenu": [
+    {
+      "course": "First Service",
+      "dish": "Heirloom Beet Tartare & Smoked Creme Fraiche",
+      "ingredients": "Salt-baked golden beets, pickled mustard seed, foraged oxalis, elderflower reduction",
+      "dietary": "Vegetarian &bull; Gluten-Free"
+    },
+    {
+      "course": "Second Service",
+      "dish": "Line-Caught Brittany Turbot",
+      "ingredients": "Braised sea lettuce, vin jaune emulsion, chanterelle mushrooms, sea herbs",
+      "dietary": "Sustainable Seafood"
+    },
+    {
+      "course": "Third Service",
+      "dish": "Aged Périgord Duck Breast",
+      "ingredients": "Black garlic puree, glazed sunchokes, roasted sour cherries, jus de canard",
+      "dietary": "Heritage Poultry"
+    },
+    {
+      "course": "Grand Finale",
+      "dish": "Smoked Guanaja Chocolate & Fermented Quince",
+      "ingredients": "Crispy sourdough tuile, bay leaf infused olive oil gelato, cocoa nib crunch",
+      "dietary": "Organic Valrhona"
+    }
+  ],
+  "philosophy": [
+    {
+      "pillar": "Micro-Seasonal Terroir",
+      "desc": "Menus evolve weekly based strictly on daily harvests from our 4-acre biodynamic farm."
+    },
+    {
+      "pillar": "Koji & Ancestral Fermentation",
+      "desc": "Deepening complexity through house-inoculated garums, lacto-fermented fruits, and artisanal vinegars."
+    },
+    {
+      "pillar": "Zero-Waste Alchemy",
+      "desc": "Every peel, bone, and stem is repurposed into reductions, infused butters, and natural dining ceramics."
+    }
+  ],
+  "press": [
+    {
+      "publication": "The Michelin Guide",
+      "quote": "Chef Laurent achieves pure harmony on the plate. His delicate balance of acidity and deep savoriness is a masterclass in modern French cuisine."
+    },
+    {
+      "publication": "The New York Times",
+      "quote": "An unforgettable dining sanctuary. Antoine's line-caught turbot alone warrants a transatlantic pilgrimage."
+    }
+  ]
+}

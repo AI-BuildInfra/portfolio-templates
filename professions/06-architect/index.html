@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaelen Voss, AIA — Studio Arcos Architecture</title>
+  <meta name="description" content="Portfolio of Kaelen Voss, AIA. Sustainable architectural practice specializing in residential sanctuaries, mass timber engineering, and civic spaces.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Architect",
+    "name": "Kaelen Voss",
+    "jobTitle": "Principal Architect",
+    "url": "https://aibuildinfra.com/services/web-development",
+    "provider": {
+      "@type": "Organization",
+      "name": "AI BuildInfra",
+      "url": "https://aibuildinfra.com/services/web-development"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="arch-header">
+    <div class="container nav-row">
+      <a href="#hero" class="arch-logo">
+        <span class="studio-name">STUDIO ARCOS</span>
+        <span class="studio-sub" id="logo-sub">KAELEN VOSS &bull; AIA</span>
+      </a>
+      <nav class="arch-menu" id="arch-menu">
+        <a href="#projects" class="menu-link">Monographs</a>
+        <a href="#materials" class="menu-link">Materiality</a>
+        <a href="#about" class="menu-link">Philosophy</a>
+        <a href="#awards" class="menu-link">Honors</a>
+        <a href="#contact" class="menu-btn">Commission Studio</a>
+      </nav>
+      <button class="arch-burger" id="arch-burger" aria-label="Toggle navigation">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="hero-tint"></div>
+    <div class="container hero-content">
+      <span class="blueprint-tag">SPATIAL PRAXIS &bull; MASS TIMBER &bull; BIOPHILIC DESIGN</span>
+      <h1 class="hero-title" id="studio-tagline">Sculpting light, sustainable materiality, & timeless geometries.</h1>
+      <p class="hero-bio" id="studio-bio">Loading biography...</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-travertine">Explore Works</a>
+        <a href="#contact" class="btn btn-outline">Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Bar -->
+  <section class="arch-metrics">
+    <div class="container metrics-grid" id="metrics-container">
+      <!-- Populated via JS -->
+    </div>
+  </section>
+
+  <!-- Projects Monograph Section -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-top">
+        <span class="section-kicker">SELECTED ARCHITECTURE</span>
+        <h2 class="section-heading">Built Works & Spatial Monographs</h2>
+      </div>
+
+      <div class="projects-grid" id="projects-container">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Materiality Palette Section -->
+  <section class="materials-section" id="materials">
+    <div class="container">
+      <div class="section-top">
+        <span class="section-kicker">SUSTAINABLE SOURCING</span>
+        <h2 class="section-heading">Tectonic Material Palette</h2>
+      </div>
+
+      <div class="materials-grid" id="materials-container">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Honors & Accolades -->
+  <section class="awards-section" id="awards">
+    <div class="container">
+      <div class="section-top">
+        <span class="section-kicker">RECOGNITION</span>
+        <h2 class="section-heading">Distinctions & Design Awards</h2>
+      </div>
+
+      <div class="awards-list" id="awards-container">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Commission / Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container contact-shell">
+      <div class="contact-box">
+        <span class="section-kicker">NEW COMMISSIONS</span>
+        <h2 class="section-heading">Initiate a Spatial Project</h2>
+        <p class="contact-sub">Studio Arcos accepts a limited number of residential and civic commissions annually. Share your site parameters and program below.</p>
+
+        <form class="arch-form" onsubmit="event.preventDefault(); alert('Commission brief received. Studio Arcos will review your site program within 48 hours.'); this.reset();">
+          <div class="form-row">
+            <input type="text" placeholder="Client / Entity Name" required>
+            <input type="email" placeholder="Email Address" required>
+          </div>
+          <div class="form-row">
+            <input type="text" placeholder="Site Location (City / Region)" required>
+            <input type="text" placeholder="Estimated Budget / Scope (CHF / USD)" required>
+          </div>
+          <textarea rows="4" placeholder="Briefly outline your spatial program, functional requirements, and site conditions..." required></textarea>
+          <button type="submit" class="btn btn-travertine btn-block">Submit Spatial Program</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="arch-footer">
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <h4>STUDIO ARCOS</h4>
+        <p>&copy; <span id="year"></span> Kaelen Voss, AIA. All rights reserved.</p>
+      </div>
+      <!-- Contextual Backlink -->
+      <div class="footer-backlink">
+        Digital Architecture & Engineering by 
+        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener">AI BuildInfra Web Development</a>
+        &bull; Powered by <a href="https://aibuildinfra.com" target="_blank" rel="noopener">AI BuildInfra</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

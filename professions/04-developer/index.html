@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Rivera — Senior Systems & Full-Stack Engineer</title>
+  <meta name="description" content="Portfolio of Alex Rivera, Senior Distributed Systems & Full-Stack Software Engineer. Building resilient, high-throughput cloud services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alex Rivera",
+    "jobTitle": "Software Engineer",
+    "url": "https://aibuildinfra.com/services/web-development",
+    "provider": {
+      "@type": "Organization",
+      "name": "AI BuildInfra",
+      "url": "https://aibuildinfra.com/services/web-development"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="dev-header">
+    <div class="container dev-nav">
+      <div class="terminal-brand">
+        <span class="prompt-sym">alex@rivera:~$</span>
+        <span class="brand-cursor"></span>
+      </div>
+      <nav class="dev-menu" id="dev-menu">
+        <a href="#terminal-section" class="nav-item">./terminal</a>
+        <a href="#projects" class="nav-item">./projects</a>
+        <a href="#skills" class="nav-item">./stack</a>
+        <a href="#experience" class="nav-item">./history</a>
+        <a href="#contact" class="nav-btn-code">./contact.sh</a>
+      </nav>
+      <button class="nav-burger" id="nav-burger" aria-label="Toggle navigation">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-intro">
+        <div class="system-status">
+          <span class="status-indicator"></span>
+          <span id="hero-status">system online &bull; building distributed microservices</span>
+        </div>
+        <h1 class="hero-name" id="hero-title">Alex Rivera</h1>
+        <p class="hero-role" id="hero-subtitle">Senior Distributed Systems & Full-Stack Engineer</p>
+        <p class="hero-bio" id="hero-desc">Software engineer with 8+ years architecting fault-tolerant microservices, event-driven pipelines, and developer tooling.</p>
+        <div class="hero-links" id="hero-socials">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Interactive Bash Terminal Widget -->
+      <div class="terminal-window" id="terminal-section">
+        <div class="terminal-bar">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="terminal-title">bash — 80x24</span>
+        </div>
+        <div class="terminal-body" id="terminal-screen">
+          <p class="term-line-output">Welcome to Alex Rivera's interactive CLI v2.4.0 (x86_64-pc-linux-gnu)</p>
+          <p class="term-line-output text-muted">Type <span class="term-cmd">help</span> to list commands, or try <span class="term-cmd">skills</span>, <span class="term-cmd">projects</span>, <span class="term-cmd">bio</span>, <span class="term-cmd">clear</span>.</p>
+          <div id="term-history"></div>
+          <div class="term-input-row">
+            <span class="term-prompt">guest@riveradev:~$</span>
+            <input type="text" id="term-input" class="term-input" autofocus autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering Metrics Strip -->
+  <section class="metrics-strip">
+    <div class="container metrics-grid" id="metrics-container">
+      <!-- Populated via JS -->
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-heading-wrap">
+        <span class="comment-syntax">// SELECTED_OPEN_SOURCE_&_PRODUCTION</span>
+        <h2 class="section-h2">Featured Deployments</h2>
+      </div>
+
+      <div class="projects-grid" id="projects-container">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Tech Stack Section -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-heading-wrap">
+        <span class="comment-syntax">// SYSTEM_CAPABILITIES_&_LANGUAGES</span>
+        <h2 class="section-h2">Technology Stack</h2>
+      </div>
+
+      <div class="skills-grid" id="skills-container">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline -->
+  <section class="exp-section" id="experience">
+    <div class="container">
+      <div class="section-heading-wrap">
+        <span class="comment-syntax">// GIT_LOG_PRETTY_ONELINE</span>
+        <h2 class="section-h2">Engineering Career Log</h2>
+      </div>
+
+      <div class="exp-timeline" id="experience-container">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container contact-shell">
+      <div class="contact-card">
+        <span class="comment-syntax">/* PING_ENDPOINT */</span>
+        <h2 class="section-h2">Initialize New Connection</h2>
+        <p class="contact-sub">Have a high-scale infrastructure challenge, distributed systems contract, or full-time opportunity?</p>
+
+        <form class="dev-form" onsubmit="event.preventDefault(); alert('Message dispatched! Alex will respond via GPG encrypted / email channel.'); this.reset();">
+          <div class="form-row">
+            <input type="text" placeholder="Sender / Organization Name" required>
+            <input type="email" placeholder="sender@domain.com" required>
+          </div>
+          <input type="text" placeholder="Subject / Scope (e.g. Distributed Consensus Microservice)" required>
+          <textarea rows="4" placeholder="Payload content & technical requirements..." required></textarea>
+          <button type="submit" class="btn-code-submit">EXECUTE TRANSMISSION &gt;</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="dev-footer">
+    <div class="container footer-row">
+      <div class="footer-left">
+        <code>&copy; <span id="current-year"></span> Alex Rivera. Built with clean semantic code.</code>
+      </div>
+      <!-- Contextual Backlink to AI BuildInfra -->
+      <div class="footer-backlink">
+        Web Performance & Engineering by 
+        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener">AI BuildInfra Web Development</a>
+        &bull; Powered by <a href="https://aibuildinfra.com" target="_blank" rel="noopener">AI BuildInfra</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
