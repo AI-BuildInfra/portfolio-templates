@@ -1,70 +1,22 @@
-# Victoria Sterling, Esq. — Legal Counsel & Law Practice Portfolio Template
+# Victoria Sterling, Esq. — Principal Counsel • Sterling Legal Portfolio Collection
 
-An executive, navy-and-gold legal counsel portfolio website template designed for attorneys, corporate legal advisors, litigators, law firm partners, and legal consultancies.
+This directory contains **10 distinct design variants** for Principal Counsel • Sterling Legal. Every template dynamically reads its content from `data.json` so you can swap designs seamlessly without re-entering your copy.
 
-Engineered with modern web architecture by [AI BuildInfra](https://aibuildinfra.com/) — check out our specialized [Web Development Services](https://aibuildinfra.com/services/web-development).
+## 🎨 Available Template Variants
 
----
-
-## ⚖️ Key Features
-
-- **Dynamic Content Injection:** Manage practice areas, representative matters, bar admissions, and disclaimer text via `data.json`.
-- **Representative Matters Showcase:** Highlight multi-million dollar transaction values, arbitration victories, and antitrust clearances.
-- **Bar Admissions & Jurisdictions List:** Highlighting federal admissions, appellate courts, and JD academic honors.
-- **Privileged Consultation Intake:** Intake form designed for corporate and private client consultations.
-- **Attorney Advertising Compliance:** Built-in legal disclaimer banner and mandatory ethics disclosures.
-- **Zero Build Dependencies:** Pure HTML5, CSS3, and modern JavaScript.
-
----
-
-## 📁 File Structure
-
-```
-07-lawyer/
-├── index.html        # Main semantic legal markup
-├── style.css         # Executive navy & gold styling
-├── app.js            # Dynamic JSON hydration engine
-├── data.json         # All attorney credentials, matters, and bio
-└── README.md         # Deployment & customization guide
-```
+| Folder | Variant Style | Archetype | Live Preview |
+|---|---|---|---|
+| [`template-01/`](template-01/) | **Obsidian Elite (Dark Theme)** | Dark Minimalist | [Demo](template-01/index.html) |
+| [`template-02/`](template-02/) | **Nordic Minimalist (Light Editorial)** | Clean Light | [Demo](template-02/index.html) |
+| [`template-03/`](template-03/) | **Bento Grid Modern** | Asymmetric Bento | [Demo](template-03/index.html) |
+| [`template-04/`](template-04/) | **Glassmorphic Aura** | Translucent Glow | [Demo](template-04/index.html) |
+| [`template-05/`](template-05/) | **Neo-Brutalist Bold** | High-Contrast Brutal | [Demo](template-05/index.html) |
+| [`template-06/`](template-06/) | **Split-Screen Studio** | Split Layout | [Demo](template-06/index.html) |
+| [`template-07/`](template-07/) | **Sidebar Navigation App** | Dashboard Layout | [Demo](template-07/index.html) |
+| [`template-08/`](template-08/) | **Magazine Editorial** | Centered Publication | [Demo](template-08/index.html) |
+| [`template-09/`](template-09/) | **Kinetic Gradient Pulse** | High Energy Vibrant | [Demo](template-09/index.html) |
+| [`template-10/`](template-10/) | **Terminal / Monospace Pro** | Hacker / Developer Tech | [Demo](template-10/index.html) |
 
 ---
 
-## 🛠️ How to Customize (For Non-Coders)
-
-Open `data.json` in any text editor:
-1. **Attorney Profile:** Update `name`, `title`, `firm`, and phone number.
-2. **Practice Areas:** Modify legal focus areas in `"practices"`.
-3. **Representative Matters:** Add your landmark transactions and trial outcomes in `"matters"`.
-4. **Admissions:** List your state bar and federal district court admissions.
-
----
-
-## 🚀 How to Deploy to GitHub Pages (Free)
-
-1. Create a repository on GitHub (e.g. `law-portfolio`).
-2. Upload `index.html`, `style.css`, `app.js`, and `data.json` to the repo root.
-3. In GitHub, go to **Settings** > **Pages**.
-4. Set source to `main` branch, root `/` folder, and click **Save**.
-5. Your legal portfolio is published at `https://<your-username>.github.io/law-portfolio/`.
-
----
-
-## 🌐 Custom Domain Setup
-
-1. In repository **Settings** > **Pages** > **Custom domain**, type `www.sterlinglegal.com` and save.
-2. At your domain registrar, add `A Records`:
-   - `185.199.108.153`
-   - `185.199.109.153`
-   - `185.199.110.153`
-   - `185.199.111.153`
-3. Add a `CNAME` record with host `www` pointing to `<your-username>.github.io`.
-4. Enable "Enforce HTTPS".
-
----
-
-## ⚡ Architecture & Credits
-
-Engineered by [AI BuildInfra](https://aibuildinfra.com) — building high-performance web systems for modern professional services. Explore our [Web Development Services](https://aibuildinfra.com/services/web-development).
-
-License: [MIT](../../LICENSE)
+Engineered by [AI BuildInfra](https://aibuildinfra.com) — [Web Development Services](https://aibuildinfra.com/services/web-development).

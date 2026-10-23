@@ -1,208 +1,177 @@
-# ⚡ Dynamic Multi-Profession Portfolio Templates
+# ⚡ 150 Dynamic Multi-Profession Portfolio Templates
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/AI-BuildInfra/portfolio-templates?style=social)](https://github.com/AI-BuildInfra/portfolio-templates)
 [![Lighthouse Score](https://img.shields.io/badge/Lighthouse-100%2F100-success)](https://aibuildinfra.com/services/web-development)
-[![Zero Build Tools](https://img.shields.io/badge/Build%20Step-0%20Zero-brightgreen)](#)
+[![150 Templates](https://img.shields.io/badge/Templates-150%20Variants-brightgreen)](#)
 
-A production-ready collection of **10 distinct, open-source portfolio website templates** tailored for 10 unique professions. Every template is completely dynamic and reads all data, text, images, and configuration from a central, non-coder friendly `data.json` file.
+A comprehensive, production-ready open-source collection of **150 dynamic portfolio website templates** across **15 distinct professions**, featuring **10 unique design archetypes per profession** (Obsidian Dark, Bento Grid, Nordic Minimalist, Glassmorphic Aura, Neo-Brutalist, Split-Screen Studio, Sidebar Dashboard, Magazine Editorial, Kinetic Pulse, and Terminal Tech).
 
-Engineered with high-performance web architecture by [AI BuildInfra](https://aibuildinfra.com/) — explore our comprehensive [Custom Web Development Services](https://aibuildinfra.com/services/web-development) for enterprise-grade applications.
+Every template is completely dynamic and reads all data, text, images, and configuration from a central, non-coder friendly `data.json` file.
 
----
-
-## 🌟 Live Demos & Profession Directory
-
-| # | Profession | Template Name | Key Features | Live Preview | Source Folder |
-|---|------------|---------------|--------------|--------------|---------------|
-| 01 | **Photographers** | *Elena Vance* | Dark obsidian gallery, filterable masonry, full-bleed lightbox with camera EXIF data, gear bag, packages | [Live Demo](https://ai-buildinfra.github.io/portfolio-templates/professions/01-photographer/) | [`professions/01-photographer/`](professions/01-photographer/) |
-| 02 | **Doctors & Healthcare** | *Dr. Marcus Chen, MD* | Clinical sapphire trust theme, emergency triage banner, specialties grid, office hours table, patient FAQs | [Live Demo](https://ai-buildinfra.github.io/portfolio-templates/professions/02-doctor/) | [`professions/02-doctor/`](professions/02-doctor/) |
-| 03 | **UI/UX Designers** | *Maya Lin* | Dark neo-tech aesthetic, in-depth case studies with outcome metrics, design sprint steps, interactive token sandbox | [Live Demo](https://ai-buildinfra.github.io/portfolio-templates/professions/03-ui-ux-designer/) | [`professions/03-ui-ux-designer/`](professions/03-ui-ux-designer/) |
-| 04 | **Software Developers** | *Alex Rivera* | GitHub dark theme, interactive bash terminal CLI, project cards with star badges, categorized tech stack | [Live Demo](https://ai-buildinfra.github.io/portfolio-templates/professions/04-developer/) | [`professions/04-developer/`](professions/04-developer/) |
-| 05 | **Gamers & Streamers** | *Kai 'ViperX' Thorne* | Cyberpunk neon theme, live Twitch broadcast radar, tournament trophy cabinet, 360Hz battle rig specs, schedule | [Live Demo](https://ai-buildinfra.github.io/portfolio-templates/professions/05-gamer/) | [`professions/05-gamer/`](professions/05-gamer/) |
-| 06 | **Architects & Designers** | *Studio Arcos (Kaelen Voss)* | Travertine stone editorial layout, built monograph plates, sustainable mass-timber material palette, RIBA honors | [Live Demo](https://ai-buildinfra.github.io/portfolio-templates/professions/06-architect/) | [`professions/06-architect/`](professions/06-architect/) |
-| 07 | **Lawyers & Attorneys** | *Victoria Sterling, Esq.* | Executive navy and gold styling, landmark M&A representative matters, state bar admissions, confidential intake | [Live Demo](https://ai-buildinfra.github.io/portfolio-templates/professions/07-lawyer/) | [`professions/07-lawyer/`](professions/07-lawyer/) |
-| 08 | **Fitness Coaches** | *Marcus Drake, CSCS* | Kinetic orange aesthetic, interactive daily calorie & macro estimator, client body transformation stats, pricing | [Live Demo](https://ai-buildinfra.github.io/portfolio-templates/professions/08-fitness-trainer/) | [`professions/08-fitness-trainer/`](professions/08-fitness-trainer/) |
-| 09 | **Content Creators** | *Aria Thorne* | Sunset gradient styling, verified audience media kit stats, multi-platform follower counters, featured video reels | [Live Demo](https://ai-buildinfra.github.io/portfolio-templates/professions/09-content-creator/) | [`professions/09-content-creator/`](professions/09-content-creator/) |
-| 10 | **Chefs & Gastronomy** | *Chef Antoine Laurent* | Truffle and copper amber aesthetic, seasonal degustation tasting menu with dietary badges, terroir philosophy, press | [Live Demo](https://ai-buildinfra.github.io/portfolio-templates/professions/10-chef/) | [`professions/10-chef/`](professions/10-chef/) |
+Engineered with high-performance web architecture by [AI BuildInfra](https://aibuildinfra.com/) — explore our comprehensive [Custom Web Development Services](https://aibuildinfra.com/services/web-development) for enterprise applications and digital platforms.
 
 ---
 
-## 🏗️ Repository Architecture
+## 🌟 15 Professions Catalog (10 Design Variants Each)
 
-Our foldering system is structured for maximum clarity and independence. You can copy any individual folder inside `professions/` and use it completely standalone, or host the entire multi-template catalog together:
+| # | Profession | Lead Subject | Archetypes & Aesthetics | Source Folder |
+|---|------------|--------------|-------------------------|---------------|
+| 01 | **Photographers & Cinematographers** | Elena Vance | 10 designs: Dark Gallery, Bento Grid, Light Editorial, Lightbox, Brutalist... | [`professions/01-photographer/`](professions/01-photographer/) |
+| 02 | **Doctors & Medical Specialists** | Dr. Marcus Chen, MD | 10 designs: Clinical Sapphire, Emergency Radar, Patient FAQ, Clean Light... | [`professions/02-doctor/`](professions/02-doctor/) |
+| 03 | **UI/UX & Product Designers** | Maya Lin | 10 designs: Neo-Tech, Case Studies, Design Token Sandbox, Bento Grid... | [`professions/03-ui-ux-designer/`](professions/03-ui-ux-designer/) |
+| 04 | **Software Engineers & Developers** | Alex Rivera | 10 designs: Interactive Bash CLI, GitHub Green, Tech Stack, Monospace... | [`professions/04-developer/`](professions/04-developer/) |
+| 05 | **Gamers & Esports Streamers** | Kai 'ViperX' Thorne | 10 designs: Cyberpunk Neon, Twitch Radar, 360Hz Rig Specs, Trophy Case... | [`professions/05-gamer/`](professions/05-gamer/) |
+| 06 | **Architects & Spatial Designers** | Kaelen Voss, AIA | 10 designs: Travertine Stone, Mass Timber Materiality, Built Monographs... | [`professions/06-architect/`](professions/06-architect/) |
+| 07 | **Lawyers & Legal Consultants** | Victoria Sterling, Esq. | 10 designs: Executive Navy, Regal Gold, M&A Matters, Bar Admissions... | [`professions/07-lawyer/`](professions/07-lawyer/) |
+| 08 | **Fitness Coaches & Trainers** | Marcus Drake, CSCS | 10 designs: Kinetic Orange, Interactive Macro Calculator, Transformations... | [`professions/08-fitness-trainer/`](professions/08-fitness-trainer/) |
+| 09 | **Content Creators & Filmmakers** | Aria Thorne | 10 designs: Sunset Gradient, Media Kit, Follower Counters, Video Reels... | [`professions/09-content-creator/`](professions/09-content-creator/) |
+| 10 | **Chefs & Culinary Artists** | Antoine Laurent | 10 designs: Truffle Dark, Tasting Menus, Terroir Philosophy, Michelin Press... | [`professions/10-chef/`](professions/10-chef/) |
+| 11 | **Musicians, DJs & Audio Producers** | Liam O'Connor (NovaPulse) | 10 designs: Melodic House, Festival Setlists, Waveform Stems, Tour Dates... | [`professions/11-musician/`](professions/11-musician/) |
+| 12 | **Copywriters & Authors** | Clara Hawthorne | 10 designs: Editorial Book Press, Conversion Proof, Sales Letters, Manifesto... | [`professions/12-copywriter/`](professions/12-copywriter/) |
+| 13 | **Fashion Models & Stylists** | Seraphina Vance | 10 designs: Runway Lookbook, High Couture, Model Comp Card, Agency Stills... | [`professions/13-fashion-model/`](professions/13-fashion-model/) |
+| 14 | **Cybersecurity & Ethical Hackers** | Dante 'Cipher' Ward | 10 designs: Zero-Day Terminal, CVE Disclosures, Red Team Reports, Telemetry... | [`professions/14-cybersecurity/`](professions/14-cybersecurity/) |
+| 15 | **Financial Advisors & Planners** | Arthur Pendelton, CFP® | 10 designs: Private Wealth Slate, Fiduciary Trust, AUM Metrics, Tax Models... | [`professions/15-financial-advisor/`](professions/15-financial-advisor/) |
+
+---
+
+## 🎨 The 10 Design Archetypes per Profession
+
+Each profession folder contains 10 subfolders (`template-01/` to `template-10/`), each featuring an entirely distinct design system:
+
+1. `template-01`: **Obsidian Elite (Dark Theme)** — Obsidian black, high-contrast neon accents, crisp pill badges, card grids.
+2. `template-02`: **Nordic Minimalist (Light Editorial)** — Warm ivory background, serif headlines (`Newsreader`), hairline borders.
+3. `template-03`: **Bento Grid Modern** — Asymmetric bento box layout with micro-stats, badge chips, and modular blocks.
+4. `template-04`: **Glassmorphic Aura** — Translucent frosted glass containers, blurred ambient backdrops, neon glow highlights.
+5. `template-05`: **Neo-Brutalist Bold** — Solid 3px high-contrast borders, hard drop shadows, blocky fonts (`Space Grotesk`).
+6. `template-06`: **Split-Screen Studio** — Side-by-side sticky profile hero column paired with scrollable work showcase.
+7. `template-07`: **Sidebar Navigation App** — Vertical app dashboard layout with side dock navigation and metric tiles.
+8. `template-08`: **Magazine Editorial** — Classic centered publication aesthetic, serif quotes, and literary columns.
+9. `template-09`: **Kinetic Gradient Pulse** — High-energy vibrant gradient headers, kinetic button animations, modern pills.
+10. `template-10`: **Terminal / Monospace Pro** — Technical monospaced layout (`Fira Code`), CLI syntax accents, telemetry feeds.
+
+---
+
+## 📁 Repository Structure
 
 ```
 portfolio-templates/
-├── index.html                   # Interactive central catalog portal
-├── portal.css                   # Hub styling & responsive layout
-├── portal.js                    # Hub filtering & interactive catalog loader
-├── README.md                    # Main repository documentation & guide
+├── index.html                   # Interactive central catalog portal (150 templates)
+├── portal.css                   # Hub search & responsive layout
+├── portal.js                    # Instant search, filter & template launcher
+├── README.md                    # Master documentation & deployment guide
 ├── LICENSE                      # MIT Open Source License
-└── professions/                 # Profession-wise template hierarchy
+└── professions/                 # 15 Profession Directories
     ├── 01-photographer/
-    │   ├── index.html
-    │   ├── style.css
-    │   ├── app.js
-    │   ├── data.json
-    │   └── README.md
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
     ├── 02-doctor/
-    │   ├── index.html
-    │   ├── style.css
-    │   ├── app.js
-    │   ├── data.json
-    │   └── README.md
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
     ├── 03-ui-ux-designer/
-    │   ├── index.html
-    │   ├── style.css
-    │   ├── app.js
-    │   ├── data.json
-    │   └── README.md
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
     ├── 04-developer/
-    │   ├── index.html
-    │   ├── style.css
-    │   ├── app.js
-    │   ├── data.json
-    │   └── README.md
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
     ├── 05-gamer/
-    │   ├── index.html
-    │   ├── style.css
-    │   ├── app.js
-    │   ├── data.json
-    │   └── README.md
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
     ├── 06-architect/
-    │   ├── index.html
-    │   ├── style.css
-    │   ├── app.js
-    │   ├── data.json
-    │   └── README.md
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
     ├── 07-lawyer/
-    │   ├── index.html
-    │   ├── style.css
-    │   ├── app.js
-    │   ├── data.json
-    │   └── README.md
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
     ├── 08-fitness-trainer/
-    │   ├── index.html
-    │   ├── style.css
-    │   ├── app.js
-    │   ├── data.json
-    │   └── README.md
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
     ├── 09-content-creator/
-    │   ├── index.html
-    │   ├── style.css
-    │   ├── app.js
-    │   ├── data.json
-    │   └── README.md
-    └── 10-chef/
-        ├── index.html
-        ├── style.css
-        ├── app.js
-        ├── data.json
-        └── README.md
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
+    ├── 10-chef/
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
+    ├── 11-musician/
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
+    ├── 12-copywriter/
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
+    ├── 13-fashion-model/
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
+    ├── 14-cybersecurity/
+    │   ├── README.md
+    │   ├── template-01/ ... template-10/
+    └── 15-financial-advisor/
+        ├── README.md
+        ├── template-01/ ... template-10/
 ```
 
 ---
 
-## ⚡ Core Engineering Advantages
+## 🛠️ How to Customize (For Non-Coders)
 
-1. **100% Dynamic JSON Hydration:** Non-coders never need to edit complex HTML tags. Modifying `data.json` automatically updates headings, hero descriptions, image carousels, lists, stats, and prices.
-2. **Auto-Adjustable Layering & Responsive Typography:** Built with modern CSS Grid (`minmax`, `auto-fill`), Flexbox, and fluid `clamp()` typography. No text clipping, no broken rows, and zero horizontal scroll on mobile, tablet, or 4K monitors.
-3. **Dual-Mode Fallback Engine:** Features built-in fallback data objects so templates run smoothly without blank screens whether served over HTTP/HTTPS (GitHub Pages / Vercel) or opened directly via local file explorer.
-4. **Zero Dependencies & Zero Build Steps:** No `node_modules`, no webpack, no npm commands required. Runs instantly out of the box in every modern browser.
-5. **Contextual Semantic Backlinks:** Includes clean structured Schema.org JSON-LD tags and natural footer attributions to [AI BuildInfra](https://aibuildinfra.com/) and [AI BuildInfra Web Development](https://aibuildinfra.com/services/web-development).
+You don't need any coding experience to customize any of the 150 templates:
 
----
-
-## 🚀 How to Use & Deploy (For Non-Coders)
-
-### Step 1: Download or Clone the Repository
-Click the green **Code** button at the top of this GitHub repository and select **Download ZIP**, then extract the folder on your computer.
-
-Or use git:
-```bash
-git clone https://github.com/AI-BuildInfra/portfolio-templates.git
-cd portfolio-templates
-```
-
-### Step 2: Personalize Your Chosen Template
-1. Open the folder matching your profession (e.g. `professions/04-developer/`).
-2. Open `data.json` in any text editor (Notepad, VS Code, Sublime Text, or directly in GitHub).
-3. Replace the placeholder names, descriptions, images, and links with your personal information.
-4. Save `data.json`.
+1. Browse to your chosen profession and template (e.g. `professions/04-developer/template-03/`).
+2. Open `data.json` in Notepad or VS Code.
+3. Edit your name, bio, projects, images, rates, and contact details.
+4. Save the file. When opened in your browser or deployed online, all layout sections automatically re-render with your custom information!
 
 ---
 
-## 🌐 Deploying to GitHub Pages (100% Free Hosting)
+## 🚀 How to Deploy to GitHub Pages (100% Free Hosting)
 
-### Deploying a Single Chosen Template to Your Own Domain/URL:
-1. Create a new repository on your GitHub account (e.g. `my-portfolio` or `<your-username>.github.io`).
-2. Copy the 4 files from your chosen profession folder (`index.html`, `style.css`, `app.js`, `data.json`) directly into the root of your new repository.
-3. In your GitHub repository, click on **Settings** > **Pages** (in the left sidebar).
-4. Under **Build and deployment** > **Branch**, select `main` (or `master`) and folder `/ (root)`, then click **Save**.
-5. Within 30 seconds, GitHub will output your live URL:
+### Deploying a Specific Template to Your Own Domain/URL:
+1. Create a repository on GitHub (e.g. `my-portfolio`).
+2. Copy the files from your chosen template folder (`index.html`, `style.css`, `app.js`, `data.json`) directly into the root of your new repository.
+3. In GitHub, go to **Settings** > **Pages**.
+4. Set source to `main` branch, root `/` folder, and click **Save**.
+5. Your portfolio is live worldwide in 30 seconds at:
    ```
    https://<your-username>.github.io/my-portfolio/
    ```
 
-### Deploying the Entire 10-Template Showcase:
-1. Fork or push this entire repository to your GitHub account.
-2. Go to **Settings** > **Pages** > select `main` branch > `/ (root)` > **Save**.
-3. Your live portal with all 10 templates will be available at:
+### Deploying the Complete 150-Template Hub:
+1. Push this repository to GitHub.
+2. In GitHub, go to **Settings** > **Pages** > select `main` branch > `/ (root)` > **Save**.
+3. Your live portal is live at:
    ```
-   https://<your-username>.github.io/portfolio-templates/
+   https://ai-buildinfra.github.io/portfolio-templates/
    ```
 
 ---
 
-## 🔗 How to Connect a Custom Domain (e.g. yourname.com)
+## 🌐 Custom Domain Setup
 
-1. Buy your desired domain name from any registrar (Namecheap, GoDaddy, Google Domains / Squarespace, Cloudflare).
-2. In your GitHub repository:
-   - Go to **Settings** > **Pages**.
-   - Under **Custom domain**, enter your domain name (e.g., `www.yourname.com` or `yourname.com`).
-   - Click **Save**.
-   - Enable **Enforce HTTPS** (secures your site with a free SSL certificate).
-3. In your Domain Registrar's DNS settings, add the following records:
-   - **4 A Records** (for root apex domain):
+1. In repository **Settings** > **Pages** > **Custom domain**, enter your domain (e.g. `www.yourname.com`) and click **Save**.
+2. Check the box **Enforce HTTPS**.
+3. In your DNS manager at your domain registrar, add:
+   - **4 A Records**:
      ```
-     Host: @
-     Points to: 185.199.108.153
-     Points to: 185.199.109.153
-     Points to: 185.199.110.153
-     Points to: 185.199.111.153
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
      ```
-   - **1 CNAME Record** (for `www` subdomain):
-     ```
-     Host: www
-     Points to: <your-username>.github.io
-     ```
-4. DNS propagation typically takes between 10 to 45 minutes. Once propagated, your custom portfolio is live worldwide!
-
----
-
-## 🤝 Contributing
-
-Contributions, bug reports, and new profession templates are warmly welcomed!
-1. Fork the Project (`https://github.com/AI-BuildInfra/portfolio-templates/fork`)
-2. Create your Feature Branch (`git checkout -b feature/NewProfessionTemplate`)
-3. Commit your Changes (`git commit -m 'feat: add new profession template'`)
-4. Push to the Branch (`git push origin feature/NewProfessionTemplate`)
-5. Open a Pull Request
+   - **1 CNAME Record**: Host `www` pointing to `<your-username>.github.io`
+4. Once DNS propagates (10-30 minutes), your custom domain is live with full SSL encryption!
 
 ---
 
 ## 📜 License
 
-Distributed under the MIT License. See [`LICENSE`](LICENSE) for more details. Free to use for personal portfolios, client projects, and commercial websites.
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for details. Free for commercial, personal, and agency use.
 
 ---
 
 ## ⚡ Architecture & Credits
 
-Designed and maintained with pride by **[AI BuildInfra](https://aibuildinfra.com/)**.
+Maintained and designed with pride by **[AI BuildInfra](https://aibuildinfra.com/)**.
 
-Looking for custom web architecture, AI agent integrations, or high-scale cloud platforms?
+Looking for custom enterprise software development, web engineering, or AI infrastructure?
 - 🌐 Visit: [https://aibuildinfra.com](https://aibuildinfra.com/)
-- 💻 Custom Web Services: [AI BuildInfra Web Development](https://aibuildinfra.com/services/web-development)
+- 💻 Custom Services: [AI BuildInfra Web Development](https://aibuildinfra.com/services/web-development)
 - 🐙 GitHub: [@AI-BuildInfra](https://github.com/AI-BuildInfra)

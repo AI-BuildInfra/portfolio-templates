@@ -1,158 +1,1880 @@
-// Catalog Data for the 10 Profession Templates
+// Catalog Data for 15 Professions x 10 Template Variants = 150 Templates
+const TOTAL_TEMPLATES = 150;
 const TEMPLATES_CATALOG = [
   {
-    id: "01-photographer",
-    title: "Elena Vance — Fine Art Photography",
-    profession: "Photographer / Cinematographer",
-    category: "creative",
-    desc: "Obsidian dark mode, filterable category masonry, full-bleed photo lightbox with EXIF gear specs, investment packages, and client reviews.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
-    tags: ["Dark Gallery", "EXIF Data", "Masonry Grid", "Packages"],
-    path: "./professions/01-photographer/index.html",
-    folder: "./professions/01-photographer/"
+    "professionId": "01-photographer",
+    "professionName": "Elena Vance",
+    "professionTitle": "Fine Art & Editorial Photographer",
+    "category": "creative",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/01-photographer/template-01/index.html",
+    "folder": "professions/01-photographer/template-01/"
   },
   {
-    id: "02-doctor",
-    title: "Dr. Marcus Chen — Cardiology & Medicine",
-    profession: "Doctor / Healthcare Specialist",
-    category: "wellness",
-    desc: "Clinical trust sapphire aesthetic, urgent emergency hotline banner, clinical specialties grid, office hours schedule, and patient FAQ accordion.",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80",
-    tags: ["Clinical Trust", "Office Hours", "Patient FAQs", "Booking"],
-    path: "./professions/02-doctor/index.html",
-    folder: "./professions/02-doctor/"
+    "professionId": "01-photographer",
+    "professionName": "Elena Vance",
+    "professionTitle": "Fine Art & Editorial Photographer",
+    "category": "creative",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/01-photographer/template-02/index.html",
+    "folder": "professions/01-photographer/template-02/"
   },
   {
-    id: "03-ui-ux-designer",
-    title: "Maya Lin — Staff Product & Design Systems",
-    profession: "UI/UX & Product Designer",
-    category: "creative",
-    desc: "Bold neo-tech dark layout, problem-solution-impact case studies, 4-phase design sprint breakdown, and interactive live token sandbox.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-    tags: ["Case Studies", "Sprint Process", "Interactive Tokens", "Lime Glow"],
-    path: "./professions/03-ui-ux-designer/index.html",
-    folder: "./professions/03-ui-ux-designer/"
+    "professionId": "01-photographer",
+    "professionName": "Elena Vance",
+    "professionTitle": "Fine Art & Editorial Photographer",
+    "category": "creative",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/01-photographer/template-03/index.html",
+    "folder": "professions/01-photographer/template-03/"
   },
   {
-    id: "04-developer",
-    title: "Alex Rivera — Distributed Systems & DevOps",
-    profession: "Software Engineer / Developer",
-    category: "tech",
-    desc: "GitHub dark mode, interactive terminal command emulator, production project cards with star badges, categorized tech stack, and career log.",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
-    tags: ["Interactive CLI", "GitHub Stars", "Tech Stack", "Git Timeline"],
-    path: "./professions/04-developer/index.html",
-    folder: "./professions/04-developer/"
+    "professionId": "01-photographer",
+    "professionName": "Elena Vance",
+    "professionTitle": "Fine Art & Editorial Photographer",
+    "category": "creative",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/01-photographer/template-04/index.html",
+    "folder": "professions/01-photographer/template-04/"
   },
   {
-    id: "05-gamer",
-    title: "Kai 'ViperX' Thorne — Esports Pro & Streamer",
-    profession: "Gamer / Esports Streamer",
-    category: "tech",
-    desc: "Cyberpunk neon dark theme, live Twitch broadcast radar, tournament trophy cabinet, 360Hz battle station PC rig specs, and weekly schedule.",
-    image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
-    tags: ["Cyberpunk", "Live Twitch Radar", "Trophy Case", "PC Rig Specs"],
-    path: "./professions/05-gamer/index.html",
-    folder: "./professions/05-gamer/"
+    "professionId": "01-photographer",
+    "professionName": "Elena Vance",
+    "professionTitle": "Fine Art & Editorial Photographer",
+    "category": "creative",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/01-photographer/template-05/index.html",
+    "folder": "professions/01-photographer/template-05/"
   },
   {
-    id: "06-architect",
-    title: "Studio Arcos — Sustainable Architecture",
-    profession: "Architect / Interior Designer",
-    category: "creative",
-    desc: "Travertine and slate editorial aesthetic, architectural built monograph plates, sustainable mass timber materiality palette, and RIBA honors.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    tags: ["Minimalist Stone", "Built Monographs", "Materiality", "RIBA Awards"],
-    path: "./professions/06-architect/index.html",
-    folder: "./professions/06-architect/"
+    "professionId": "01-photographer",
+    "professionName": "Elena Vance",
+    "professionTitle": "Fine Art & Editorial Photographer",
+    "category": "creative",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/01-photographer/template-06/index.html",
+    "folder": "professions/01-photographer/template-06/"
   },
   {
-    id: "07-lawyer",
-    title: "Victoria Sterling, Esq. — Corporate Counsel",
-    profession: "Lawyer / Legal Consultant",
-    category: "business",
-    desc: "Prestigious executive navy and regal gold aesthetic, landmark M&A representative matters, state bar admissions, and privileged intake form.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
-    tags: ["Executive Navy", "M&A Matters", "Bar Admissions", "Privilege Form"],
-    path: "./professions/07-lawyer/index.html",
-    folder: "./professions/07-lawyer/"
+    "professionId": "01-photographer",
+    "professionName": "Elena Vance",
+    "professionTitle": "Fine Art & Editorial Photographer",
+    "category": "creative",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/01-photographer/template-07/index.html",
+    "folder": "professions/01-photographer/template-07/"
   },
   {
-    id: "08-fitness-trainer",
-    title: "Marcus Drake — CSCS Elite Strength Coach",
-    profession: "Fitness Trainer / Coach",
-    category: "wellness",
-    desc: "Kinetic dark-orange aesthetic, interactive calorie & protein goal calculator, client body transformation stats, and tiered coaching packages.",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80",
-    tags: ["Macro Calculator", "Transformation Stats", "Tiered Plans", "Kinetic"],
-    path: "./professions/08-fitness-trainer/index.html",
-    folder: "./professions/08-fitness-trainer/"
+    "professionId": "01-photographer",
+    "professionName": "Elena Vance",
+    "professionTitle": "Fine Art & Editorial Photographer",
+    "category": "creative",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/01-photographer/template-08/index.html",
+    "folder": "professions/01-photographer/template-08/"
   },
   {
-    id: "09-content-creator",
-    title: "Aria Thorne — Travel & Tech Storyteller",
-    profession: "Content Creator / Media Kit",
-    category: "creative",
-    desc: "Vibrant sunset gradient aesthetic, verified audience demographics media kit, YouTube/TikTok stats, featured episodic films, and brand collaborations.",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
-    tags: ["Media Kit", "Multi-Platform Stats", "Episodic Series", "Collabs"],
-    path: "./professions/09-content-creator/index.html",
-    folder: "./professions/09-content-creator/"
+    "professionId": "01-photographer",
+    "professionName": "Elena Vance",
+    "professionTitle": "Fine Art & Editorial Photographer",
+    "category": "creative",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/01-photographer/template-09/index.html",
+    "folder": "professions/01-photographer/template-09/"
   },
   {
-    id: "10-chef",
-    title: "Chef Antoine Laurent — Two-Starred Gastronomy",
-    profession: "Executive Chef / Fine Dining",
-    category: "business",
-    desc: "Truffle and copper amber culinary aesthetic, seasonal degustation tasting menu with dietary badges, biodynamic philosophy, and private dining concierge.",
-    image: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80",
-    tags: ["Michelin Accolades", "Tasting Menus", "Farm Philosophy", "Private Dining"],
-    path: "./professions/10-chef/index.html",
-    folder: "./professions/10-chef/"
+    "professionId": "01-photographer",
+    "professionName": "Elena Vance",
+    "professionTitle": "Fine Art & Editorial Photographer",
+    "category": "creative",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/01-photographer/template-10/index.html",
+    "folder": "professions/01-photographer/template-10/"
+  },
+  {
+    "professionId": "02-doctor",
+    "professionName": "Dr. Marcus Chen",
+    "professionTitle": "MD, FACC • Interventional Cardiologist",
+    "category": "wellness",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/02-doctor/template-01/index.html",
+    "folder": "professions/02-doctor/template-01/"
+  },
+  {
+    "professionId": "02-doctor",
+    "professionName": "Dr. Marcus Chen",
+    "professionTitle": "MD, FACC • Interventional Cardiologist",
+    "category": "wellness",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/02-doctor/template-02/index.html",
+    "folder": "professions/02-doctor/template-02/"
+  },
+  {
+    "professionId": "02-doctor",
+    "professionName": "Dr. Marcus Chen",
+    "professionTitle": "MD, FACC • Interventional Cardiologist",
+    "category": "wellness",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/02-doctor/template-03/index.html",
+    "folder": "professions/02-doctor/template-03/"
+  },
+  {
+    "professionId": "02-doctor",
+    "professionName": "Dr. Marcus Chen",
+    "professionTitle": "MD, FACC • Interventional Cardiologist",
+    "category": "wellness",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/02-doctor/template-04/index.html",
+    "folder": "professions/02-doctor/template-04/"
+  },
+  {
+    "professionId": "02-doctor",
+    "professionName": "Dr. Marcus Chen",
+    "professionTitle": "MD, FACC • Interventional Cardiologist",
+    "category": "wellness",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/02-doctor/template-05/index.html",
+    "folder": "professions/02-doctor/template-05/"
+  },
+  {
+    "professionId": "02-doctor",
+    "professionName": "Dr. Marcus Chen",
+    "professionTitle": "MD, FACC • Interventional Cardiologist",
+    "category": "wellness",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/02-doctor/template-06/index.html",
+    "folder": "professions/02-doctor/template-06/"
+  },
+  {
+    "professionId": "02-doctor",
+    "professionName": "Dr. Marcus Chen",
+    "professionTitle": "MD, FACC • Interventional Cardiologist",
+    "category": "wellness",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/02-doctor/template-07/index.html",
+    "folder": "professions/02-doctor/template-07/"
+  },
+  {
+    "professionId": "02-doctor",
+    "professionName": "Dr. Marcus Chen",
+    "professionTitle": "MD, FACC • Interventional Cardiologist",
+    "category": "wellness",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/02-doctor/template-08/index.html",
+    "folder": "professions/02-doctor/template-08/"
+  },
+  {
+    "professionId": "02-doctor",
+    "professionName": "Dr. Marcus Chen",
+    "professionTitle": "MD, FACC • Interventional Cardiologist",
+    "category": "wellness",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/02-doctor/template-09/index.html",
+    "folder": "professions/02-doctor/template-09/"
+  },
+  {
+    "professionId": "02-doctor",
+    "professionName": "Dr. Marcus Chen",
+    "professionTitle": "MD, FACC • Interventional Cardiologist",
+    "category": "wellness",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/02-doctor/template-10/index.html",
+    "folder": "professions/02-doctor/template-10/"
+  },
+  {
+    "professionId": "03-ui-ux-designer",
+    "professionName": "Maya Lin",
+    "professionTitle": "Staff Product & Design Systems Designer",
+    "category": "creative",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/03-ui-ux-designer/template-01/index.html",
+    "folder": "professions/03-ui-ux-designer/template-01/"
+  },
+  {
+    "professionId": "03-ui-ux-designer",
+    "professionName": "Maya Lin",
+    "professionTitle": "Staff Product & Design Systems Designer",
+    "category": "creative",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/03-ui-ux-designer/template-02/index.html",
+    "folder": "professions/03-ui-ux-designer/template-02/"
+  },
+  {
+    "professionId": "03-ui-ux-designer",
+    "professionName": "Maya Lin",
+    "professionTitle": "Staff Product & Design Systems Designer",
+    "category": "creative",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/03-ui-ux-designer/template-03/index.html",
+    "folder": "professions/03-ui-ux-designer/template-03/"
+  },
+  {
+    "professionId": "03-ui-ux-designer",
+    "professionName": "Maya Lin",
+    "professionTitle": "Staff Product & Design Systems Designer",
+    "category": "creative",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/03-ui-ux-designer/template-04/index.html",
+    "folder": "professions/03-ui-ux-designer/template-04/"
+  },
+  {
+    "professionId": "03-ui-ux-designer",
+    "professionName": "Maya Lin",
+    "professionTitle": "Staff Product & Design Systems Designer",
+    "category": "creative",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/03-ui-ux-designer/template-05/index.html",
+    "folder": "professions/03-ui-ux-designer/template-05/"
+  },
+  {
+    "professionId": "03-ui-ux-designer",
+    "professionName": "Maya Lin",
+    "professionTitle": "Staff Product & Design Systems Designer",
+    "category": "creative",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/03-ui-ux-designer/template-06/index.html",
+    "folder": "professions/03-ui-ux-designer/template-06/"
+  },
+  {
+    "professionId": "03-ui-ux-designer",
+    "professionName": "Maya Lin",
+    "professionTitle": "Staff Product & Design Systems Designer",
+    "category": "creative",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/03-ui-ux-designer/template-07/index.html",
+    "folder": "professions/03-ui-ux-designer/template-07/"
+  },
+  {
+    "professionId": "03-ui-ux-designer",
+    "professionName": "Maya Lin",
+    "professionTitle": "Staff Product & Design Systems Designer",
+    "category": "creative",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/03-ui-ux-designer/template-08/index.html",
+    "folder": "professions/03-ui-ux-designer/template-08/"
+  },
+  {
+    "professionId": "03-ui-ux-designer",
+    "professionName": "Maya Lin",
+    "professionTitle": "Staff Product & Design Systems Designer",
+    "category": "creative",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/03-ui-ux-designer/template-09/index.html",
+    "folder": "professions/03-ui-ux-designer/template-09/"
+  },
+  {
+    "professionId": "03-ui-ux-designer",
+    "professionName": "Maya Lin",
+    "professionTitle": "Staff Product & Design Systems Designer",
+    "category": "creative",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/03-ui-ux-designer/template-10/index.html",
+    "folder": "professions/03-ui-ux-designer/template-10/"
+  },
+  {
+    "professionId": "04-developer",
+    "professionName": "Alex Rivera",
+    "professionTitle": "Senior Distributed Systems & Full-Stack Engineer",
+    "category": "tech",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/04-developer/template-01/index.html",
+    "folder": "professions/04-developer/template-01/"
+  },
+  {
+    "professionId": "04-developer",
+    "professionName": "Alex Rivera",
+    "professionTitle": "Senior Distributed Systems & Full-Stack Engineer",
+    "category": "tech",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/04-developer/template-02/index.html",
+    "folder": "professions/04-developer/template-02/"
+  },
+  {
+    "professionId": "04-developer",
+    "professionName": "Alex Rivera",
+    "professionTitle": "Senior Distributed Systems & Full-Stack Engineer",
+    "category": "tech",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/04-developer/template-03/index.html",
+    "folder": "professions/04-developer/template-03/"
+  },
+  {
+    "professionId": "04-developer",
+    "professionName": "Alex Rivera",
+    "professionTitle": "Senior Distributed Systems & Full-Stack Engineer",
+    "category": "tech",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/04-developer/template-04/index.html",
+    "folder": "professions/04-developer/template-04/"
+  },
+  {
+    "professionId": "04-developer",
+    "professionName": "Alex Rivera",
+    "professionTitle": "Senior Distributed Systems & Full-Stack Engineer",
+    "category": "tech",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/04-developer/template-05/index.html",
+    "folder": "professions/04-developer/template-05/"
+  },
+  {
+    "professionId": "04-developer",
+    "professionName": "Alex Rivera",
+    "professionTitle": "Senior Distributed Systems & Full-Stack Engineer",
+    "category": "tech",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/04-developer/template-06/index.html",
+    "folder": "professions/04-developer/template-06/"
+  },
+  {
+    "professionId": "04-developer",
+    "professionName": "Alex Rivera",
+    "professionTitle": "Senior Distributed Systems & Full-Stack Engineer",
+    "category": "tech",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/04-developer/template-07/index.html",
+    "folder": "professions/04-developer/template-07/"
+  },
+  {
+    "professionId": "04-developer",
+    "professionName": "Alex Rivera",
+    "professionTitle": "Senior Distributed Systems & Full-Stack Engineer",
+    "category": "tech",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/04-developer/template-08/index.html",
+    "folder": "professions/04-developer/template-08/"
+  },
+  {
+    "professionId": "04-developer",
+    "professionName": "Alex Rivera",
+    "professionTitle": "Senior Distributed Systems & Full-Stack Engineer",
+    "category": "tech",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/04-developer/template-09/index.html",
+    "folder": "professions/04-developer/template-09/"
+  },
+  {
+    "professionId": "04-developer",
+    "professionName": "Alex Rivera",
+    "professionTitle": "Senior Distributed Systems & Full-Stack Engineer",
+    "category": "tech",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/04-developer/template-10/index.html",
+    "folder": "professions/04-developer/template-10/"
+  },
+  {
+    "professionId": "05-gamer",
+    "professionName": "Kai 'ViperX' Thorne",
+    "professionTitle": "Pro Esports Athlete & Twitch Partner",
+    "category": "tech",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/05-gamer/template-01/index.html",
+    "folder": "professions/05-gamer/template-01/"
+  },
+  {
+    "professionId": "05-gamer",
+    "professionName": "Kai 'ViperX' Thorne",
+    "professionTitle": "Pro Esports Athlete & Twitch Partner",
+    "category": "tech",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/05-gamer/template-02/index.html",
+    "folder": "professions/05-gamer/template-02/"
+  },
+  {
+    "professionId": "05-gamer",
+    "professionName": "Kai 'ViperX' Thorne",
+    "professionTitle": "Pro Esports Athlete & Twitch Partner",
+    "category": "tech",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/05-gamer/template-03/index.html",
+    "folder": "professions/05-gamer/template-03/"
+  },
+  {
+    "professionId": "05-gamer",
+    "professionName": "Kai 'ViperX' Thorne",
+    "professionTitle": "Pro Esports Athlete & Twitch Partner",
+    "category": "tech",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/05-gamer/template-04/index.html",
+    "folder": "professions/05-gamer/template-04/"
+  },
+  {
+    "professionId": "05-gamer",
+    "professionName": "Kai 'ViperX' Thorne",
+    "professionTitle": "Pro Esports Athlete & Twitch Partner",
+    "category": "tech",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/05-gamer/template-05/index.html",
+    "folder": "professions/05-gamer/template-05/"
+  },
+  {
+    "professionId": "05-gamer",
+    "professionName": "Kai 'ViperX' Thorne",
+    "professionTitle": "Pro Esports Athlete & Twitch Partner",
+    "category": "tech",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/05-gamer/template-06/index.html",
+    "folder": "professions/05-gamer/template-06/"
+  },
+  {
+    "professionId": "05-gamer",
+    "professionName": "Kai 'ViperX' Thorne",
+    "professionTitle": "Pro Esports Athlete & Twitch Partner",
+    "category": "tech",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/05-gamer/template-07/index.html",
+    "folder": "professions/05-gamer/template-07/"
+  },
+  {
+    "professionId": "05-gamer",
+    "professionName": "Kai 'ViperX' Thorne",
+    "professionTitle": "Pro Esports Athlete & Twitch Partner",
+    "category": "tech",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/05-gamer/template-08/index.html",
+    "folder": "professions/05-gamer/template-08/"
+  },
+  {
+    "professionId": "05-gamer",
+    "professionName": "Kai 'ViperX' Thorne",
+    "professionTitle": "Pro Esports Athlete & Twitch Partner",
+    "category": "tech",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/05-gamer/template-09/index.html",
+    "folder": "professions/05-gamer/template-09/"
+  },
+  {
+    "professionId": "05-gamer",
+    "professionName": "Kai 'ViperX' Thorne",
+    "professionTitle": "Pro Esports Athlete & Twitch Partner",
+    "category": "tech",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/05-gamer/template-10/index.html",
+    "folder": "professions/05-gamer/template-10/"
+  },
+  {
+    "professionId": "06-architect",
+    "professionName": "Kaelen Voss, AIA",
+    "professionTitle": "Principal Architect • Studio Arcos",
+    "category": "creative",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/06-architect/template-01/index.html",
+    "folder": "professions/06-architect/template-01/"
+  },
+  {
+    "professionId": "06-architect",
+    "professionName": "Kaelen Voss, AIA",
+    "professionTitle": "Principal Architect • Studio Arcos",
+    "category": "creative",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/06-architect/template-02/index.html",
+    "folder": "professions/06-architect/template-02/"
+  },
+  {
+    "professionId": "06-architect",
+    "professionName": "Kaelen Voss, AIA",
+    "professionTitle": "Principal Architect • Studio Arcos",
+    "category": "creative",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/06-architect/template-03/index.html",
+    "folder": "professions/06-architect/template-03/"
+  },
+  {
+    "professionId": "06-architect",
+    "professionName": "Kaelen Voss, AIA",
+    "professionTitle": "Principal Architect • Studio Arcos",
+    "category": "creative",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/06-architect/template-04/index.html",
+    "folder": "professions/06-architect/template-04/"
+  },
+  {
+    "professionId": "06-architect",
+    "professionName": "Kaelen Voss, AIA",
+    "professionTitle": "Principal Architect • Studio Arcos",
+    "category": "creative",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/06-architect/template-05/index.html",
+    "folder": "professions/06-architect/template-05/"
+  },
+  {
+    "professionId": "06-architect",
+    "professionName": "Kaelen Voss, AIA",
+    "professionTitle": "Principal Architect • Studio Arcos",
+    "category": "creative",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/06-architect/template-06/index.html",
+    "folder": "professions/06-architect/template-06/"
+  },
+  {
+    "professionId": "06-architect",
+    "professionName": "Kaelen Voss, AIA",
+    "professionTitle": "Principal Architect • Studio Arcos",
+    "category": "creative",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/06-architect/template-07/index.html",
+    "folder": "professions/06-architect/template-07/"
+  },
+  {
+    "professionId": "06-architect",
+    "professionName": "Kaelen Voss, AIA",
+    "professionTitle": "Principal Architect • Studio Arcos",
+    "category": "creative",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/06-architect/template-08/index.html",
+    "folder": "professions/06-architect/template-08/"
+  },
+  {
+    "professionId": "06-architect",
+    "professionName": "Kaelen Voss, AIA",
+    "professionTitle": "Principal Architect • Studio Arcos",
+    "category": "creative",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/06-architect/template-09/index.html",
+    "folder": "professions/06-architect/template-09/"
+  },
+  {
+    "professionId": "06-architect",
+    "professionName": "Kaelen Voss, AIA",
+    "professionTitle": "Principal Architect • Studio Arcos",
+    "category": "creative",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/06-architect/template-10/index.html",
+    "folder": "professions/06-architect/template-10/"
+  },
+  {
+    "professionId": "07-lawyer",
+    "professionName": "Victoria Sterling, Esq.",
+    "professionTitle": "Principal Counsel • Sterling Legal",
+    "category": "business",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/07-lawyer/template-01/index.html",
+    "folder": "professions/07-lawyer/template-01/"
+  },
+  {
+    "professionId": "07-lawyer",
+    "professionName": "Victoria Sterling, Esq.",
+    "professionTitle": "Principal Counsel • Sterling Legal",
+    "category": "business",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/07-lawyer/template-02/index.html",
+    "folder": "professions/07-lawyer/template-02/"
+  },
+  {
+    "professionId": "07-lawyer",
+    "professionName": "Victoria Sterling, Esq.",
+    "professionTitle": "Principal Counsel • Sterling Legal",
+    "category": "business",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/07-lawyer/template-03/index.html",
+    "folder": "professions/07-lawyer/template-03/"
+  },
+  {
+    "professionId": "07-lawyer",
+    "professionName": "Victoria Sterling, Esq.",
+    "professionTitle": "Principal Counsel • Sterling Legal",
+    "category": "business",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/07-lawyer/template-04/index.html",
+    "folder": "professions/07-lawyer/template-04/"
+  },
+  {
+    "professionId": "07-lawyer",
+    "professionName": "Victoria Sterling, Esq.",
+    "professionTitle": "Principal Counsel • Sterling Legal",
+    "category": "business",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/07-lawyer/template-05/index.html",
+    "folder": "professions/07-lawyer/template-05/"
+  },
+  {
+    "professionId": "07-lawyer",
+    "professionName": "Victoria Sterling, Esq.",
+    "professionTitle": "Principal Counsel • Sterling Legal",
+    "category": "business",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/07-lawyer/template-06/index.html",
+    "folder": "professions/07-lawyer/template-06/"
+  },
+  {
+    "professionId": "07-lawyer",
+    "professionName": "Victoria Sterling, Esq.",
+    "professionTitle": "Principal Counsel • Sterling Legal",
+    "category": "business",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/07-lawyer/template-07/index.html",
+    "folder": "professions/07-lawyer/template-07/"
+  },
+  {
+    "professionId": "07-lawyer",
+    "professionName": "Victoria Sterling, Esq.",
+    "professionTitle": "Principal Counsel • Sterling Legal",
+    "category": "business",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/07-lawyer/template-08/index.html",
+    "folder": "professions/07-lawyer/template-08/"
+  },
+  {
+    "professionId": "07-lawyer",
+    "professionName": "Victoria Sterling, Esq.",
+    "professionTitle": "Principal Counsel • Sterling Legal",
+    "category": "business",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/07-lawyer/template-09/index.html",
+    "folder": "professions/07-lawyer/template-09/"
+  },
+  {
+    "professionId": "07-lawyer",
+    "professionName": "Victoria Sterling, Esq.",
+    "professionTitle": "Principal Counsel • Sterling Legal",
+    "category": "business",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/07-lawyer/template-10/index.html",
+    "folder": "professions/07-lawyer/template-10/"
+  },
+  {
+    "professionId": "08-fitness-trainer",
+    "professionName": "Marcus Drake",
+    "professionTitle": "CSCS • Elite Strength & Physique Coach",
+    "category": "wellness",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/08-fitness-trainer/template-01/index.html",
+    "folder": "professions/08-fitness-trainer/template-01/"
+  },
+  {
+    "professionId": "08-fitness-trainer",
+    "professionName": "Marcus Drake",
+    "professionTitle": "CSCS • Elite Strength & Physique Coach",
+    "category": "wellness",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/08-fitness-trainer/template-02/index.html",
+    "folder": "professions/08-fitness-trainer/template-02/"
+  },
+  {
+    "professionId": "08-fitness-trainer",
+    "professionName": "Marcus Drake",
+    "professionTitle": "CSCS • Elite Strength & Physique Coach",
+    "category": "wellness",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/08-fitness-trainer/template-03/index.html",
+    "folder": "professions/08-fitness-trainer/template-03/"
+  },
+  {
+    "professionId": "08-fitness-trainer",
+    "professionName": "Marcus Drake",
+    "professionTitle": "CSCS • Elite Strength & Physique Coach",
+    "category": "wellness",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/08-fitness-trainer/template-04/index.html",
+    "folder": "professions/08-fitness-trainer/template-04/"
+  },
+  {
+    "professionId": "08-fitness-trainer",
+    "professionName": "Marcus Drake",
+    "professionTitle": "CSCS • Elite Strength & Physique Coach",
+    "category": "wellness",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/08-fitness-trainer/template-05/index.html",
+    "folder": "professions/08-fitness-trainer/template-05/"
+  },
+  {
+    "professionId": "08-fitness-trainer",
+    "professionName": "Marcus Drake",
+    "professionTitle": "CSCS • Elite Strength & Physique Coach",
+    "category": "wellness",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/08-fitness-trainer/template-06/index.html",
+    "folder": "professions/08-fitness-trainer/template-06/"
+  },
+  {
+    "professionId": "08-fitness-trainer",
+    "professionName": "Marcus Drake",
+    "professionTitle": "CSCS • Elite Strength & Physique Coach",
+    "category": "wellness",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/08-fitness-trainer/template-07/index.html",
+    "folder": "professions/08-fitness-trainer/template-07/"
+  },
+  {
+    "professionId": "08-fitness-trainer",
+    "professionName": "Marcus Drake",
+    "professionTitle": "CSCS • Elite Strength & Physique Coach",
+    "category": "wellness",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/08-fitness-trainer/template-08/index.html",
+    "folder": "professions/08-fitness-trainer/template-08/"
+  },
+  {
+    "professionId": "08-fitness-trainer",
+    "professionName": "Marcus Drake",
+    "professionTitle": "CSCS • Elite Strength & Physique Coach",
+    "category": "wellness",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/08-fitness-trainer/template-09/index.html",
+    "folder": "professions/08-fitness-trainer/template-09/"
+  },
+  {
+    "professionId": "08-fitness-trainer",
+    "professionName": "Marcus Drake",
+    "professionTitle": "CSCS • Elite Strength & Physique Coach",
+    "category": "wellness",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/08-fitness-trainer/template-10/index.html",
+    "folder": "professions/08-fitness-trainer/template-10/"
+  },
+  {
+    "professionId": "09-content-creator",
+    "professionName": "Aria Thorne",
+    "professionTitle": "Cinematic Travel & Tech Storyteller",
+    "category": "creative",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/09-content-creator/template-01/index.html",
+    "folder": "professions/09-content-creator/template-01/"
+  },
+  {
+    "professionId": "09-content-creator",
+    "professionName": "Aria Thorne",
+    "professionTitle": "Cinematic Travel & Tech Storyteller",
+    "category": "creative",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/09-content-creator/template-02/index.html",
+    "folder": "professions/09-content-creator/template-02/"
+  },
+  {
+    "professionId": "09-content-creator",
+    "professionName": "Aria Thorne",
+    "professionTitle": "Cinematic Travel & Tech Storyteller",
+    "category": "creative",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/09-content-creator/template-03/index.html",
+    "folder": "professions/09-content-creator/template-03/"
+  },
+  {
+    "professionId": "09-content-creator",
+    "professionName": "Aria Thorne",
+    "professionTitle": "Cinematic Travel & Tech Storyteller",
+    "category": "creative",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/09-content-creator/template-04/index.html",
+    "folder": "professions/09-content-creator/template-04/"
+  },
+  {
+    "professionId": "09-content-creator",
+    "professionName": "Aria Thorne",
+    "professionTitle": "Cinematic Travel & Tech Storyteller",
+    "category": "creative",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/09-content-creator/template-05/index.html",
+    "folder": "professions/09-content-creator/template-05/"
+  },
+  {
+    "professionId": "09-content-creator",
+    "professionName": "Aria Thorne",
+    "professionTitle": "Cinematic Travel & Tech Storyteller",
+    "category": "creative",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/09-content-creator/template-06/index.html",
+    "folder": "professions/09-content-creator/template-06/"
+  },
+  {
+    "professionId": "09-content-creator",
+    "professionName": "Aria Thorne",
+    "professionTitle": "Cinematic Travel & Tech Storyteller",
+    "category": "creative",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/09-content-creator/template-07/index.html",
+    "folder": "professions/09-content-creator/template-07/"
+  },
+  {
+    "professionId": "09-content-creator",
+    "professionName": "Aria Thorne",
+    "professionTitle": "Cinematic Travel & Tech Storyteller",
+    "category": "creative",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/09-content-creator/template-08/index.html",
+    "folder": "professions/09-content-creator/template-08/"
+  },
+  {
+    "professionId": "09-content-creator",
+    "professionName": "Aria Thorne",
+    "professionTitle": "Cinematic Travel & Tech Storyteller",
+    "category": "creative",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/09-content-creator/template-09/index.html",
+    "folder": "professions/09-content-creator/template-09/"
+  },
+  {
+    "professionId": "09-content-creator",
+    "professionName": "Aria Thorne",
+    "professionTitle": "Cinematic Travel & Tech Storyteller",
+    "category": "creative",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/09-content-creator/template-10/index.html",
+    "folder": "professions/09-content-creator/template-10/"
+  },
+  {
+    "professionId": "10-chef",
+    "professionName": "Antoine Laurent",
+    "professionTitle": "Two-Michelin-Starred Executive Chef",
+    "category": "business",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/10-chef/template-01/index.html",
+    "folder": "professions/10-chef/template-01/"
+  },
+  {
+    "professionId": "10-chef",
+    "professionName": "Antoine Laurent",
+    "professionTitle": "Two-Michelin-Starred Executive Chef",
+    "category": "business",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/10-chef/template-02/index.html",
+    "folder": "professions/10-chef/template-02/"
+  },
+  {
+    "professionId": "10-chef",
+    "professionName": "Antoine Laurent",
+    "professionTitle": "Two-Michelin-Starred Executive Chef",
+    "category": "business",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/10-chef/template-03/index.html",
+    "folder": "professions/10-chef/template-03/"
+  },
+  {
+    "professionId": "10-chef",
+    "professionName": "Antoine Laurent",
+    "professionTitle": "Two-Michelin-Starred Executive Chef",
+    "category": "business",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/10-chef/template-04/index.html",
+    "folder": "professions/10-chef/template-04/"
+  },
+  {
+    "professionId": "10-chef",
+    "professionName": "Antoine Laurent",
+    "professionTitle": "Two-Michelin-Starred Executive Chef",
+    "category": "business",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/10-chef/template-05/index.html",
+    "folder": "professions/10-chef/template-05/"
+  },
+  {
+    "professionId": "10-chef",
+    "professionName": "Antoine Laurent",
+    "professionTitle": "Two-Michelin-Starred Executive Chef",
+    "category": "business",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/10-chef/template-06/index.html",
+    "folder": "professions/10-chef/template-06/"
+  },
+  {
+    "professionId": "10-chef",
+    "professionName": "Antoine Laurent",
+    "professionTitle": "Two-Michelin-Starred Executive Chef",
+    "category": "business",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/10-chef/template-07/index.html",
+    "folder": "professions/10-chef/template-07/"
+  },
+  {
+    "professionId": "10-chef",
+    "professionName": "Antoine Laurent",
+    "professionTitle": "Two-Michelin-Starred Executive Chef",
+    "category": "business",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/10-chef/template-08/index.html",
+    "folder": "professions/10-chef/template-08/"
+  },
+  {
+    "professionId": "10-chef",
+    "professionName": "Antoine Laurent",
+    "professionTitle": "Two-Michelin-Starred Executive Chef",
+    "category": "business",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/10-chef/template-09/index.html",
+    "folder": "professions/10-chef/template-09/"
+  },
+  {
+    "professionId": "10-chef",
+    "professionName": "Antoine Laurent",
+    "professionTitle": "Two-Michelin-Starred Executive Chef",
+    "category": "business",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/10-chef/template-10/index.html",
+    "folder": "professions/10-chef/template-10/"
+  },
+  {
+    "professionId": "11-musician",
+    "professionName": "Liam O'Connor (NovaPulse)",
+    "professionTitle": "Electronic Music Producer, DJ & Sound Designer",
+    "category": "creative",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/11-musician/template-01/index.html",
+    "folder": "professions/11-musician/template-01/"
+  },
+  {
+    "professionId": "11-musician",
+    "professionName": "Liam O'Connor (NovaPulse)",
+    "professionTitle": "Electronic Music Producer, DJ & Sound Designer",
+    "category": "creative",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/11-musician/template-02/index.html",
+    "folder": "professions/11-musician/template-02/"
+  },
+  {
+    "professionId": "11-musician",
+    "professionName": "Liam O'Connor (NovaPulse)",
+    "professionTitle": "Electronic Music Producer, DJ & Sound Designer",
+    "category": "creative",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/11-musician/template-03/index.html",
+    "folder": "professions/11-musician/template-03/"
+  },
+  {
+    "professionId": "11-musician",
+    "professionName": "Liam O'Connor (NovaPulse)",
+    "professionTitle": "Electronic Music Producer, DJ & Sound Designer",
+    "category": "creative",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/11-musician/template-04/index.html",
+    "folder": "professions/11-musician/template-04/"
+  },
+  {
+    "professionId": "11-musician",
+    "professionName": "Liam O'Connor (NovaPulse)",
+    "professionTitle": "Electronic Music Producer, DJ & Sound Designer",
+    "category": "creative",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/11-musician/template-05/index.html",
+    "folder": "professions/11-musician/template-05/"
+  },
+  {
+    "professionId": "11-musician",
+    "professionName": "Liam O'Connor (NovaPulse)",
+    "professionTitle": "Electronic Music Producer, DJ & Sound Designer",
+    "category": "creative",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/11-musician/template-06/index.html",
+    "folder": "professions/11-musician/template-06/"
+  },
+  {
+    "professionId": "11-musician",
+    "professionName": "Liam O'Connor (NovaPulse)",
+    "professionTitle": "Electronic Music Producer, DJ & Sound Designer",
+    "category": "creative",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/11-musician/template-07/index.html",
+    "folder": "professions/11-musician/template-07/"
+  },
+  {
+    "professionId": "11-musician",
+    "professionName": "Liam O'Connor (NovaPulse)",
+    "professionTitle": "Electronic Music Producer, DJ & Sound Designer",
+    "category": "creative",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/11-musician/template-08/index.html",
+    "folder": "professions/11-musician/template-08/"
+  },
+  {
+    "professionId": "11-musician",
+    "professionName": "Liam O'Connor (NovaPulse)",
+    "professionTitle": "Electronic Music Producer, DJ & Sound Designer",
+    "category": "creative",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/11-musician/template-09/index.html",
+    "folder": "professions/11-musician/template-09/"
+  },
+  {
+    "professionId": "11-musician",
+    "professionName": "Liam O'Connor (NovaPulse)",
+    "professionTitle": "Electronic Music Producer, DJ & Sound Designer",
+    "category": "creative",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/11-musician/template-10/index.html",
+    "folder": "professions/11-musician/template-10/"
+  },
+  {
+    "professionId": "12-copywriter",
+    "professionName": "Clara Hawthorne",
+    "professionTitle": "Senior Direct Response & Brand Copywriter",
+    "category": "creative",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/12-copywriter/template-01/index.html",
+    "folder": "professions/12-copywriter/template-01/"
+  },
+  {
+    "professionId": "12-copywriter",
+    "professionName": "Clara Hawthorne",
+    "professionTitle": "Senior Direct Response & Brand Copywriter",
+    "category": "creative",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/12-copywriter/template-02/index.html",
+    "folder": "professions/12-copywriter/template-02/"
+  },
+  {
+    "professionId": "12-copywriter",
+    "professionName": "Clara Hawthorne",
+    "professionTitle": "Senior Direct Response & Brand Copywriter",
+    "category": "creative",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/12-copywriter/template-03/index.html",
+    "folder": "professions/12-copywriter/template-03/"
+  },
+  {
+    "professionId": "12-copywriter",
+    "professionName": "Clara Hawthorne",
+    "professionTitle": "Senior Direct Response & Brand Copywriter",
+    "category": "creative",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/12-copywriter/template-04/index.html",
+    "folder": "professions/12-copywriter/template-04/"
+  },
+  {
+    "professionId": "12-copywriter",
+    "professionName": "Clara Hawthorne",
+    "professionTitle": "Senior Direct Response & Brand Copywriter",
+    "category": "creative",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/12-copywriter/template-05/index.html",
+    "folder": "professions/12-copywriter/template-05/"
+  },
+  {
+    "professionId": "12-copywriter",
+    "professionName": "Clara Hawthorne",
+    "professionTitle": "Senior Direct Response & Brand Copywriter",
+    "category": "creative",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/12-copywriter/template-06/index.html",
+    "folder": "professions/12-copywriter/template-06/"
+  },
+  {
+    "professionId": "12-copywriter",
+    "professionName": "Clara Hawthorne",
+    "professionTitle": "Senior Direct Response & Brand Copywriter",
+    "category": "creative",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/12-copywriter/template-07/index.html",
+    "folder": "professions/12-copywriter/template-07/"
+  },
+  {
+    "professionId": "12-copywriter",
+    "professionName": "Clara Hawthorne",
+    "professionTitle": "Senior Direct Response & Brand Copywriter",
+    "category": "creative",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/12-copywriter/template-08/index.html",
+    "folder": "professions/12-copywriter/template-08/"
+  },
+  {
+    "professionId": "12-copywriter",
+    "professionName": "Clara Hawthorne",
+    "professionTitle": "Senior Direct Response & Brand Copywriter",
+    "category": "creative",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/12-copywriter/template-09/index.html",
+    "folder": "professions/12-copywriter/template-09/"
+  },
+  {
+    "professionId": "12-copywriter",
+    "professionName": "Clara Hawthorne",
+    "professionTitle": "Senior Direct Response & Brand Copywriter",
+    "category": "creative",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/12-copywriter/template-10/index.html",
+    "folder": "professions/12-copywriter/template-10/"
+  },
+  {
+    "professionId": "13-fashion-model",
+    "professionName": "Seraphina Vance",
+    "professionTitle": "International Fashion Model & Editorial Stylist",
+    "category": "creative",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/13-fashion-model/template-01/index.html",
+    "folder": "professions/13-fashion-model/template-01/"
+  },
+  {
+    "professionId": "13-fashion-model",
+    "professionName": "Seraphina Vance",
+    "professionTitle": "International Fashion Model & Editorial Stylist",
+    "category": "creative",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/13-fashion-model/template-02/index.html",
+    "folder": "professions/13-fashion-model/template-02/"
+  },
+  {
+    "professionId": "13-fashion-model",
+    "professionName": "Seraphina Vance",
+    "professionTitle": "International Fashion Model & Editorial Stylist",
+    "category": "creative",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/13-fashion-model/template-03/index.html",
+    "folder": "professions/13-fashion-model/template-03/"
+  },
+  {
+    "professionId": "13-fashion-model",
+    "professionName": "Seraphina Vance",
+    "professionTitle": "International Fashion Model & Editorial Stylist",
+    "category": "creative",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/13-fashion-model/template-04/index.html",
+    "folder": "professions/13-fashion-model/template-04/"
+  },
+  {
+    "professionId": "13-fashion-model",
+    "professionName": "Seraphina Vance",
+    "professionTitle": "International Fashion Model & Editorial Stylist",
+    "category": "creative",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/13-fashion-model/template-05/index.html",
+    "folder": "professions/13-fashion-model/template-05/"
+  },
+  {
+    "professionId": "13-fashion-model",
+    "professionName": "Seraphina Vance",
+    "professionTitle": "International Fashion Model & Editorial Stylist",
+    "category": "creative",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/13-fashion-model/template-06/index.html",
+    "folder": "professions/13-fashion-model/template-06/"
+  },
+  {
+    "professionId": "13-fashion-model",
+    "professionName": "Seraphina Vance",
+    "professionTitle": "International Fashion Model & Editorial Stylist",
+    "category": "creative",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/13-fashion-model/template-07/index.html",
+    "folder": "professions/13-fashion-model/template-07/"
+  },
+  {
+    "professionId": "13-fashion-model",
+    "professionName": "Seraphina Vance",
+    "professionTitle": "International Fashion Model & Editorial Stylist",
+    "category": "creative",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/13-fashion-model/template-08/index.html",
+    "folder": "professions/13-fashion-model/template-08/"
+  },
+  {
+    "professionId": "13-fashion-model",
+    "professionName": "Seraphina Vance",
+    "professionTitle": "International Fashion Model & Editorial Stylist",
+    "category": "creative",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/13-fashion-model/template-09/index.html",
+    "folder": "professions/13-fashion-model/template-09/"
+  },
+  {
+    "professionId": "13-fashion-model",
+    "professionName": "Seraphina Vance",
+    "professionTitle": "International Fashion Model & Editorial Stylist",
+    "category": "creative",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/13-fashion-model/template-10/index.html",
+    "folder": "professions/13-fashion-model/template-10/"
+  },
+  {
+    "professionId": "14-cybersecurity",
+    "professionName": "Dante 'Cipher' Ward",
+    "professionTitle": "Principal Security Researcher & Red Teamer",
+    "category": "tech",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/14-cybersecurity/template-01/index.html",
+    "folder": "professions/14-cybersecurity/template-01/"
+  },
+  {
+    "professionId": "14-cybersecurity",
+    "professionName": "Dante 'Cipher' Ward",
+    "professionTitle": "Principal Security Researcher & Red Teamer",
+    "category": "tech",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/14-cybersecurity/template-02/index.html",
+    "folder": "professions/14-cybersecurity/template-02/"
+  },
+  {
+    "professionId": "14-cybersecurity",
+    "professionName": "Dante 'Cipher' Ward",
+    "professionTitle": "Principal Security Researcher & Red Teamer",
+    "category": "tech",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/14-cybersecurity/template-03/index.html",
+    "folder": "professions/14-cybersecurity/template-03/"
+  },
+  {
+    "professionId": "14-cybersecurity",
+    "professionName": "Dante 'Cipher' Ward",
+    "professionTitle": "Principal Security Researcher & Red Teamer",
+    "category": "tech",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/14-cybersecurity/template-04/index.html",
+    "folder": "professions/14-cybersecurity/template-04/"
+  },
+  {
+    "professionId": "14-cybersecurity",
+    "professionName": "Dante 'Cipher' Ward",
+    "professionTitle": "Principal Security Researcher & Red Teamer",
+    "category": "tech",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/14-cybersecurity/template-05/index.html",
+    "folder": "professions/14-cybersecurity/template-05/"
+  },
+  {
+    "professionId": "14-cybersecurity",
+    "professionName": "Dante 'Cipher' Ward",
+    "professionTitle": "Principal Security Researcher & Red Teamer",
+    "category": "tech",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/14-cybersecurity/template-06/index.html",
+    "folder": "professions/14-cybersecurity/template-06/"
+  },
+  {
+    "professionId": "14-cybersecurity",
+    "professionName": "Dante 'Cipher' Ward",
+    "professionTitle": "Principal Security Researcher & Red Teamer",
+    "category": "tech",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/14-cybersecurity/template-07/index.html",
+    "folder": "professions/14-cybersecurity/template-07/"
+  },
+  {
+    "professionId": "14-cybersecurity",
+    "professionName": "Dante 'Cipher' Ward",
+    "professionTitle": "Principal Security Researcher & Red Teamer",
+    "category": "tech",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/14-cybersecurity/template-08/index.html",
+    "folder": "professions/14-cybersecurity/template-08/"
+  },
+  {
+    "professionId": "14-cybersecurity",
+    "professionName": "Dante 'Cipher' Ward",
+    "professionTitle": "Principal Security Researcher & Red Teamer",
+    "category": "tech",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/14-cybersecurity/template-09/index.html",
+    "folder": "professions/14-cybersecurity/template-09/"
+  },
+  {
+    "professionId": "14-cybersecurity",
+    "professionName": "Dante 'Cipher' Ward",
+    "professionTitle": "Principal Security Researcher & Red Teamer",
+    "category": "tech",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/14-cybersecurity/template-10/index.html",
+    "folder": "professions/14-cybersecurity/template-10/"
+  },
+  {
+    "professionId": "15-financial-advisor",
+    "professionName": "Arthur Pendelton, CFP®",
+    "professionTitle": "Senior Wealth Strategist & Fiduciary Advisor",
+    "category": "business",
+    "variantId": "template-01",
+    "variantName": "Obsidian Elite (Dark Theme)",
+    "variantType": "Dark Minimalist",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/15-financial-advisor/template-01/index.html",
+    "folder": "professions/15-financial-advisor/template-01/"
+  },
+  {
+    "professionId": "15-financial-advisor",
+    "professionName": "Arthur Pendelton, CFP®",
+    "professionTitle": "Senior Wealth Strategist & Fiduciary Advisor",
+    "category": "business",
+    "variantId": "template-02",
+    "variantName": "Nordic Minimalist (Light Editorial)",
+    "variantType": "Clean Light",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/15-financial-advisor/template-02/index.html",
+    "folder": "professions/15-financial-advisor/template-02/"
+  },
+  {
+    "professionId": "15-financial-advisor",
+    "professionName": "Arthur Pendelton, CFP®",
+    "professionTitle": "Senior Wealth Strategist & Fiduciary Advisor",
+    "category": "business",
+    "variantId": "template-03",
+    "variantName": "Bento Grid Modern",
+    "variantType": "Asymmetric Bento",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/15-financial-advisor/template-03/index.html",
+    "folder": "professions/15-financial-advisor/template-03/"
+  },
+  {
+    "professionId": "15-financial-advisor",
+    "professionName": "Arthur Pendelton, CFP®",
+    "professionTitle": "Senior Wealth Strategist & Fiduciary Advisor",
+    "category": "business",
+    "variantId": "template-04",
+    "variantName": "Glassmorphic Aura",
+    "variantType": "Translucent Glow",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/15-financial-advisor/template-04/index.html",
+    "folder": "professions/15-financial-advisor/template-04/"
+  },
+  {
+    "professionId": "15-financial-advisor",
+    "professionName": "Arthur Pendelton, CFP®",
+    "professionTitle": "Senior Wealth Strategist & Fiduciary Advisor",
+    "category": "business",
+    "variantId": "template-05",
+    "variantName": "Neo-Brutalist Bold",
+    "variantType": "High-Contrast Brutal",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/15-financial-advisor/template-05/index.html",
+    "folder": "professions/15-financial-advisor/template-05/"
+  },
+  {
+    "professionId": "15-financial-advisor",
+    "professionName": "Arthur Pendelton, CFP®",
+    "professionTitle": "Senior Wealth Strategist & Fiduciary Advisor",
+    "category": "business",
+    "variantId": "template-06",
+    "variantName": "Split-Screen Studio",
+    "variantType": "Split Layout",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/15-financial-advisor/template-06/index.html",
+    "folder": "professions/15-financial-advisor/template-06/"
+  },
+  {
+    "professionId": "15-financial-advisor",
+    "professionName": "Arthur Pendelton, CFP®",
+    "professionTitle": "Senior Wealth Strategist & Fiduciary Advisor",
+    "category": "business",
+    "variantId": "template-07",
+    "variantName": "Sidebar Navigation App",
+    "variantType": "Dashboard Layout",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/15-financial-advisor/template-07/index.html",
+    "folder": "professions/15-financial-advisor/template-07/"
+  },
+  {
+    "professionId": "15-financial-advisor",
+    "professionName": "Arthur Pendelton, CFP®",
+    "professionTitle": "Senior Wealth Strategist & Fiduciary Advisor",
+    "category": "business",
+    "variantId": "template-08",
+    "variantName": "Magazine Editorial",
+    "variantType": "Centered Publication",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/15-financial-advisor/template-08/index.html",
+    "folder": "professions/15-financial-advisor/template-08/"
+  },
+  {
+    "professionId": "15-financial-advisor",
+    "professionName": "Arthur Pendelton, CFP®",
+    "professionTitle": "Senior Wealth Strategist & Fiduciary Advisor",
+    "category": "business",
+    "variantId": "template-09",
+    "variantName": "Kinetic Gradient Pulse",
+    "variantType": "High Energy Vibrant",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/15-financial-advisor/template-09/index.html",
+    "folder": "professions/15-financial-advisor/template-09/"
+  },
+  {
+    "professionId": "15-financial-advisor",
+    "professionName": "Arthur Pendelton, CFP®",
+    "professionTitle": "Senior Wealth Strategist & Fiduciary Advisor",
+    "category": "business",
+    "variantId": "template-10",
+    "variantName": "Terminal / Monospace Pro",
+    "variantType": "Hacker / Developer Tech",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+    "path": "professions/15-financial-advisor/template-10/index.html",
+    "folder": "professions/15-financial-advisor/template-10/"
   }
 ];
 
-function renderCatalog(items) {
+let currentCategory = 'all';
+let currentProfession = 'all';
+let currentSearch = '';
+
+function renderCatalog() {
   const grid = document.getElementById('templates-grid');
+  let items = TEMPLATES_CATALOG;
+
+  if (currentCategory !== 'all') {
+    items = items.filter(t => t.category === currentCategory);
+  }
+  if (currentProfession !== 'all') {
+    items = items.filter(t => t.professionId === currentProfession);
+  }
+  if (currentSearch.trim() !== '') {
+    const q = currentSearch.toLowerCase();
+    items = items.filter(t => 
+      t.professionName.toLowerCase().includes(q) ||
+      t.professionTitle.toLowerCase().includes(q) ||
+      t.variantName.toLowerCase().includes(q) ||
+      t.variantType.toLowerCase().includes(q)
+    );
+  }
+
+  document.getElementById('template-count-badge').textContent = `Showing ${items.length} of ${TEMPLATES_CATALOG.length} Templates`;
+
   grid.innerHTML = items.map(item => `
     <article class="template-card" data-category="${item.category}">
       <div class="card-preview">
-        <img src="${item.image}" alt="${item.title}" loading="lazy">
-        <span class="card-badge">${item.profession}</span>
+        <img src="${item.image}" alt="${item.professionName}" loading="lazy">
+        <span class="card-badge">${item.variantType}</span>
       </div>
       <div class="card-body">
-        <h3 class="card-title">${item.title}</h3>
-        <p class="card-desc">${item.desc}</p>
-        <div class="card-tags">
-          ${item.tags.map(t => `<span class="tag-chip">${t}</span>`).join('')}
-        </div>
+        <span class="card-kicker">${item.professionTitle}</span>
+        <h3 class="card-title">${item.professionName}</h3>
+        <p class="card-variant-label">Design Variant: <strong>${item.variantName}</strong></p>
         <div class="card-actions">
           <a href="${item.path}" class="btn-view" target="_blank" rel="noopener">Live Demo &nearr;</a>
-          <a href="https://github.com/AI-BuildInfra/portfolio-templates/tree/main/${item.folder.replace('./', '')}" target="_blank" class="btn-folder" title="View Source on GitHub">Source 📁</a>
+          <a href="https://github.com/AI-BuildInfra/portfolio-templates/tree/main/${item.folder}" target="_blank" class="btn-folder" title="View Source on GitHub">Source 📁</a>
         </div>
       </div>
     </article>
   `).join('');
 }
 
-function setupFilters() {
-  const pills = document.querySelectorAll('.cat-pill');
-  pills.forEach(pill => {
+function initFilters() {
+  // Category filter
+  document.querySelectorAll('.cat-pill').forEach(pill => {
     pill.addEventListener('click', () => {
-      pills.forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
-      const filter = pill.dataset.filter;
-      if (filter === 'all') {
-        renderCatalog(TEMPLATES_CATALOG);
-      } else {
-        const filtered = TEMPLATES_CATALOG.filter(t => t.category === filter);
-        renderCatalog(filtered);
-      }
+      currentCategory = pill.dataset.filter;
+      renderCatalog();
     });
+  });
+
+  // Profession selector
+  const profSelect = document.getElementById('profession-select');
+  profSelect.addEventListener('change', (e) => {
+    currentProfession = e.target.value;
+    renderCatalog();
+  });
+
+  // Search input
+  const searchInput = document.getElementById('search-input');
+  searchInput.addEventListener('input', (e) => {
+    currentSearch = e.target.value;
+    renderCatalog();
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderCatalog(TEMPLATES_CATALOG);
-  setupFilters();
+  renderCatalog();
+  initFilters();
 });

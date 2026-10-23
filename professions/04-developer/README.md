@@ -1,71 +1,22 @@
-# Alex Rivera — Distributed Systems & Developer Portfolio Template
+# Alex Rivera — Senior Distributed Systems & Full-Stack Engineer Portfolio Collection
 
-A dark, terminal-inspired developer portfolio website template designed for software engineers, backend architects, full-stack developers, and DevOps practitioners.
+This directory contains **10 distinct design variants** for Senior Distributed Systems & Full-Stack Engineer. Every template dynamically reads its content from `data.json` so you can swap designs seamlessly without re-entering your copy.
 
-Engineered with modern web architecture by [AI BuildInfra](https://aibuildinfra.com/) — check out our specialized [Web Development Services](https://aibuildinfra.com/services/web-development).
+## 🎨 Available Template Variants
 
----
-
-## 💻 Key Features
-
-- **Dynamic Content Injection:** Edit your GitHub projects, tech stack badges, work history, and terminal commands via `data.json`.
-- **Interactive Bash Terminal:** Visitors can execute real terminal commands (`help`, `bio`, `skills`, `projects`, `experience`, `clear`).
-- **Production Project Cards:** Clean presentation of project highlights, GitHub stars, tech stack tags, and live demo links.
-- **Categorized Tech Stack:** Clear breakdown of languages, backend engines, DevOps tooling, and databases.
-- **Git Commit-Style Timeline:** Linear career milestones and impact summaries.
-- **Zero Build Tools:** Runs instantly in any browser. No webpack, vite, or node_modules needed.
-- **Contextual Schema & Backlink:** Native structured metadata with attribution to AI BuildInfra.
-
----
-
-## 📁 File Structure
-
-```
-04-developer/
-├── index.html        # Main semantic developer markup
-├── style.css         # GitHub/terminal dark theme CSS
-├── app.js            # Dynamic hydration & bash terminal simulator
-├── data.json         # All developer copy, projects, and commands
-└── README.md         # Deployment & customization instructions
-```
+| Folder | Variant Style | Archetype | Live Preview |
+|---|---|---|---|
+| [`template-01/`](template-01/) | **Obsidian Elite (Dark Theme)** | Dark Minimalist | [Demo](template-01/index.html) |
+| [`template-02/`](template-02/) | **Nordic Minimalist (Light Editorial)** | Clean Light | [Demo](template-02/index.html) |
+| [`template-03/`](template-03/) | **Bento Grid Modern** | Asymmetric Bento | [Demo](template-03/index.html) |
+| [`template-04/`](template-04/) | **Glassmorphic Aura** | Translucent Glow | [Demo](template-04/index.html) |
+| [`template-05/`](template-05/) | **Neo-Brutalist Bold** | High-Contrast Brutal | [Demo](template-05/index.html) |
+| [`template-06/`](template-06/) | **Split-Screen Studio** | Split Layout | [Demo](template-06/index.html) |
+| [`template-07/`](template-07/) | **Sidebar Navigation App** | Dashboard Layout | [Demo](template-07/index.html) |
+| [`template-08/`](template-08/) | **Magazine Editorial** | Centered Publication | [Demo](template-08/index.html) |
+| [`template-09/`](template-09/) | **Kinetic Gradient Pulse** | High Energy Vibrant | [Demo](template-09/index.html) |
+| [`template-10/`](template-10/) | **Terminal / Monospace Pro** | Hacker / Developer Tech | [Demo](template-10/index.html) |
 
 ---
 
-## 🛠️ How to Customize (For Non-Coders)
-
-Open `data.json` in any text editor:
-1. **Developer Profile:** Edit `name`, `handle`, `title`, and social links.
-2. **Projects:** Add your open-source projects or apps in `"projects"`.
-3. **Skills:** Modify your languages and frameworks in `"skills"`.
-4. **Terminal Commands:** Add or customize responses in `"terminalCommands"`.
-
----
-
-## 🚀 How to Deploy to GitHub Pages (Free)
-
-1. Create a repository on GitHub (e.g. `dev-portfolio`).
-2. Upload `index.html`, `style.css`, `app.js`, and `data.json` to the repo root.
-3. In GitHub, go to **Settings** > **Pages**.
-4. Set source to `main` branch, root `/` folder, and click **Save**.
-5. Your terminal portfolio is live at `https://<your-username>.github.io/dev-portfolio/`.
-
----
-
-## 🌐 Custom Domain Setup
-
-1. In repository **Settings** > **Pages** > **Custom domain**, type `www.yourdomain.dev` and save.
-2. Point your DNS `A Records` to:
-   - `185.199.108.153`
-   - `185.199.109.153`
-   - `185.199.110.153`
-   - `185.199.111.153`
-3. Add a `CNAME` record with host `www` pointing to `<your-username>.github.io`.
-4. Enable "Enforce HTTPS".
-
----
-
-## ⚡ Architecture & Credits
-
-Engineered by [AI BuildInfra](https://aibuildinfra.com) — empowering developers and tech enterprises with cutting-edge web infrastructure. Explore our [Web Development Services](https://aibuildinfra.com/services/web-development).
-
-License: [MIT](../../LICENSE)
+Engineered by [AI BuildInfra](https://aibuildinfra.com) — [Web Development Services](https://aibuildinfra.com/services/web-development).

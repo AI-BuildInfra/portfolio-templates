@@ -1,0 +1,107 @@
+{
+  "id": "11-musician",
+  "name": "Liam O'Connor (NovaPulse)",
+  "category": "creative",
+  "title": "Electronic Music Producer, DJ & Sound Designer",
+  "headline": "Fusing Cinematic Orchestral Elements with Kinetic Melodic House",
+  "tagline": "Producer • Touring DJ • Mixing Engineer",
+  "bio": "Liam O'Connor (performing as NovaPulse) is an electronic producer whose tracks have surpassed 65M global streams. Headlining international festivals from ADE Amsterdam to Coachella Sahara.",
+  "location": "Berlin & London",
+  "email": "mgmt@novapulsemusic.com",
+  "phone": "+49 30 555 0192",
+  "heroImage": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80",
+  "avatar": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+  "stats": [
+    {
+      "val": "65M+",
+      "label": "Spotify & Apple Streams"
+    },
+    {
+      "val": "180+",
+      "label": "International DJ Sets"
+    },
+    {
+      "val": "#1",
+      "label": "Beatport Melodic Chart"
+    },
+    {
+      "val": "12",
+      "label": "Official Remixes Shipped"
+    }
+  ],
+  "itemsTitle": "Discography & Live Performances",
+  "items": [
+    {
+      "title": "Echoes in the Stratosphere (EP)",
+      "tag": "Original Release",
+      "desc": "4-track melodic techno journey exploring analog Moog synthesis.",
+      "meta": "Anjunadeep / Afterlife • 2025",
+      "img": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Live at Printworks London",
+      "tag": "Festival Set",
+      "desc": "2-hour headline set featuring exclusive unreleased VIP edits.",
+      "meta": "Full 4K Video Stream",
+      "img": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Nebula Synthwave Re-Imagining",
+      "tag": "Remix",
+      "desc": "Official remix for Grammy-nominated synthpop group.",
+      "meta": "Over 14M Streams",
+      "img": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Bespoke Game Audio Scoring",
+      "tag": "Sound Design",
+      "desc": "Atmospheric ambient electronic soundtrack for indie sci-fi game.",
+      "meta": "Unity & FMOD Integration",
+      "img": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "packages": [
+    {
+      "name": "Festival & Club DJ Headline Set",
+      "price": "$5,000+",
+      "features": [
+        "90 to 120-minute headline DJ performance",
+        "Custom visuals sync file provided",
+        "Social media tour date promotion",
+        "Technical rider coordination"
+      ]
+    },
+    {
+      "name": "Full Production Track / Mix",
+      "price": "$2,800",
+      "features": [
+        "Full electronic track arrangement",
+        "Analog synth mastering & stem mixdown",
+        "Radio edit, extended club mix, & instrumental",
+        "Commercial sync licensing options"
+      ]
+    },
+    {
+      "name": "Bespoke Commercial Sound Score",
+      "price": "$4,500",
+      "features": [
+        "Custom audio branding sonic identity",
+        "Film / trailer atmospheric music composition",
+        "All stem audio files in 24-bit 96kHz",
+        "Full broadcast usage rights"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "quote": "NovaPulse creates evocative, stadium-sized melodic emotion.",
+      "author": "Mixmag",
+      "role": "Music Magazine"
+    },
+    {
+      "quote": "His mastering and analog low-end punch are unrivaled in electronic music.",
+      "author": "Pete Tong",
+      "role": "BBC Radio 1"
+    }
+  ]
+}

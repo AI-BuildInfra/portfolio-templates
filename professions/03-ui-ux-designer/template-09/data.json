@@ -1,0 +1,107 @@
+{
+  "id": "03-ui-ux-designer",
+  "name": "Maya Lin",
+  "category": "creative",
+  "title": "Staff Product & Design Systems Designer",
+  "headline": "Crafting Resilient Digital Products and Scalable Multi-Brand Design Systems",
+  "tagline": "Design Systems • Enterprise SaaS • Fintech",
+  "bio": "Over 9 years architecting products for fintech unicorns, developer platforms, and enterprise SaaS. Bridging rigorous qualitative research with production token architecture.",
+  "location": "Seattle, WA & Remote",
+  "email": "hello@mayalinux.design",
+  "phone": "+1 (206) 555-0144",
+  "heroImage": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+  "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+  "stats": [
+    {
+      "val": "9+",
+      "label": "Years Experience"
+    },
+    {
+      "val": "14+",
+      "label": "Design Systems Shipped"
+    },
+    {
+      "val": "2.4M+",
+      "label": "Active Platform Users"
+    },
+    {
+      "val": "3",
+      "label": "Design Awards (Red Dot)"
+    }
+  ],
+  "itemsTitle": "Selected Product Case Studies",
+  "items": [
+    {
+      "title": "VaultPay Global Treasury App",
+      "tag": "Fintech",
+      "desc": "Autonomous international cross-border liquidity management platform.",
+      "meta": "+164% Daily Transactions",
+      "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Prism Multi-Brand Design System",
+      "tag": "Design Systems",
+      "desc": "Unified 4 enterprise brands under tokenized WCAG 2.1 AAA accessibility.",
+      "meta": "62% Faster Sprint Velocity",
+      "img": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Orbit AI Codebase Copilot",
+      "tag": "Developer Tools",
+      "desc": "Human-in-the-loop AST visualization and code refactoring interface.",
+      "meta": "4.9/5 CSAT Rating",
+      "img": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "title": "Krypton Health Patient Portal",
+      "tag": "HealthTech",
+      "desc": "Empowering patients with transparent telehealth scheduling and lab results.",
+      "meta": "98.7% Retention Rate",
+      "img": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "packages": [
+    {
+      "name": "Design System Audit & Tokens",
+      "price": "$4,500",
+      "features": [
+        "Figma token architecture review",
+        "Accessibility WCAG compliance audit",
+        "Component library restructuring",
+        "Developer handoff documentation"
+      ]
+    },
+    {
+      "name": "End-to-End Product Design",
+      "price": "$8,500+",
+      "features": [
+        "User research & journey blueprints",
+        "Wireframes to high-fidelity prototypes",
+        "Interactive Protopie testing",
+        "Engineering support & QA"
+      ]
+    },
+    {
+      "name": "Monthly Staff Design Advisory",
+      "price": "$3,800/mo",
+      "features": [
+        "15 hours design leadership",
+        "Design sprint alignment",
+        "Design team mentoring",
+        "Executive design reviews"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "quote": "Maya transformed our messy platform into a benchmark of elegant usability.",
+      "author": "Samantha Vance",
+      "role": "VP of Product"
+    },
+    {
+      "quote": "Her deep understanding of design tokens saved our engineering squads months of work.",
+      "author": "Julian Meyer",
+      "role": "Head of Engineering"
+    }
+  ]
+}
