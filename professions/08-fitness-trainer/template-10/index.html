@@ -23,74 +23,76 @@
     }
   }
   </script></head>
-<body class="arch-terminal">
-  <div class="terminal-shell">
-    <!-- Terminal Window Container -->
-    <div class="terminal-window">
-      <!-- Window Titlebar -->
-      <div class="terminal-titlebar">
-        <div class="window-controls">
-          <span class="w-btn w-close"></span>
-          <span class="w-btn w-min"></span>
-          <span class="w-btn w-max"></span>
-        </div>
-        <div class="window-title">bash &mdash; portfolio@fitness-trainer: ~ (80x24)</div>
-        <div class="window-status"><span class="term-status-dot"></span> LIVE</div>
-      </div>
-
-      <!-- Quick Command Bar -->
-      <div class="cli-shortcuts-bar">
-        <span class="shortcut-label">RUN:</span>
-        <button class="cli-btn" onclick="runCommand('help')">help</button>
-        <button class="cli-btn" onclick="runCommand('bio')">cat bio.txt</button>
-        <button class="cli-btn" onclick="runCommand('projects')">ls projects/</button>
-        <button class="cli-btn" onclick="runCommand('stats')">./get_metrics.sh</button>
-        <button class="cli-btn" onclick="runCommand('rates')">cat packages.json</button>
-        <button class="cli-btn" onclick="runCommand('contact')">./contact.sh</button>
-        <button class="cli-btn" onclick="runCommand('clear')">clear</button>
-      </div>
-
-      <!-- Terminal Output Canvas -->
-      <div class="terminal-body" id="terminal-screen">
-        <pre class="ascii-art">
-+----------------------------------------------------------+
-|  PORTFOLIO TERMINAL v4.2.0-LTS // ENVIRONMENT READY      |
-|  HOST: aibuildinfra.com  USER: fitness-trainer                    |
-+----------------------------------------------------------+
-        </pre>
-        <p class="term-line intro-line">System initialized. Type <code class="t-code">help</code> or click commands above to explore Marcus Drake's verified portfolio.</p>
-        <p class="term-line prompt-demo"><span class="t-prompt">$</span> whoami</p>
-        <p class="term-line response-line"><strong>Marcus Drake</strong> &mdash; CSCS • Elite Strength & Physique Coach (Miami, FL & Online Worldwide)</p>
-        
-        <!-- Live Terminal History Log -->
-        <div id="terminal-history"></div>
-
-        <!-- Active Interactive Prompt Line -->
-        <div class="terminal-input-row">
-          <span class="t-prompt">$</span>
-          <input type="text" id="terminal-input" class="terminal-input-field" placeholder="Type command here (e.g. help, projects, bio)..." autocomplete="off" autofocus>
-          <span class="blinking-cursor">▋</span>
+<body class="arch-athletic">
+  <header class="athletic-header">
+    <div class="container athletic-bar">
+      <div class="athletic-brand">
+        <span class="ath-icon">⚡</span>
+        <div>
+          <h1>Marcus Drake</h1>
+          <span class="ath-cert">CSCS • Elite Strength & Physique Coach &bull; CSCS CERTIFIED</span>
         </div>
       </div>
-
-      <!-- Graphical Data Stores (Hidden / Hydrated for terminal commands) -->
-      <div id="brand-name" style="display:none;">Marcus Drake</div>
-      <div id="hero-headline" style="display:none;">Evidence-Based Hypertrophy, Recomposition, and Peak Athletic Conditioning</div>
-      <div id="hero-tagline" style="display:none;">CSCS • Elite Strength & Physique Coach</div>
-      <div id="hero-bio" style="display:none;">Marcus Drake is an NSCA Certified Strength & Conditioning Specialist with 11+ years transforming 1,400+ executives and competitive lifters using scientific progressive overload.</div>
-      <div id="items-title" style="display:none;">Client Transformation Case Studies</div>
-      <div id="metrics-grid" style="display:none;"></div>
-      <div id="items-grid" style="display:none;"></div>
-      <div id="packages-grid" style="display:none;"></div>
-      <div id="reviews-grid" style="display:none;"></div>
-      <span id="year" style="display:none;"></span>
+      <div class="athletic-links">
+        <a href="#macro-calc">Macro Calc</a>
+        <a href="#coaching" class="btn-ath-cta">Apply for Coaching &rarr;</a>
+      </div>
     </div>
+  </header>
 
-    <!-- Terminal Footer -->
-    <footer class="terminal-footer">
-      <div class="container term-footer-flex">
-        <span>portfolio-os v4.2.0-lts // &copy; <span id="term-year">2026</span> Marcus Drake</span>
-        
+  <main class="container athletic-main">
+    <section class="ath-hero-plate">
+      <span class="ath-kicker">ELITE STRENGTH &amp; CONDITIONING PROTOCOL</span>
+      <h2 class="ath-headline">Evidence-Based Hypertrophy, Recomposition, and Peak Athletic Conditioning</h2>
+      <p class="ath-bio">Marcus Drake is an NSCA Certified Strength & Conditioning Specialist with 11+ years transforming 1,400+ executives and competitive lifters using scientific progressive overload.</p>
+      <div class="ath-metrics-grid" id="ath-metrics"></div>
+    </section>
+
+    <section class="ath-tools-section" id="macro-calc">
+      <div class="ath-tools-grid">
+        <div class="tool-card">
+          <h3>Interactive 1RM Strength Calculator</h3>
+          <p>Estimate your one-rep max using the Brzycki Formula.</p>
+          <div class="calc-inputs">
+            <input type="number" id="calc-weight" placeholder="Weight (lbs)" value="225">
+            <input type="number" id="calc-reps" placeholder="Reps Completed" value="5">
+            <button onclick="calculate1RM()" class="btn-calc">Calculate 1RM</button>
+          </div>
+          <div class="calc-result" id="rm-result">Estimated 1RM: <strong>253 lbs</strong></div>
+        </div>
+
+        <div class="tool-card">
+          <h3>Daily Macro Nutrient Estimator</h3>
+          <p>Optimal target macros based on body composition goals.</p>
+          <div class="macro-breakdown">
+            <div class="macro-bar"><span class="m-lbl">Protein (40%)</span><span class="m-val">200g</span></div>
+            <div class="macro-bar"><span class="m-lbl">Carbohydrates (35%)</span><span class="m-val">175g</span></div>
+            <div class="macro-bar"><span class="m-lbl">Fats (25%)</span><span class="m-val">55g</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ath-split-section">
+      <div class="ath-section-head">
+        <h3>Client Transformations &amp; Benchmark Metrics</h3>
+      </div>
+      <div class="split-cards-grid" id="split-cards"></div>
+    </section>
+
+    <section class="ath-coaching-section" id="coaching">
+      <div class="coaching-card">
+        <h3>1-on-1 High Performance Coaching Applications</h3>
+        <p>Bespoke periodization programming, weekly biometric check-ins, and precision nutrition guidance.</p>
+        <div class="ath-packages-grid" id="ath-packages"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="athletic-footer">
+    <div class="container">
+      <p>&copy; 2026 Marcus Drake. Certified Strength and Conditioning Specialist (CSCS).</p>
+      
   <div class="footer-backlink" id="infra-credit-wrap">
     <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
       <span class="badge-icon">⚡</span>
@@ -98,10 +100,9 @@
       <span class="badge-score">100</span>
     </a>
   </div>
-      </div>
-    </footer>
-  </div>
-
+    </div>
+  </footer>
+  <script src="data.json" type="application/json" id="portfolio-data"></script>
   <script src="app.js"></script>
 </body>
 </html>

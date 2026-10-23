@@ -23,74 +23,68 @@
     }
   }
   </script></head>
-<body class="arch-terminal">
-  <div class="terminal-shell">
-    <!-- Terminal Window Container -->
-    <div class="terminal-window">
-      <!-- Window Titlebar -->
-      <div class="terminal-titlebar">
-        <div class="window-controls">
-          <span class="w-btn w-close"></span>
-          <span class="w-btn w-min"></span>
-          <span class="w-btn w-max"></span>
-        </div>
-        <div class="window-title">bash &mdash; portfolio@musician: ~ (80x24)</div>
-        <div class="window-status"><span class="term-status-dot"></span> LIVE</div>
+<body class="arch-vinyl">
+  <header class="vinyl-header">
+    <div class="container vinyl-bar">
+      <div class="vinyl-brand">
+        <span class="v-disc-icon">💿</span>
+        <h1>Liam O'Connor (NovaPulse)</h1>
       </div>
-
-      <!-- Quick Command Bar -->
-      <div class="cli-shortcuts-bar">
-        <span class="shortcut-label">RUN:</span>
-        <button class="cli-btn" onclick="runCommand('help')">help</button>
-        <button class="cli-btn" onclick="runCommand('bio')">cat bio.txt</button>
-        <button class="cli-btn" onclick="runCommand('projects')">ls projects/</button>
-        <button class="cli-btn" onclick="runCommand('stats')">./get_metrics.sh</button>
-        <button class="cli-btn" onclick="runCommand('rates')">cat packages.json</button>
-        <button class="cli-btn" onclick="runCommand('contact')">./contact.sh</button>
-        <button class="cli-btn" onclick="runCommand('clear')">clear</button>
+      <div class="vinyl-stream-counter">
+        <span>65M+ STREAMS &bull; BEATPORT #1</span>
+        <a href="#tour" class="btn-vinyl-tour">Tour Dates &rarr;</a>
       </div>
-
-      <!-- Terminal Output Canvas -->
-      <div class="terminal-body" id="terminal-screen">
-        <pre class="ascii-art">
-+----------------------------------------------------------+
-|  PORTFOLIO TERMINAL v4.2.0-LTS // ENVIRONMENT READY      |
-|  HOST: aibuildinfra.com  USER: musician                    |
-+----------------------------------------------------------+
-        </pre>
-        <p class="term-line intro-line">System initialized. Type <code class="t-code">help</code> or click commands above to explore Liam O'Connor (NovaPulse)'s verified portfolio.</p>
-        <p class="term-line prompt-demo"><span class="t-prompt">$</span> whoami</p>
-        <p class="term-line response-line"><strong>Liam O'Connor (NovaPulse)</strong> &mdash; Electronic Music Producer, DJ & Sound Designer (Berlin & London)</p>
-        
-        <!-- Live Terminal History Log -->
-        <div id="terminal-history"></div>
-
-        <!-- Active Interactive Prompt Line -->
-        <div class="terminal-input-row">
-          <span class="t-prompt">$</span>
-          <input type="text" id="terminal-input" class="terminal-input-field" placeholder="Type command here (e.g. help, projects, bio)..." autocomplete="off" autofocus>
-          <span class="blinking-cursor">▋</span>
-        </div>
-      </div>
-
-      <!-- Graphical Data Stores (Hidden / Hydrated for terminal commands) -->
-      <div id="brand-name" style="display:none;">Liam O'Connor (NovaPulse)</div>
-      <div id="hero-headline" style="display:none;">Fusing Cinematic Orchestral Elements with Kinetic Melodic House</div>
-      <div id="hero-tagline" style="display:none;">Electronic Music Producer, DJ & Sound Designer</div>
-      <div id="hero-bio" style="display:none;">Liam O'Connor (performing as NovaPulse) is an electronic producer whose tracks have surpassed 65M global streams. Headlining international festivals from ADE Amsterdam to Coachella Sahara.</div>
-      <div id="items-title" style="display:none;">Discography & Live Performances</div>
-      <div id="metrics-grid" style="display:none;"></div>
-      <div id="items-grid" style="display:none;"></div>
-      <div id="packages-grid" style="display:none;"></div>
-      <div id="reviews-grid" style="display:none;"></div>
-      <span id="year" style="display:none;"></span>
     </div>
+  </header>
 
-    <!-- Terminal Footer -->
-    <footer class="terminal-footer">
-      <div class="container term-footer-flex">
-        <span>portfolio-os v4.2.0-lts // &copy; <span id="term-year">2026</span> Liam O'Connor (NovaPulse)</span>
-        
+  <main class="container vinyl-main">
+    <section class="turntable-deck">
+      <div class="turntable-shell">
+        <div class="turntable-platter">
+          <div class="vinyl-record" id="vinyl-disc">
+            <div class="vinyl-grooves"></div>
+            <div class="vinyl-center-label">
+              <span class="record-title">NOVAPULSE</span>
+              <span class="record-rpm">33⅓ RPM</span>
+              <span class="record-sub">SIDE A</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="turntable-controls-panel">
+          <span class="vinyl-kicker">NOW SPINNING &bull; HIGH FIDELITY STEREO</span>
+          <h2 id="now-playing-title">Fusing Cinematic Orchestral Elements with Kinetic Melodic House</h2>
+          <p class="track-meta">Liam O'Connor (performing as NovaPulse) is an electronic producer whose tracks have surpassed 65M global streams. Headlining international festivals from ADE Amsterdam to Coachella Sahara.</p>
+          
+          <div class="audio-controls-row">
+            <button class="btn-play-vinyl" id="btn-play-vinyl" onclick="toggleVinylPlay()">
+              <span id="play-icon">▶ Play Synthesizer Preview</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="vinyl-releases-section">
+      <div class="vinyl-section-head">
+        <h3>Selected Discography &amp; Festival Sets</h3>
+      </div>
+      <div class="vinyl-grid" id="vinyl-grid"></div>
+    </section>
+
+    <section class="vinyl-tour-section" id="tour">
+      <div class="tour-card">
+        <h3>Festival Headline Sets &amp; Sonic Commissions</h3>
+        <p>Available for international club residencies, festival main stages, and bespoke commercial film scoring.</p>
+        <div class="vinyl-packages" id="vinyl-packages"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="vinyl-footer">
+    <div class="container">
+      <p>&copy; 2026 Liam O'Connor (NovaPulse). Electronic Music Producer &amp; Sound Designer.</p>
+      
   <div class="footer-backlink" id="infra-credit-wrap">
     <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
       <span class="badge-icon">⚡</span>
@@ -98,10 +92,9 @@
       <span class="badge-score">100</span>
     </a>
   </div>
-      </div>
-    </footer>
-  </div>
-
+    </div>
+  </footer>
+  <script src="data.json" type="application/json" id="portfolio-data"></script>
   <script src="app.js"></script>
 </body>
 </html>

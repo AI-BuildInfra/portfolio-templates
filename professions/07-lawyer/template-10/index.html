@@ -23,74 +23,59 @@
     }
   }
   </script></head>
-<body class="arch-terminal">
-  <div class="terminal-shell">
-    <!-- Terminal Window Container -->
-    <div class="terminal-window">
-      <!-- Window Titlebar -->
-      <div class="terminal-titlebar">
-        <div class="window-controls">
-          <span class="w-btn w-close"></span>
-          <span class="w-btn w-min"></span>
-          <span class="w-btn w-max"></span>
-        </div>
-        <div class="window-title">bash &mdash; portfolio@lawyer: ~ (80x24)</div>
-        <div class="window-status"><span class="term-status-dot"></span> LIVE</div>
-      </div>
-
-      <!-- Quick Command Bar -->
-      <div class="cli-shortcuts-bar">
-        <span class="shortcut-label">RUN:</span>
-        <button class="cli-btn" onclick="runCommand('help')">help</button>
-        <button class="cli-btn" onclick="runCommand('bio')">cat bio.txt</button>
-        <button class="cli-btn" onclick="runCommand('projects')">ls projects/</button>
-        <button class="cli-btn" onclick="runCommand('stats')">./get_metrics.sh</button>
-        <button class="cli-btn" onclick="runCommand('rates')">cat packages.json</button>
-        <button class="cli-btn" onclick="runCommand('contact')">./contact.sh</button>
-        <button class="cli-btn" onclick="runCommand('clear')">clear</button>
-      </div>
-
-      <!-- Terminal Output Canvas -->
-      <div class="terminal-body" id="terminal-screen">
-        <pre class="ascii-art">
-+----------------------------------------------------------+
-|  PORTFOLIO TERMINAL v4.2.0-LTS // ENVIRONMENT READY      |
-|  HOST: aibuildinfra.com  USER: lawyer                    |
-+----------------------------------------------------------+
-        </pre>
-        <p class="term-line intro-line">System initialized. Type <code class="t-code">help</code> or click commands above to explore Victoria Sterling, Esq.'s verified portfolio.</p>
-        <p class="term-line prompt-demo"><span class="t-prompt">$</span> whoami</p>
-        <p class="term-line response-line"><strong>Victoria Sterling, Esq.</strong> &mdash; Principal Counsel • Sterling Legal (One World Trade Center, New York, NY)</p>
-        
-        <!-- Live Terminal History Log -->
-        <div id="terminal-history"></div>
-
-        <!-- Active Interactive Prompt Line -->
-        <div class="terminal-input-row">
-          <span class="t-prompt">$</span>
-          <input type="text" id="terminal-input" class="terminal-input-field" placeholder="Type command here (e.g. help, projects, bio)..." autocomplete="off" autofocus>
-          <span class="blinking-cursor">▋</span>
+<body class="arch-judicial">
+  <header class="judicial-header">
+    <div class="container judicial-bar">
+      <div class="judicial-seal">
+        <span class="seal-icon">⚖️</span>
+        <div>
+          <h1>Victoria Sterling, Esq.</h1>
+          <span class="judicial-bar-num">Principal Counsel • Sterling Legal &bull; STATE BAR OF NEW YORK</span>
         </div>
       </div>
-
-      <!-- Graphical Data Stores (Hidden / Hydrated for terminal commands) -->
-      <div id="brand-name" style="display:none;">Victoria Sterling, Esq.</div>
-      <div id="hero-headline" style="display:none;">Strategic Legal Counsel for Transformative M&A, IP, and Corporate Governance</div>
-      <div id="hero-tagline" style="display:none;">Principal Counsel • Sterling Legal</div>
-      <div id="hero-bio" style="display:none;">Victoria Sterling has over 18 years of legal advisory experience representing Fortune 500 corporations, private equity funds, and emerging technology ventures before federal courts and international arbitrations.</div>
-      <div id="items-title" style="display:none;">Representative Matters & Legal Focus</div>
-      <div id="metrics-grid" style="display:none;"></div>
-      <div id="items-grid" style="display:none;"></div>
-      <div id="packages-grid" style="display:none;"></div>
-      <div id="reviews-grid" style="display:none;"></div>
-      <span id="year" style="display:none;"></span>
+      <div class="judicial-jurisdiction">
+        <span>U.S. SUPREME COURT &bull; SDNY &bull; 2ND CIRCUIT</span>
+        <a href="#retainer" class="btn-retainer">Retain Counsel &rarr;</a>
+      </div>
     </div>
+  </header>
 
-    <!-- Terminal Footer -->
-    <footer class="terminal-footer">
-      <div class="container term-footer-flex">
-        <span>portfolio-os v4.2.0-lts // &copy; <span id="term-year">2026</span> Victoria Sterling, Esq.</span>
-        
+  <main class="container judicial-main">
+    <section class="judicial-folio">
+      <div class="folio-stamp">&sect; 1.01 MEMORANDUM OF JURISDICTION &amp; PRACTICE</div>
+      <h2 class="judicial-headline">Strategic Legal Counsel for Transformative M&A, IP, and Corporate Governance</h2>
+      <p class="judicial-bio">Victoria Sterling has over 18 years of legal advisory experience representing Fortune 500 corporations, private equity funds, and emerging technology ventures before federal courts and international arbitrations.</p>
+      <div class="judicial-verdict-metrics" id="judicial-metrics"></div>
+    </section>
+
+    <section class="judicial-docket-section">
+      <div class="docket-header">
+        <h3>RECORD OF REPRESENTATIVE MATTERS &amp; VERDICTS</h3>
+        <span>REPORTED IN FEDERAL &amp; ARBITRATION REPORTERS</span>
+      </div>
+      <div class="docket-grid" id="docket-grid"></div>
+    </section>
+
+    <section class="judicial-retainer-section" id="retainer">
+      <div class="retainer-box">
+        <h3>Privileged Legal Consultation &amp; Conflict Check</h3>
+        <p>All inquiries are treated with strict attorney-client privilege. Representation begins upon execution of a formal retainer agreement.</p>
+        <div class="retainer-tiers" id="retainer-tiers"></div>
+        <form class="retainer-form" onsubmit="handleRetainerSubmit(event)">
+          <div class="j-row">
+            <input type="text" placeholder="Individual / Entity Legal Name" required>
+            <input type="email" placeholder="Corporate Email Address" required>
+          </div>
+          <button type="submit" class="btn-retainer-submit">Submit Formal Conflict Intake &rarr;</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="judicial-footer">
+    <div class="container">
+      <p>&copy; 2026 Victoria Sterling, Esq.. Attorney Advertising. Prior results do not guarantee similar outcomes.</p>
+      
   <div class="footer-backlink" id="infra-credit-wrap">
     <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
       <span class="badge-icon">⚡</span>
@@ -98,10 +83,9 @@
       <span class="badge-score">100</span>
     </a>
   </div>
-      </div>
-    </footer>
-  </div>
-
+    </div>
+  </footer>
+  <script src="data.json" type="application/json" id="portfolio-data"></script>
   <script src="app.js"></script>
 </body>
 </html>

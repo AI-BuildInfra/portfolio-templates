@@ -31,7 +31,7 @@ const ARCHETYPES_META = {
   "template-07": { label: "Sidebar App", badge: "SaaS Dashboard Dock", summary: "Modern productivity dock with collapsible navigation sidebar and sub-panels." },
   "template-08": { label: "Magazine Serif", badge: "Publication Masthead", summary: "Classic editorial newspaper masthead, dateline stamp, and pull-quote sidebars." },
   "template-09": { label: "Kinetic Pulse", badge: "Draggable Reel Carousel", summary: "Horizontal touch & drag gallery reel with kinetic friction physics." },
-  "template-10": { label: "Terminal Monospace", badge: "Interactive Bash CLI", summary: "Functional hacker shell with command parser (`help`, `cat`, `skills`, `clear`)." }
+  "template-10": { label: "Domain Signature Studio", badge: "Career-Tailored", summary: "Dedicated signature archetype crafted specifically for each career (e.g. 35mm Contact Sheet for Photographers, Clinical Dossier for Doctors, Terminal CLI for Developers, etc.)." }
 };
 
 let activeProfessionFilter = "all";
@@ -252,18 +252,24 @@ function openProfessionDrawer(profId) {
   const cardsHtml = templates.map((t, idx) => {
     const arch = ARCHETYPES_META[t.variantId] || { label: t.variantName, badge: t.variantType, summary: "" };
     const numDisplay = String(idx + 1).padStart(2, '0');
+    const displayLabel = (t.variantId === "template-10") ? t.variantName : arch.label;
+    const displayBadge = t.variantType || arch.badge;
+    const summaryText = (t.variantId === "template-10" && t.professionId !== "04-developer" && t.professionId !== "14-cybersecurity")
+      ? `Dedicated domain-authentic layout engineered specifically for ${meta.title}.`
+      : arch.summary;
+
     return `
       <article class="drawer-item-card">
         <div class="drawer-item-media">
           <img src="${t.image}" alt="${t.variantName}" loading="lazy">
           <span class="drawer-variant-tag">STYLE ${numDisplay} / 10</span>
-          <span class="drawer-style-tag">${arch.badge}</span>
+          <span class="drawer-style-tag">${escapeHtml(displayBadge)}</span>
         </div>
         <div class="drawer-item-body">
-          <span class="drawer-archetype-name">${arch.label}</span>
+          <span class="drawer-archetype-name">${escapeHtml(displayLabel)}</span>
           <h4>${escapeHtml(t.variantName)}</h4>
           <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.45; margin-bottom: 1.2rem;">
-            ${arch.summary}
+            ${summaryText}
           </p>
           <div class="drawer-actions">
             <a href="${t.path}" target="_blank" rel="noopener" class="btn-drawer-demo">

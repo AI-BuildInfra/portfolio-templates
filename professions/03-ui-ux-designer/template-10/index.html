@@ -23,74 +23,93 @@
     }
   }
   </script></head>
-<body class="arch-terminal">
-  <div class="terminal-shell">
-    <!-- Terminal Window Container -->
-    <div class="terminal-window">
-      <!-- Window Titlebar -->
-      <div class="terminal-titlebar">
-        <div class="window-controls">
-          <span class="w-btn w-close"></span>
-          <span class="w-btn w-min"></span>
-          <span class="w-btn w-max"></span>
-        </div>
-        <div class="window-title">bash &mdash; portfolio@ui-ux-designer: ~ (80x24)</div>
-        <div class="window-status"><span class="term-status-dot"></span> LIVE</div>
-      </div>
-
-      <!-- Quick Command Bar -->
-      <div class="cli-shortcuts-bar">
-        <span class="shortcut-label">RUN:</span>
-        <button class="cli-btn" onclick="runCommand('help')">help</button>
-        <button class="cli-btn" onclick="runCommand('bio')">cat bio.txt</button>
-        <button class="cli-btn" onclick="runCommand('projects')">ls projects/</button>
-        <button class="cli-btn" onclick="runCommand('stats')">./get_metrics.sh</button>
-        <button class="cli-btn" onclick="runCommand('rates')">cat packages.json</button>
-        <button class="cli-btn" onclick="runCommand('contact')">./contact.sh</button>
-        <button class="cli-btn" onclick="runCommand('clear')">clear</button>
-      </div>
-
-      <!-- Terminal Output Canvas -->
-      <div class="terminal-body" id="terminal-screen">
-        <pre class="ascii-art">
-+----------------------------------------------------------+
-|  PORTFOLIO TERMINAL v4.2.0-LTS // ENVIRONMENT READY      |
-|  HOST: aibuildinfra.com  USER: ui-ux-designer                    |
-+----------------------------------------------------------+
-        </pre>
-        <p class="term-line intro-line">System initialized. Type <code class="t-code">help</code> or click commands above to explore Maya Lin's verified portfolio.</p>
-        <p class="term-line prompt-demo"><span class="t-prompt">$</span> whoami</p>
-        <p class="term-line response-line"><strong>Maya Lin</strong> &mdash; Staff Product & Design Systems Designer (Seattle, WA & Remote)</p>
-        
-        <!-- Live Terminal History Log -->
-        <div id="terminal-history"></div>
-
-        <!-- Active Interactive Prompt Line -->
-        <div class="terminal-input-row">
-          <span class="t-prompt">$</span>
-          <input type="text" id="terminal-input" class="terminal-input-field" placeholder="Type command here (e.g. help, projects, bio)..." autocomplete="off" autofocus>
-          <span class="blinking-cursor">▋</span>
-        </div>
-      </div>
-
-      <!-- Graphical Data Stores (Hidden / Hydrated for terminal commands) -->
-      <div id="brand-name" style="display:none;">Maya Lin</div>
-      <div id="hero-headline" style="display:none;">Crafting Resilient Digital Products and Scalable Multi-Brand Design Systems</div>
-      <div id="hero-tagline" style="display:none;">Staff Product & Design Systems Designer</div>
-      <div id="hero-bio" style="display:none;">Over 9 years architecting products for fintech unicorns, developer platforms, and enterprise SaaS. Bridging rigorous qualitative research with production token architecture.</div>
-      <div id="items-title" style="display:none;">Selected Product Case Studies</div>
-      <div id="metrics-grid" style="display:none;"></div>
-      <div id="items-grid" style="display:none;"></div>
-      <div id="packages-grid" style="display:none;"></div>
-      <div id="reviews-grid" style="display:none;"></div>
-      <span id="year" style="display:none;"></span>
+<body class="arch-figma-studio">
+  <header class="figma-top-bar">
+    <div class="figma-brand">
+      <span class="figma-icon">❖</span>
+      <span class="figma-file-title">Maya Lin &mdash; Design System &amp; Product Portfolio</span>
+      <span class="figma-version-pill">v4.8 Production</span>
     </div>
+    <div class="figma-viewport-controls">
+      <button class="vp-btn active" onclick="setCanvasWidth('desktop')">🖥️ Desktop 1440</button>
+      <button class="vp-btn" onclick="setCanvasWidth('tablet')">📱 Tablet 768</button>
+      <button class="vp-btn" onclick="setCanvasWidth('mobile')">📱 Mobile 390</button>
+    </div>
+    <div class="figma-actions">
+      <a href="#contact" class="btn-share-spec">Hire Designer &nearr;</a>
+    </div>
+  </header>
 
-    <!-- Terminal Footer -->
-    <footer class="terminal-footer">
-      <div class="container term-footer-flex">
-        <span>portfolio-os v4.2.0-lts // &copy; <span id="term-year">2026</span> Maya Lin</span>
-        
+  <div class="figma-workspace">
+    <aside class="figma-token-sidebar">
+      <div class="token-sidebar-header">DESIGN TOKENS</div>
+      <div class="token-group">
+        <span class="token-group-title">COLOR PALETTE</span>
+        <div class="token-swatches">
+          <div class="token-swatch" style="background: #3b82f6;" title="Primary / 500"><span>#3b82f6</span></div>
+          <div class="token-swatch" style="background: #10b981;" title="Success / 500"><span>#10b981</span></div>
+          <div class="token-swatch" style="background: #f59e0b;" title="Warning / 500"><span>#f59e0b</span></div>
+          <div class="token-swatch" style="background: #ef4444;" title="Danger / 500"><span>#ef4444</span></div>
+          <div class="token-swatch" style="background: #0f172a;" title="Slate / 900"><span>#0f172a</span></div>
+        </div>
+      </div>
+      <div class="token-group">
+        <span class="token-group-title">TYPOGRAPHY TOKENS</span>
+        <div class="token-text-scale">
+          <div class="token-row"><span>Display:</span><strong>Inter 48px / -0.02em</strong></div>
+          <div class="token-row"><span>Heading:</span><strong>Inter 24px / 600</strong></div>
+          <div class="token-row"><span>Body:</span><strong>Inter 15px / 1.6</strong></div>
+          <div class="token-row"><span>Code:</span><strong>JetBrains Mono 13px</strong></div>
+        </div>
+      </div>
+      <div class="token-group">
+        <span class="token-group-title">COMPONENT PLAYGROUND</span>
+        <div class="interactive-sandbox-box">
+          <label style="font-size: 0.72rem; color: #a1a1aa; display: block; margin-bottom: 0.4rem;">Button State Switcher:</label>
+          <div class="sandbox-buttons">
+            <button class="preview-btn state-default">Primary</button>
+            <button class="preview-btn state-hover">Hover</button>
+            <button class="preview-btn state-active">Active</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="figma-canvas-viewport" id="figma-canvas">
+      <div class="artboard-frame" id="artboard-frame">
+        <div class="artboard-titlebar">
+          <span class="artboard-name">Frame: Case Studies &amp; Design Architecture</span>
+          <span class="artboard-dim" id="artboard-dim">1440 &times; 2800</span>
+        </div>
+        <div class="artboard-inner">
+          <section class="canvas-hero">
+            <span class="canvas-chip">Staff Product & Design Systems Designer</span>
+            <h1 class="canvas-h1">Crafting Resilient Digital Products and Scalable Multi-Brand Design Systems</h1>
+            <p class="canvas-bio">Over 9 years architecting products for fintech unicorns, developer platforms, and enterprise SaaS. Bridging rigorous qualitative research with production token architecture.</p>
+            <div class="canvas-metrics" id="canvas-metrics"></div>
+          </section>
+          <section class="canvas-cases">
+            <div class="canvas-section-head">
+              <h2>Shipped Product Case Studies</h2>
+              <p>End-to-end design architectures with quantified business impacts.</p>
+            </div>
+            <div class="canvas-cases-grid" id="cases-grid"></div>
+          </section>
+          <section class="canvas-services" id="contact">
+            <div class="canvas-section-head">
+              <h2>Design System &amp; Product Sprints</h2>
+            </div>
+            <div class="canvas-packages" id="packages-grid"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="figma-footer">
+    <div class="container">
+      <p>&copy; 2026 Maya Lin. Product Design &amp; Scalable Multi-Brand Design Systems.</p>
+      
   <div class="footer-backlink" id="infra-credit-wrap">
     <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
       <span class="badge-icon">⚡</span>
@@ -98,10 +117,9 @@
       <span class="badge-score">100</span>
     </a>
   </div>
-      </div>
-    </footer>
-  </div>
-
+    </div>
+  </footer>
+  <script src="data.json" type="application/json" id="portfolio-data"></script>
   <script src="app.js"></script>
 </body>
 </html>

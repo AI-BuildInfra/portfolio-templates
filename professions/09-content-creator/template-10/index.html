@@ -23,74 +23,50 @@
     }
   }
   </script></head>
-<body class="arch-terminal">
-  <div class="terminal-shell">
-    <!-- Terminal Window Container -->
-    <div class="terminal-window">
-      <!-- Window Titlebar -->
-      <div class="terminal-titlebar">
-        <div class="window-controls">
-          <span class="w-btn w-close"></span>
-          <span class="w-btn w-min"></span>
-          <span class="w-btn w-max"></span>
-        </div>
-        <div class="window-title">bash &mdash; portfolio@content-creator: ~ (80x24)</div>
-        <div class="window-status"><span class="term-status-dot"></span> LIVE</div>
+<body class="arch-mediakit">
+  <header class="mediakit-header">
+    <div class="container mediakit-bar">
+      <div class="mk-brand">
+        <span class="mk-badge">MEDIA KIT</span>
+        <h1>Aria Thorne</h1>
       </div>
-
-      <!-- Quick Command Bar -->
-      <div class="cli-shortcuts-bar">
-        <span class="shortcut-label">RUN:</span>
-        <button class="cli-btn" onclick="runCommand('help')">help</button>
-        <button class="cli-btn" onclick="runCommand('bio')">cat bio.txt</button>
-        <button class="cli-btn" onclick="runCommand('projects')">ls projects/</button>
-        <button class="cli-btn" onclick="runCommand('stats')">./get_metrics.sh</button>
-        <button class="cli-btn" onclick="runCommand('rates')">cat packages.json</button>
-        <button class="cli-btn" onclick="runCommand('contact')">./contact.sh</button>
-        <button class="cli-btn" onclick="runCommand('clear')">clear</button>
+      <div class="mk-reach-badge">
+        <span>VERIFIED REACH: 1.8M AUDIENCE</span>
+        <a href="#sponsor" class="btn-sponsor">Partner With Aria &rarr;</a>
       </div>
-
-      <!-- Terminal Output Canvas -->
-      <div class="terminal-body" id="terminal-screen">
-        <pre class="ascii-art">
-+----------------------------------------------------------+
-|  PORTFOLIO TERMINAL v4.2.0-LTS // ENVIRONMENT READY      |
-|  HOST: aibuildinfra.com  USER: content-creator                    |
-+----------------------------------------------------------+
-        </pre>
-        <p class="term-line intro-line">System initialized. Type <code class="t-code">help</code> or click commands above to explore Aria Thorne's verified portfolio.</p>
-        <p class="term-line prompt-demo"><span class="t-prompt">$</span> whoami</p>
-        <p class="term-line response-line"><strong>Aria Thorne</strong> &mdash; Cinematic Travel & Tech Storyteller (Los Angeles & Tokyo)</p>
-        
-        <!-- Live Terminal History Log -->
-        <div id="terminal-history"></div>
-
-        <!-- Active Interactive Prompt Line -->
-        <div class="terminal-input-row">
-          <span class="t-prompt">$</span>
-          <input type="text" id="terminal-input" class="terminal-input-field" placeholder="Type command here (e.g. help, projects, bio)..." autocomplete="off" autofocus>
-          <span class="blinking-cursor">▋</span>
-        </div>
-      </div>
-
-      <!-- Graphical Data Stores (Hidden / Hydrated for terminal commands) -->
-      <div id="brand-name" style="display:none;">Aria Thorne</div>
-      <div id="hero-headline" style="display:none;">Crafting Cinematic Visual Narratives for a Global Community of 1.8M Explorers</div>
-      <div id="hero-tagline" style="display:none;">Cinematic Travel & Tech Storyteller</div>
-      <div id="hero-bio" style="display:none;">Aria Thorne is an award-winning travel filmmaker and digital creator with 1.8M+ community followers. She partners with leading brands like Sony, DJI, and Airbnb to craft high-production human stories.</div>
-      <div id="items-title" style="display:none;">Featured Films & Brand Campaigns</div>
-      <div id="metrics-grid" style="display:none;"></div>
-      <div id="items-grid" style="display:none;"></div>
-      <div id="packages-grid" style="display:none;"></div>
-      <div id="reviews-grid" style="display:none;"></div>
-      <span id="year" style="display:none;"></span>
     </div>
+  </header>
 
-    <!-- Terminal Footer -->
-    <footer class="terminal-footer">
-      <div class="container term-footer-flex">
-        <span>portfolio-os v4.2.0-lts // &copy; <span id="term-year">2026</span> Aria Thorne</span>
-        
+  <main class="container mediakit-main">
+    <section class="mk-deck-hero">
+      <div class="deck-lead">
+        <span class="deck-kicker">OFFICIAL BRAND PARTNERSHIP DECK &bull; 2026</span>
+        <h2>Crafting Cinematic Visual Narratives for a Global Community of 1.8M Explorers</h2>
+        <p>Aria Thorne is an award-winning travel filmmaker and digital creator with 1.8M+ community followers. She partners with leading brands like Sony, DJI, and Airbnb to craft high-production human stories.</p>
+      </div>
+      <div class="deck-metrics-grid" id="deck-metrics"></div>
+    </section>
+
+    <section class="mk-cases-section">
+      <div class="mk-section-head">
+        <h3>Sponsored Campaign Highlights &amp; Video Portfolio</h3>
+      </div>
+      <div class="mk-cards-grid" id="mk-cards"></div>
+    </section>
+
+    <section class="mk-sponsor-section" id="sponsor">
+      <div class="mk-sponsor-card">
+        <h3>Integration Packages &amp; Deliverables</h3>
+        <p>Dedicated YouTube integrations, multi-platform TikTok/Reels bundles, and brand ambassador licensing.</p>
+        <div class="mk-packages-grid" id="mk-packages"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mediakit-footer">
+    <div class="container">
+      <p>&copy; 2026 Aria Thorne. Verified Media Kit &bull; Managed by Underscore Talent.</p>
+      
   <div class="footer-backlink" id="infra-credit-wrap">
     <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
       <span class="badge-icon">⚡</span>
@@ -98,10 +74,9 @@
       <span class="badge-score">100</span>
     </a>
   </div>
-      </div>
-    </footer>
-  </div>
-
+    </div>
+  </footer>
+  <script src="data.json" type="application/json" id="portfolio-data"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -23,74 +23,52 @@
     }
   }
   </script></head>
-<body class="arch-terminal">
-  <div class="terminal-shell">
-    <!-- Terminal Window Container -->
-    <div class="terminal-window">
-      <!-- Window Titlebar -->
-      <div class="terminal-titlebar">
-        <div class="window-controls">
-          <span class="w-btn w-close"></span>
-          <span class="w-btn w-min"></span>
-          <span class="w-btn w-max"></span>
-        </div>
-        <div class="window-title">bash &mdash; portfolio@architect: ~ (80x24)</div>
-        <div class="window-status"><span class="term-status-dot"></span> LIVE</div>
+<body class="arch-blueprint">
+  <header class="blueprint-header">
+    <div class="container blueprint-header-inner">
+      <div class="blueprint-stamp-box">
+        <span class="bp-code">DWG NO: ARCH-2026-X</span>
+        <h1>Kaelen Voss, AIA &bull; STUDIO DE ARCHITECTURA</h1>
       </div>
-
-      <!-- Quick Command Bar -->
-      <div class="cli-shortcuts-bar">
-        <span class="shortcut-label">RUN:</span>
-        <button class="cli-btn" onclick="runCommand('help')">help</button>
-        <button class="cli-btn" onclick="runCommand('bio')">cat bio.txt</button>
-        <button class="cli-btn" onclick="runCommand('projects')">ls projects/</button>
-        <button class="cli-btn" onclick="runCommand('stats')">./get_metrics.sh</button>
-        <button class="cli-btn" onclick="runCommand('rates')">cat packages.json</button>
-        <button class="cli-btn" onclick="runCommand('contact')">./contact.sh</button>
-        <button class="cli-btn" onclick="runCommand('clear')">clear</button>
+      <div class="blueprint-nav-specs">
+        <span>SCALE: 1:50</span>
+        <span>STATUS: APPROVED</span>
+        <a href="#commission" class="bp-cta">Commission Project &rarr;</a>
       </div>
-
-      <!-- Terminal Output Canvas -->
-      <div class="terminal-body" id="terminal-screen">
-        <pre class="ascii-art">
-+----------------------------------------------------------+
-|  PORTFOLIO TERMINAL v4.2.0-LTS // ENVIRONMENT READY      |
-|  HOST: aibuildinfra.com  USER: architect                    |
-+----------------------------------------------------------+
-        </pre>
-        <p class="term-line intro-line">System initialized. Type <code class="t-code">help</code> or click commands above to explore Kaelen Voss, AIA's verified portfolio.</p>
-        <p class="term-line prompt-demo"><span class="t-prompt">$</span> whoami</p>
-        <p class="term-line response-line"><strong>Kaelen Voss, AIA</strong> &mdash; Principal Architect • Studio Arcos (Zurich, Switzerland & Copenhagen)</p>
-        
-        <!-- Live Terminal History Log -->
-        <div id="terminal-history"></div>
-
-        <!-- Active Interactive Prompt Line -->
-        <div class="terminal-input-row">
-          <span class="t-prompt">$</span>
-          <input type="text" id="terminal-input" class="terminal-input-field" placeholder="Type command here (e.g. help, projects, bio)..." autocomplete="off" autofocus>
-          <span class="blinking-cursor">▋</span>
-        </div>
-      </div>
-
-      <!-- Graphical Data Stores (Hidden / Hydrated for terminal commands) -->
-      <div id="brand-name" style="display:none;">Kaelen Voss, AIA</div>
-      <div id="hero-headline" style="display:none;">Sculpting Light, Sustainable Materiality, and Timeless Spatial Geometries</div>
-      <div id="hero-tagline" style="display:none;">Principal Architect • Studio Arcos</div>
-      <div id="hero-bio" style="display:none;">Kaelen Voss is an AIA architect whose practice specializes in sustainable residential sanctuaries, mass-timber civic structures, and adaptive re-use across Europe and North America.</div>
-      <div id="items-title" style="display:none;">Selected Architectural Monographs</div>
-      <div id="metrics-grid" style="display:none;"></div>
-      <div id="items-grid" style="display:none;"></div>
-      <div id="packages-grid" style="display:none;"></div>
-      <div id="reviews-grid" style="display:none;"></div>
-      <span id="year" style="display:none;"></span>
     </div>
+  </header>
 
-    <!-- Terminal Footer -->
-    <footer class="terminal-footer">
-      <div class="container term-footer-flex">
-        <span>portfolio-os v4.2.0-lts // &copy; <span id="term-year">2026</span> Kaelen Voss, AIA</span>
-        
+  <main class="container blueprint-viewport">
+    <section class="blueprint-hero-plate">
+      <div class="bp-hero-content">
+        <span class="bp-kicker">ARCHITECTURAL SPECIFICATION &bull; RESIDENTIAL &amp; CULTURAL</span>
+        <h2 class="bp-headline">Sculpting Light, Sustainable Materiality, and Timeless Spatial Geometries</h2>
+        <p class="bp-bio">Kaelen Voss is an AIA architect whose practice specializes in sustainable residential sanctuaries, mass-timber civic structures, and adaptive re-use across Europe and North America.</p>
+        <div class="bp-metrics-docket" id="bp-metrics"></div>
+      </div>
+    </section>
+
+    <section class="blueprint-plates-section">
+      <div class="bp-section-stamp">
+        <h3>ELEVATION PLATES &amp; MATERIALITY SCHEDULE</h3>
+        <span>SECTION A-A &bull; RIBA / AIA REGISTERED ARCHITECT</span>
+      </div>
+      <div class="blueprint-plates-grid" id="blueprint-plates"></div>
+    </section>
+
+    <section class="blueprint-commission" id="commission">
+      <div class="bp-comm-card">
+        <h3>Architectural Engagement Tiers</h3>
+        <p>Bespoke residential compounds, civic cultural institutions, and commercial master plans.</p>
+        <div class="bp-packages-grid" id="bp-packages"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="blueprint-footer">
+    <div class="container">
+      <p>&copy; 2026 Kaelen Voss, AIA. Registered Member American Institute of Architects (AIA).</p>
+      
   <div class="footer-backlink" id="infra-credit-wrap">
     <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
       <span class="badge-icon">⚡</span>
@@ -98,10 +76,9 @@
       <span class="badge-score">100</span>
     </a>
   </div>
-      </div>
-    </footer>
-  </div>
-
+    </div>
+  </footer>
+  <script src="data.json" type="application/json" id="portfolio-data"></script>
   <script src="app.js"></script>
 </body>
 </html>

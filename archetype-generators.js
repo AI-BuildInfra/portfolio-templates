@@ -1,6 +1,8 @@
 // Architectural Generators for 10 Structurally Distinct Portfolio Archetypes
 // Each archetype features unique HTML structure, CSS layouts, and interactive JS components.
 
+const { getDomainTemplate10HTML, getDomainTemplate10CSS, getDomainTemplate10JS } = require('./domain-archetypes.js');
+
 function getArchetypeHTML(prof, variant) {
   const commonHead = `
   <meta charset="UTF-8">
@@ -950,9 +952,13 @@ function getArchetypeHTML(prof, variant) {
 </html>`;
 
     // -------------------------------------------------------------
-    // ARCHETYPE 10: Terminal Monospace CLI (Real Interactive Bash Shell)
+    // ARCHETYPE 10: Terminal Monospace CLI / Domain-Specific Custom Archetype
     // -------------------------------------------------------------
     case "template-10":
+      if (prof.id !== "04-developer" && prof.id !== "14-cybersecurity") {
+        const domainHTML = getDomainTemplate10HTML(prof, variant, commonHead, trustBadge);
+        if (domainHTML) return domainHTML;
+      }
       return `<!DOCTYPE html>
 <html lang="en">
 <head>${commonHead}</head>
@@ -1036,7 +1042,8 @@ function getArchetypeHTML(prof, variant) {
   }
 }
 
-function getArchetypeCSS(variant) {
+function getArchetypeCSS(prof, variant) {
+  if (!variant) { variant = prof; prof = null; }
   // Base universal reset
   const baseReset = `
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1316,9 +1323,63 @@ function getArchetypeCSS(variant) {
       `;
 
     // -------------------------------------------------------------
-    // CSS 05: Neo-Brutalist
+    // CSS 05: Neo-Brutalist (or Dignified Broadsheet for Healthcare & Legal)
     // -------------------------------------------------------------
     case "template-05":
+      if (prof && (prof.id === "02-doctor" || prof.id === "07-lawyer" || prof.id === "15-financial-advisor")) {
+        return `${baseReset}
+        body { background: #fafafa; color: #111827; font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 600; }
+        .brutalist-marquee-bar { background: #111827; color: #ffffff; padding: 0.75rem 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.1em; border-bottom: 2px solid #111827; }
+        .marquee-track { display: inline-block; animation: marquee 25s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .brutalist-header { padding: 2rem 0; }
+        .brutalist-nav-box { background: #ffffff; border: 2px solid #111827; box-shadow: 4px 4px 0px #111827; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .brutalist-brand-badge h1 { font-size: 1.5rem; font-weight: 900; line-height: 1; }
+        .brutalist-sub { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #4b5563; }
+        .brutalist-nav-links { display: flex; align-items: center; gap: 1.2rem; }
+        .b-link { color: #111827; font-weight: 800; font-size: 0.9rem; }
+        .b-link:hover { text-decoration: underline; }
+        .b-cta-btn { background: #111827; color: #ffffff !important; padding: 0.6rem 1.4rem; border: 2px solid #111827; font-weight: 800; font-size: 0.85rem; box-shadow: 3px 3px 0px rgba(0,0,0,0.2); }
+        .brutalist-main { padding-bottom: 6rem; display: flex; flex-direction: column; gap: 4rem; }
+        .brutalist-hero-block { background: #ffffff; border: 2px solid #111827; box-shadow: 6px 6px 0px #111827; padding: 3.5rem; display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; position: relative; }
+        .sticker-badge { position: absolute; background: #111827; color: #ffffff; font-size: 0.72rem; font-weight: 800; padding: 0.35rem 0.8rem; border: 1px solid #111827; }
+        .sticker-1 { top: -14px; left: 30px; }
+        .sticker-2 { bottom: -14px; right: 20px; }
+        .raw-kicker { font-size: 0.85rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; background: #111827; color: #ffffff; padding: 0.2rem 0.6rem; display: inline-block; margin-bottom: 1rem; }
+        .raw-h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 1.2rem; }
+        .raw-bio { font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; color: #374151; }
+        .raw-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; border-top: 2px solid #111827; padding-top: 1.5rem; }
+        .raw-stat strong { font-size: 2.2rem; font-weight: 900; display: block; line-height: 1; }
+        .raw-stat span { font-size: 0.72rem; text-transform: uppercase; font-weight: 800; color: #6b7280; }
+        .raw-img-frame { border: 2px solid #111827; box-shadow: 4px 4px 0px #111827; background: #000; position: relative; }
+        .raw-img-frame img { width: 100%; height: 100%; object-fit: cover; }
+        .brutalist-tape { background: #111827; color: #ffffff; padding: 0.6rem 0; border: 2px solid #111827; margin: 1rem 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.85rem; }
+        .tape-track { display: inline-block; animation: marquee 20s linear infinite; }
+        .brutalist-section-title h2 { font-size: 2rem; font-weight: 900; text-transform: uppercase; margin-bottom: 1.5rem; }
+        .brutalist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .brutal-card { background: #ffffff; border: 2px solid #111827; box-shadow: 4px 4px 0px #111827; overflow: hidden; }
+        .brutal-card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid #111827; }
+        .brutal-body { padding: 1.5rem; }
+        .brutal-body h3 { font-size: 1.25rem; font-weight: 900; margin-bottom: 0.5rem; }
+        .brutal-body p { font-size: 0.9rem; line-height: 1.5; color: #374151; margin-bottom: 1rem; }
+        .brutal-meta-tag { background: #111827; color: #ffffff; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.5rem; }
+        .brutalist-packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
+        .brutal-pkg { background: #ffffff; border: 2px solid #111827; box-shadow: 4px 4px 0px #111827; padding: 2rem; }
+        .brutal-pkg h3 { font-size: 1.3rem; font-weight: 900; margin-bottom: 0.4rem; }
+        .brutal-price { font-size: 2rem; font-weight: 900; margin-bottom: 1rem; }
+        .brutal-features { list-style: none; margin-bottom: 1.5rem; }
+        .brutal-features li { padding: 0.4rem 0; border-bottom: 1px dashed #d1d5db; font-size: 0.85rem; font-weight: 700; }
+        .brutalist-contact-box { background: #ffffff; border: 2px solid #111827; box-shadow: 6px 6px 0px #111827; padding: 3.5rem; text-align: center; }
+        .brutalist-contact-box h2 { font-size: 2.2rem; font-weight: 900; margin-bottom: 0.8rem; }
+        .brutalist-contact-box p { font-size: 1.05rem; margin-bottom: 2rem; color: #374151; }
+        .brutal-form { display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto; }
+        .brutal-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .brutal-form input, .brutal-form textarea { border: 2px solid #111827; padding: 0.8rem 1rem; font-size: 0.95rem; font-weight: 700; font-family: inherit; }
+        .brutal-submit-btn { background: #111827; color: #ffffff; font-weight: 900; font-size: 1.1rem; padding: 1rem; border: 2px solid #111827; box-shadow: 4px 4px 0px rgba(0,0,0,0.2); cursor: pointer; }
+        .brutalist-footer { border-top: 2px solid #111827; padding: 2.5rem 0; text-align: center; font-weight: 800; font-size: 0.85rem; }
+        @media (max-width: 850px) { .brutalist-hero-block { grid-template-columns: 1fr; } .raw-stats-row { grid-template-columns: 1fr 1fr; } .brutal-form-row { grid-template-columns: 1fr; } }
+        `;
+      }
       return `${baseReset}
       body { background: #ffe600; color: #000000; font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 600; }
       .brutalist-marquee-bar { background: #000000; color: #ffe600; padding: 0.75rem 0; overflow: hidden; white-space: nowrap; font-weight: 800; font-size: 0.9rem; letter-spacing: 0.1em; border-bottom: 3px solid #000000; }
@@ -1576,9 +1637,13 @@ function getArchetypeCSS(variant) {
       `;
 
     // -------------------------------------------------------------
-    // CSS 10: Terminal Monospace CLI
+    // CSS 10: Terminal Monospace CLI / Domain-Specific Custom Archetype
     // -------------------------------------------------------------
     case "template-10":
+      if (prof && prof.id !== "04-developer" && prof.id !== "14-cybersecurity") {
+        const domainCSS = getDomainTemplate10CSS(prof, variant, baseReset);
+        if (domainCSS) return domainCSS;
+      }
       return `${baseReset}
       body { background: #050505; color: #22c55e; font-family: 'Fira Code', 'JetBrains Mono', monospace; min-height: 100vh; padding: 2rem 1rem; }
       .terminal-shell { max-width: 1000px; margin: 0 auto; }
@@ -2253,9 +2318,13 @@ document.addEventListener('DOMContentLoaded', loadData);
 `;
 
     // -------------------------------------------------------------
-    // JS 10: Terminal Monospace CLI (Real Interactive Bash Shell)
+    // JS 10: Terminal Monospace CLI / Domain-Specific Custom Archetype
     // -------------------------------------------------------------
     case "template-10":
+      if (prof.id !== "04-developer" && prof.id !== "14-cybersecurity") {
+        const domainJS = getDomainTemplate10JS(prof, variant, commonDataFetch);
+        if (domainJS) return domainJS;
+      }
       return `${commonDataFetch}
 
 let termData = null;

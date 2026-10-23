@@ -23,74 +23,101 @@
     }
   }
   </script></head>
-<body class="arch-terminal">
-  <div class="terminal-shell">
-    <!-- Terminal Window Container -->
-    <div class="terminal-window">
-      <!-- Window Titlebar -->
-      <div class="terminal-titlebar">
-        <div class="window-controls">
-          <span class="w-btn w-close"></span>
-          <span class="w-btn w-min"></span>
-          <span class="w-btn w-max"></span>
-        </div>
-        <div class="window-title">bash &mdash; portfolio@photographer: ~ (80x24)</div>
-        <div class="window-status"><span class="term-status-dot"></span> LIVE</div>
+<body class="arch-darkroom safelight-red">
+  <header class="darkroom-header">
+    <div class="darkroom-bar">
+      <div class="film-brand-stamp">
+        <span class="film-code">ILFORD HP5 PLUS 400</span>
+        <span class="film-exp">SAFETY FILM &bull; 36 EXP</span>
       </div>
-
-      <!-- Quick Command Bar -->
-      <div class="cli-shortcuts-bar">
-        <span class="shortcut-label">RUN:</span>
-        <button class="cli-btn" onclick="runCommand('help')">help</button>
-        <button class="cli-btn" onclick="runCommand('bio')">cat bio.txt</button>
-        <button class="cli-btn" onclick="runCommand('projects')">ls projects/</button>
-        <button class="cli-btn" onclick="runCommand('stats')">./get_metrics.sh</button>
-        <button class="cli-btn" onclick="runCommand('rates')">cat packages.json</button>
-        <button class="cli-btn" onclick="runCommand('contact')">./contact.sh</button>
-        <button class="cli-btn" onclick="runCommand('clear')">clear</button>
+      <div class="safelight-controls">
+        <span class="safelight-label">DARKROOM ILLUMINATION:</span>
+        <button class="safelight-btn active" id="btn-safelight-red" onclick="setSafelight('red')">🔴 Red Safelight</button>
+        <button class="safelight-btn" id="btn-safelight-white" onclick="setSafelight('white')">⚪ Daylight Proof</button>
       </div>
+      <a href="#inquire" class="darkroom-cta">Commission Prints &rarr;</a>
+    </div>
+  </header>
 
-      <!-- Terminal Output Canvas -->
-      <div class="terminal-body" id="terminal-screen">
-        <pre class="ascii-art">
-+----------------------------------------------------------+
-|  PORTFOLIO TERMINAL v4.2.0-LTS // ENVIRONMENT READY      |
-|  HOST: aibuildinfra.com  USER: photographer                    |
-+----------------------------------------------------------+
-        </pre>
-        <p class="term-line intro-line">System initialized. Type <code class="t-code">help</code> or click commands above to explore Elena Vance's verified portfolio.</p>
-        <p class="term-line prompt-demo"><span class="t-prompt">$</span> whoami</p>
-        <p class="term-line response-line"><strong>Elena Vance</strong> &mdash; Fine Art & Editorial Photographer (San Francisco & Global)</p>
-        
-        <!-- Live Terminal History Log -->
-        <div id="terminal-history"></div>
-
-        <!-- Active Interactive Prompt Line -->
-        <div class="terminal-input-row">
-          <span class="t-prompt">$</span>
-          <input type="text" id="terminal-input" class="terminal-input-field" placeholder="Type command here (e.g. help, projects, bio)..." autocomplete="off" autofocus>
-          <span class="blinking-cursor">▋</span>
-        </div>
-      </div>
-
-      <!-- Graphical Data Stores (Hidden / Hydrated for terminal commands) -->
-      <div id="brand-name" style="display:none;">Elena Vance</div>
-      <div id="hero-headline" style="display:none;">Capturing Fleeting Light and Raw Emotion Across 30+ Countries</div>
-      <div id="hero-tagline" style="display:none;">Fine Art & Editorial Photographer</div>
-      <div id="hero-bio" style="display:none;">Elena Vance is an internationally published photographer whose work bridges cinematic realism with intimate portraiture. Featured in Vogue Escapes, National Geographic, and Harper's Arts.</div>
-      <div id="items-title" style="display:none;">Selected Photography Series</div>
-      <div id="metrics-grid" style="display:none;"></div>
-      <div id="items-grid" style="display:none;"></div>
-      <div id="packages-grid" style="display:none;"></div>
-      <div id="reviews-grid" style="display:none;"></div>
-      <span id="year" style="display:none;"></span>
+  <main class="darkroom-viewport">
+    <div class="sprocket-track">
+      <span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span>
     </div>
 
-    <!-- Terminal Footer -->
-    <footer class="terminal-footer">
-      <div class="container term-footer-flex">
-        <span>portfolio-os v4.2.0-lts // &copy; <span id="term-year">2026</span> Elena Vance</span>
-        
+    <div class="contact-sheet-board">
+      <div class="sheet-title-stamp">
+        <div class="stamp-meta">
+          <h1>Elena Vance &mdash; MASTER CONTACT SHEET</h1>
+          <p>Fine Art & Editorial Photographer &bull; Capturing Fleeting Light and Raw Emotion Across 30+ Countries</p>
+        </div>
+        <div class="stamp-batch">
+          <span>ROLL #2026-B</span>
+          <span>DEV: D-76 (1:1) @ 20&deg;C</span>
+          <span>DATE: 23/10/2026</span>
+        </div>
+      </div>
+
+      <div class="frames-grid" id="contact-frames-grid"></div>
+
+      <div class="darkroom-specs-strip">
+        <div class="spec-cell">
+          <span class="sc-label">EMULSION STOCK</span>
+          <strong class="sc-val">Silver Gelatin Fiber (Baryta)</strong>
+        </div>
+        <div class="spec-cell">
+          <span class="sc-label">CAMERA PLATFORMS</span>
+          <strong class="sc-val">Hasselblad X2D 100C &bull; Leica M11</strong>
+        </div>
+        <div class="spec-cell">
+          <span class="sc-label">CHEMISTRY DEV</span>
+          <strong class="sc-val">Kodak D-76 &bull; Ilfostop &bull; Rapid Fixer</strong>
+        </div>
+        <div class="spec-cell">
+          <span class="sc-label">EDITION RUNS</span>
+          <strong class="sc-val">Archival 1/15 Signed Fine Art Plates</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="sprocket-track">
+      <span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span><span class="sprocket-hole"></span>
+    </div>
+
+    <div id="loupe-modal" class="loupe-modal" onclick="closeLoupeModal()">
+      <div class="loupe-content" onclick="event.stopPropagation()">
+        <button class="loupe-close" onclick="closeLoupeModal()">&times;</button>
+        <div class="loupe-view" id="loupe-view">
+          <img id="loupe-img" src="" alt="Enlarged Proof">
+        </div>
+        <div class="loupe-caption" id="loupe-caption"></div>
+      </div>
+    </div>
+
+    <section class="darkroom-inquiry" id="inquire">
+      <div class="container">
+        <div class="inquiry-card">
+          <h2>Order Archival Gelatin Silver Prints &amp; Commissions</h2>
+          <p>Every print is hand-developed in our San Francisco darkroom, washed for 60 minutes in archival siphon washers, selenium toned for permanence, and mounted on 100% cotton museum rag board.</p>
+          <div class="edition-tiers" id="edition-tiers"></div>
+          <div class="inquiry-form-wrap">
+            <form onsubmit="handleInquiry(event)">
+              <div class="form-row">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+              </div>
+              <input type="text" placeholder="Desired Print Title or Shoot Brief" required>
+              <button type="submit" class="btn-darkroom-submit">Submit Print Inquiry &rarr;</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="darkroom-footer">
+    <div class="container">
+      <p>&copy; 2026 Elena Vance. All darkroom negatives registered with the Fine Art Guild.</p>
+      
   <div class="footer-backlink" id="infra-credit-wrap">
     <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
       <span class="badge-icon">⚡</span>
@@ -98,10 +125,10 @@
       <span class="badge-score">100</span>
     </a>
   </div>
-      </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
+  <script src="data.json" type="application/json" id="portfolio-data"></script>
   <script src="app.js"></script>
 </body>
 </html>

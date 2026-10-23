@@ -17,37 +17,46 @@
   .infra-trust-badge strong { color: #ffffff; }
   .badge-score { background: #10b981; color: #000000; font-weight: 800; font-size: 0.68rem; padding: 0.1rem 0.4rem; border-radius: 8px; }
   
-      body { background: #050505; color: #22c55e; font-family: 'Fira Code', 'JetBrains Mono', monospace; min-height: 100vh; padding: 2rem 1rem; }
-      .terminal-shell { max-width: 1000px; margin: 0 auto; }
-      .terminal-window { background: #0d1117; border: 1px solid #30363d; border-radius: 8px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9); overflow: hidden; }
-      .terminal-titlebar { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.65rem 1rem; display: flex; justify-content: space-between; align-items: center; }
-      .window-controls { display: flex; gap: 0.45rem; }
-      .w-btn { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
-      .w-close { background: #ff5f56; } .w-min { background: #ffbd2e; } .w-max { background: #27c93f; }
-      .window-title { font-size: 0.78rem; color: #8b949e; }
-      .window-status { font-size: 0.72rem; color: #22c55e; font-weight: 700; display: flex; align-items: center; gap: 0.35rem; }
-      .term-status-dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 6px #22c55e; }
-      .cli-shortcuts-bar { background: #11161d; border-bottom: 1px solid #21262d; padding: 0.5rem 1rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-      .shortcut-label { font-size: 0.72rem; color: #8b949e; font-weight: 700; margin-right: 0.3rem; }
-      .cli-btn { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; font-size: 0.72rem; padding: 0.25rem 0.65rem; border-radius: 4px; font-family: inherit; }
-      .cli-btn:hover { background: #30363d; color: #22c55e; border-color: #22c55e; }
-      .terminal-body { padding: 1.5rem; min-height: 520px; font-size: 0.88rem; line-height: 1.6; }
-      .ascii-art { font-size: 0.7rem; color: #22c55e; margin-bottom: 1rem; overflow-x: auto; }
-      .term-line { margin-bottom: 0.6rem; color: #e6edf3; }
-      .intro-line { color: #8b949e; }
-      .t-code { background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 0.1rem 0.3rem; border-radius: 3px; }
-      .t-prompt { color: #58a6ff; font-weight: 700; margin-right: 0.4rem; }
-      .prompt-demo { color: #8b949e; }
-      .response-line { color: #58a6ff; margin-bottom: 1.2rem; }
-      .terminal-input-row { display: flex; align-items: center; margin-top: 1rem; }
-      .terminal-input-field { flex: 1; background: transparent; border: none; color: #22c55e; font-family: inherit; font-size: 0.95rem; outline: none; }
-      .blinking-cursor { color: #22c55e; animation: blink 1s infinite; margin-left: 2px; }
-      @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
-      .term-cmd-echo { color: #e6edf3; margin-top: 0.8rem; }
-      .term-cmd-res { margin-bottom: 1rem; }
-      .cli-card-block { background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 0.8rem 1rem; margin: 0.5rem 0; color: #c9d1d9; }
-      .cli-card-title { color: #22c55e; font-weight: 700; }
-      .terminal-footer { margin-top: 1.5rem; font-size: 0.78rem; color: #6e7681; }
-      .term-footer-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; }
-      @media (max-width: 600px) { .ascii-art { display: none; } }
+      body.arch-esports { background: #080a10; color: #f1f5f9; font-family: 'Space Grotesk', -apple-system, sans-serif; min-height: 100vh; }
+      .hud-top-bar { background: #0d111a; border-bottom: 2px solid #06b6d4; padding: 0.8rem 0; }
+      .hud-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1300px; margin: 0 auto; flex-wrap: wrap; gap: 1rem; }
+      .hud-streamer-tag { display: flex; align-items: center; gap: 0.6rem; font-weight: 800; font-size: 1.2rem; }
+      .live-dot { width: 8px; height: 8px; background: #ef4444; border-radius: 50%; box-shadow: 0 0 10px #ef4444; }
+      .hud-clan-tag { color: #06b6d4; font-size: 0.85rem; }
+      .hud-ticker { font-family: monospace; font-size: 0.75rem; color: #94a3b8; }
+      .btn-hud-rig { background: #06b6d4; color: #000; font-weight: 800; padding: 0.45rem 1rem; border-radius: 4px; text-decoration: none; }
+      .hud-main { padding: 3rem 0; max-width: 1300px; margin: 0 auto; display: flex; flex-direction: column; gap: 4rem; }
+      .hud-hero-box { background: #0d111a; border: 1px solid rgba(6, 182, 212, 0.3); border-radius: 8px; padding: 3rem; box-shadow: 0 0 35px rgba(6, 182, 212, 0.1); }
+      .hud-hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: center; }
+      .hud-kicker { font-family: monospace; font-size: 0.72rem; color: #06b6d4; letter-spacing: 0.15em; font-weight: 700; margin-bottom: 1rem; display: block; }
+      .hud-headline { font-size: clamp(2rem, 3.8vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 1.2rem; }
+      .hud-bio { color: #94a3b8; font-size: 1.05rem; line-height: 1.6; margin-bottom: 2rem; }
+      .hud-stats-radar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; }
+      .hud-stat-cell strong { font-size: 2rem; color: #06b6d4; font-weight: 900; display: block; line-height: 1; }
+      .hud-stat-cell span { font-size: 0.72rem; color: #64748b; font-family: monospace; text-transform: uppercase; }
+      .hud-stream-window { position: relative; border-radius: 8px; overflow: hidden; border: 2px solid #1e293b; aspect-ratio: 16/10; }
+      .hud-poster-img { width: 100%; height: 100%; object-fit: cover; }
+      .hud-overlay-elements { position: absolute; top: 10px; left: 10px; right: 10px; display: flex; justify-content: space-between; font-size: 0.75rem; font-weight: 700; font-family: monospace; }
+      .hud-online-badge { background: rgba(0,0,0,0.8); color: #ef4444; padding: 0.25rem 0.6rem; border-radius: 4px; }
+      .hud-res-badge { background: rgba(0,0,0,0.8); color: #06b6d4; padding: 0.25rem 0.6rem; border-radius: 4px; }
+      .hud-section-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 2rem; }
+      .hud-section-header h2 { font-size: 1.8rem; font-weight: 800; }
+      .hud-bracket-status { font-family: monospace; font-size: 0.75rem; color: #06b6d4; font-weight: 700; }
+      .hud-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; }
+      .hud-card { background: #0d111a; border: 1px solid #1e293b; border-radius: 8px; overflow: hidden; }
+      .hud-card img { width: 100%; height: 180px; object-fit: cover; }
+      .hud-card-body { padding: 1.5rem; }
+      .hud-card-body h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
+      .hud-card-body p { font-size: 0.88rem; color: #94a3b8; line-height: 1.5; margin-bottom: 0.8rem; }
+      .rig-specs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+      .rig-card { background: #0d111a; border: 1px solid #1e293b; border-radius: 8px; padding: 1.8rem; }
+      .rig-icon { font-size: 1.8rem; display: block; margin-bottom: 0.6rem; }
+      .rig-card h4 { font-size: 1rem; color: #06b6d4; margin-bottom: 0.3rem; }
+      .rig-card p { font-size: 0.85rem; color: #94a3b8; }
+      .hud-packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+      .hud-pkg { background: #0d111a; border: 1px solid #1e293b; border-radius: 8px; padding: 1.8rem; }
+      .hud-pkg h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+      .hud-pkg strong { font-size: 1.6rem; color: #06b6d4; display: block; margin-bottom: 0.8rem; }
+      .hud-pkg ul { list-style: none; font-size: 0.82rem; color: #94a3b8; display: flex; flex-direction: column; gap: 0.35rem; }
+      .hud-footer { border-top: 1px solid #1e293b; padding: 2rem 0; text-align: center; font-size: 0.8rem; color: #64748b; }
       

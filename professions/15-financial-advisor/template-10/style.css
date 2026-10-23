@@ -17,37 +17,42 @@
   .infra-trust-badge strong { color: #ffffff; }
   .badge-score { background: #10b981; color: #000000; font-weight: 800; font-size: 0.68rem; padding: 0.1rem 0.4rem; border-radius: 8px; }
   
-      body { background: #050505; color: #22c55e; font-family: 'Fira Code', 'JetBrains Mono', monospace; min-height: 100vh; padding: 2rem 1rem; }
-      .terminal-shell { max-width: 1000px; margin: 0 auto; }
-      .terminal-window { background: #0d1117; border: 1px solid #30363d; border-radius: 8px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9); overflow: hidden; }
-      .terminal-titlebar { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.65rem 1rem; display: flex; justify-content: space-between; align-items: center; }
-      .window-controls { display: flex; gap: 0.45rem; }
-      .w-btn { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
-      .w-close { background: #ff5f56; } .w-min { background: #ffbd2e; } .w-max { background: #27c93f; }
-      .window-title { font-size: 0.78rem; color: #8b949e; }
-      .window-status { font-size: 0.72rem; color: #22c55e; font-weight: 700; display: flex; align-items: center; gap: 0.35rem; }
-      .term-status-dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 6px #22c55e; }
-      .cli-shortcuts-bar { background: #11161d; border-bottom: 1px solid #21262d; padding: 0.5rem 1rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-      .shortcut-label { font-size: 0.72rem; color: #8b949e; font-weight: 700; margin-right: 0.3rem; }
-      .cli-btn { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; font-size: 0.72rem; padding: 0.25rem 0.65rem; border-radius: 4px; font-family: inherit; }
-      .cli-btn:hover { background: #30363d; color: #22c55e; border-color: #22c55e; }
-      .terminal-body { padding: 1.5rem; min-height: 520px; font-size: 0.88rem; line-height: 1.6; }
-      .ascii-art { font-size: 0.7rem; color: #22c55e; margin-bottom: 1rem; overflow-x: auto; }
-      .term-line { margin-bottom: 0.6rem; color: #e6edf3; }
-      .intro-line { color: #8b949e; }
-      .t-code { background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 0.1rem 0.3rem; border-radius: 3px; }
-      .t-prompt { color: #58a6ff; font-weight: 700; margin-right: 0.4rem; }
-      .prompt-demo { color: #8b949e; }
-      .response-line { color: #58a6ff; margin-bottom: 1.2rem; }
-      .terminal-input-row { display: flex; align-items: center; margin-top: 1rem; }
-      .terminal-input-field { flex: 1; background: transparent; border: none; color: #22c55e; font-family: inherit; font-size: 0.95rem; outline: none; }
-      .blinking-cursor { color: #22c55e; animation: blink 1s infinite; margin-left: 2px; }
-      @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
-      .term-cmd-echo { color: #e6edf3; margin-top: 0.8rem; }
-      .term-cmd-res { margin-bottom: 1rem; }
-      .cli-card-block { background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 0.8rem 1rem; margin: 0.5rem 0; color: #c9d1d9; }
-      .cli-card-title { color: #22c55e; font-weight: 700; }
-      .terminal-footer { margin-top: 1.5rem; font-size: 0.78rem; color: #6e7681; }
-      .term-footer-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; }
-      @media (max-width: 600px) { .ascii-art { display: none; } }
+      body.arch-wealth-terminal { background: #080b11; color: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; min-height: 100vh; }
+      .wealth-header { background: #0e131d; border-bottom: 2px solid #10b981; padding: 1rem 0; }
+      .wealth-bar { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 1rem; }
+      .wealth-brand { display: flex; align-items: center; gap: 0.8rem; }
+      .terminal-amber-box { background: #f59e0b; color: #000; font-size: 0.68rem; font-weight: 800; padding: 0.25rem 0.6rem; border-radius: 3px; font-family: monospace; }
+      .wealth-brand h1 { font-size: 1.3rem; font-weight: 800; }
+      .wealth-sub { font-size: 0.72rem; color: #10b981; font-weight: 700; font-family: monospace; }
+      .wealth-aum-strip { font-size: 0.78rem; font-family: monospace; color: #94a3b8; display: flex; align-items: center; gap: 1.2rem; }
+      .btn-wealth-consult { background: #10b981; color: #000; font-weight: 800; padding: 0.5rem 1.2rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; }
+      .wealth-main { padding: 3rem 0; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 3.5rem; }
+      .wealth-overview-plate { background: #0e131d; border: 1px solid #1e293b; border-radius: 8px; padding: 3rem; }
+      .wealth-stamp { font-family: monospace; font-size: 0.72rem; color: #10b981; letter-spacing: 0.12em; font-weight: 700; margin-bottom: 0.8rem; }
+      .wealth-overview-plate h2 { font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 800; margin-bottom: 1rem; }
+      .wealth-overview-plate p { font-size: 1.05rem; color: #94a3b8; line-height: 1.6; max-width: 850px; margin-bottom: 2rem; }
+      .wealth-metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; border-top: 1px solid #1e293b; padding-top: 1.8rem; }
+      .wealth-metric-cell strong { font-size: 2.2rem; color: #10b981; font-weight: 900; display: block; font-family: monospace; }
+      .wealth-metric-cell span { font-size: 0.72rem; color: #64748b; text-transform: uppercase; font-family: monospace; }
+      .matrix-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .alloc-card, .fiduciary-oath-card { background: #0e131d; border: 1px solid #1e293b; border-radius: 8px; padding: 2.2rem; }
+      .alloc-pie { width: 140px; height: 140px; border-radius: 50%; margin: 0 auto 1.5rem; box-shadow: 0 0 25px rgba(0,0,0,0.5); }
+      .alloc-legend { display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.85rem; color: #cbd5e1; }
+      .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 0.4rem; }
+      .fiduciary-oath-card h4 { font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem; font-weight: 700; }
+      .fiduciary-oath-card p { font-size: 0.9rem; color: #94a3b8; line-height: 1.6; margin-bottom: 1.5rem; }
+      .fiduciary-checklist { list-style: none; font-size: 0.85rem; color: #10b981; display: flex; flex-direction: column; gap: 0.6rem; font-weight: 600; }
+      .wealth-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; }
+      .wealth-card { background: #0e131d; border: 1px solid #1e293b; border-radius: 8px; overflow: hidden; }
+      .wealth-card img { width: 100%; height: 180px; object-fit: cover; }
+      .wealth-card-body { padding: 1.4rem; }
+      .wealth-card-body h4 { font-size: 1.15rem; margin-bottom: 0.4rem; }
+      .wealth-card-body p { font-size: 0.85rem; color: #94a3b8; line-height: 1.5; margin-bottom: 0.8rem; }
+      .wealth-card-meta { font-family: monospace; font-size: 0.75rem; color: #10b981; }
+      .wealth-packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+      .wealth-pkg { background: #0e131d; border: 1px solid #1e293b; border-radius: 8px; padding: 1.8rem; }
+      .wealth-pkg h4 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+      .wealth-pkg strong { font-family: monospace; font-size: 1.6rem; color: #10b981; display: block; margin-bottom: 0.8rem; }
+      .wealth-pkg ul { list-style: none; font-size: 0.82rem; color: #94a3b8; display: flex; flex-direction: column; gap: 0.35rem; }
+      .wealth-footer { border-top: 1px solid #1e293b; padding: 2rem 0; text-align: center; font-size: 0.8rem; color: #64748b; }
       

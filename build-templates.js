@@ -1765,14 +1765,45 @@ Engineered by [AI BuildInfra](https://aibuildinfra.com) — [Web Development Ser
 
     // Write distinct architectural HTML, CSS, and JS for each of the 10 Archetypes
     fs.writeFileSync(path.join(templateDir, 'index.html'), getArchetypeHTML(prof, variant), 'utf8');
-    fs.writeFileSync(path.join(templateDir, 'style.css'), getArchetypeCSS(variant), 'utf8');
+    fs.writeFileSync(path.join(templateDir, 'style.css'), getArchetypeCSS(prof, variant), 'utf8');
     fs.writeFileSync(path.join(templateDir, 'app.js'), getArchetypeJS(prof, variant), 'utf8');
 
     // Write data.json
     fs.writeFileSync(path.join(templateDir, 'data.json'), JSON.stringify(prof, null, 2), 'utf8');
 
+    // Determine domain-authentic variant names
+    let vName = variant.name;
+    let vType = variant.type;
+    if (variant.variantId === "template-10") {
+      const custom10Meta = {
+        "01-photographer": { name: "35mm Analog Contact Sheet & Darkroom Studio", type: "Film Contact Sheet" },
+        "02-doctor": { name: "Clinical Case Files & Medical Board Dossier", type: "Clinical Dossier" },
+        "03-ui-ux-designer": { name: "Design System Token Studio & Component Sandbox", type: "Design System Spec" },
+        "04-developer": { name: "Interactive Bash Terminal CLI & Shell", type: "Developer CLI" },
+        "05-gamer": { name: "Esports Battle Station HUD & Stream Radar", type: "Esports Telemetry" },
+        "06-architect": { name: "Cyan Blueprint & Architectural CAD Spec", type: "CAD Blueprint" },
+        "07-lawyer": { name: "Supreme Court Brief & Judicial Case Docket", type: "Judicial Docket" },
+        "08-fitness-trainer": { name: "Athletic Performance Log & Macro Periodization", type: "Athletic Log" },
+        "09-content-creator": { name: "Creator Media Kit & Brand Sponsorship Deck", type: "Creator Media Kit" },
+        "10-chef": { name: "Chalkboard Degustation Carte & Culinary Atelier", type: "Chalkboard Menu" },
+        "11-musician": { name: "Vinyl Record Turntable & Audio Player", type: "Vinyl Player" },
+        "12-copywriter": { name: "Vintage Typewriter Manuscript & Sales Letter", type: "Typewriter Manuscript" },
+        "13-fashion-model": { name: "Agency Comp Card & Polaroid Casting Sheet", type: "Model Comp Card" },
+        "14-cybersecurity": { name: "Offensive Security Terminal & Threat Intel Console", type: "Infosec Terminal" },
+        "15-financial-advisor": { name: "Bloomberg Wealth Terminal & Asset Allocation Matrix", type: "Wealth Terminal" }
+      };
+      if (custom10Meta[prof.id]) {
+        vName = custom10Meta[prof.id].name;
+        vType = custom10Meta[prof.id].type;
+      }
+    }
+    if (variant.variantId === "template-05" && (prof.id === "02-doctor" || prof.id === "07-lawyer" || prof.id === "15-financial-advisor")) {
+      vName = "Monograph Broadsheet & Structured Folio";
+      vType = "High-Contrast Folio";
+    }
+
     // Write README.md
-    fs.writeFileSync(path.join(templateDir, 'README.md'), generateTemplateREADME(prof, variant), 'utf8');
+    fs.writeFileSync(path.join(templateDir, 'README.md'), generateTemplateREADME(prof, { ...variant, name: vName, type: vType }), 'utf8');
 
     // Add to catalog
     allCatalogEntries.push({
@@ -1781,8 +1812,8 @@ Engineered by [AI BuildInfra](https://aibuildinfra.com) — [Web Development Ser
       professionTitle: prof.title,
       category: prof.category,
       variantId: variant.variantId,
-      variantName: variant.name,
-      variantType: variant.type,
+      variantName: vName,
+      variantType: vType,
       image: prof.heroImage,
       path: `professions/${prof.id}/${variant.variantId}/index.html`,
       folder: `professions/${prof.id}/${variant.variantId}/`

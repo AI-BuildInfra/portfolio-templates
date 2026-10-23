@@ -23,74 +23,73 @@
     }
   }
   </script></head>
-<body class="arch-terminal">
-  <div class="terminal-shell">
-    <!-- Terminal Window Container -->
-    <div class="terminal-window">
-      <!-- Window Titlebar -->
-      <div class="terminal-titlebar">
-        <div class="window-controls">
-          <span class="w-btn w-close"></span>
-          <span class="w-btn w-min"></span>
-          <span class="w-btn w-max"></span>
-        </div>
-        <div class="window-title">bash &mdash; portfolio@fashion-model: ~ (80x24)</div>
-        <div class="window-status"><span class="term-status-dot"></span> LIVE</div>
+<body class="arch-compcard">
+  <header class="compcard-header">
+    <div class="container cc-bar">
+      <div class="cc-brand">
+        <span class="cc-agency-mark">PARIS &bull; MILAN &bull; NYC</span>
+        <h1>Seraphina Vance</h1>
       </div>
-
-      <!-- Quick Command Bar -->
-      <div class="cli-shortcuts-bar">
-        <span class="shortcut-label">RUN:</span>
-        <button class="cli-btn" onclick="runCommand('help')">help</button>
-        <button class="cli-btn" onclick="runCommand('bio')">cat bio.txt</button>
-        <button class="cli-btn" onclick="runCommand('projects')">ls projects/</button>
-        <button class="cli-btn" onclick="runCommand('stats')">./get_metrics.sh</button>
-        <button class="cli-btn" onclick="runCommand('rates')">cat packages.json</button>
-        <button class="cli-btn" onclick="runCommand('contact')">./contact.sh</button>
-        <button class="cli-btn" onclick="runCommand('clear')">clear</button>
+      <div class="cc-actions">
+        <button class="btn-print-compcard" onclick="window.print()">🖨️ Print Comp Card</button>
+        <a href="#book" class="btn-book-model">Book Model &rarr;</a>
       </div>
+    </div>
+  </header>
 
-      <!-- Terminal Output Canvas -->
-      <div class="terminal-body" id="terminal-screen">
-        <pre class="ascii-art">
-+----------------------------------------------------------+
-|  PORTFOLIO TERMINAL v4.2.0-LTS // ENVIRONMENT READY      |
-|  HOST: aibuildinfra.com  USER: fashion-model                    |
-+----------------------------------------------------------+
-        </pre>
-        <p class="term-line intro-line">System initialized. Type <code class="t-code">help</code> or click commands above to explore Seraphina Vance's verified portfolio.</p>
-        <p class="term-line prompt-demo"><span class="t-prompt">$</span> whoami</p>
-        <p class="term-line response-line"><strong>Seraphina Vance</strong> &mdash; International Fashion Model & Editorial Stylist (Paris & New York)</p>
-        
-        <!-- Live Terminal History Log -->
-        <div id="terminal-history"></div>
-
-        <!-- Active Interactive Prompt Line -->
-        <div class="terminal-input-row">
-          <span class="t-prompt">$</span>
-          <input type="text" id="terminal-input" class="terminal-input-field" placeholder="Type command here (e.g. help, projects, bio)..." autocomplete="off" autofocus>
-          <span class="blinking-cursor">▋</span>
+  <main class="container compcard-main">
+    <div class="compcard-board">
+      <div class="compcard-front">
+        <div class="cc-hero-frame">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80" alt="Seraphina Vance Editorial Front">
+          <div class="cc-front-name-plate">
+            <h2>SERAPHINA VANCE</h2>
+            <span>INTERNATIONAL FASHION MODEL & EDITORIAL STYLIST</span>
+          </div>
         </div>
       </div>
 
-      <!-- Graphical Data Stores (Hidden / Hydrated for terminal commands) -->
-      <div id="brand-name" style="display:none;">Seraphina Vance</div>
-      <div id="hero-headline" style="display:none;">Elegance in Motion Across Paris, Milan, and New York Runways</div>
-      <div id="hero-tagline" style="display:none;">International Fashion Model & Editorial Stylist</div>
-      <div id="hero-bio" style="display:none;">Represented by premier agencies across Paris, Milan, and New York. Seraphina has walked for top European couture houses and starred in luxury beauty and magazine cover campaigns.</div>
-      <div id="items-title" style="display:none;">Editorial Campaigns & Runway Shows</div>
-      <div id="metrics-grid" style="display:none;"></div>
-      <div id="items-grid" style="display:none;"></div>
-      <div id="packages-grid" style="display:none;"></div>
-      <div id="reviews-grid" style="display:none;"></div>
-      <span id="year" style="display:none;"></span>
+      <div class="compcard-back">
+        <div class="polaroid-grid" id="polaroid-grid"></div>
+
+        <div class="model-stats-box">
+          <div class="stat-col"><span class="lbl">HEIGHT</span><strong>5' 11" / 180cm</strong></div>
+          <div class="stat-col"><span class="lbl">BUST</span><strong>32" / 81cm</strong></div>
+          <div class="stat-col"><span class="lbl">WAIST</span><strong>24" / 61cm</strong></div>
+          <div class="stat-col"><span class="lbl">HIPS</span><strong>34" / 86cm</strong></div>
+          <div class="stat-col"><span class="lbl">SHOES</span><strong>39 EU / 8.5 US</strong></div>
+          <div class="stat-col"><span class="lbl">EYES</span><strong>Green</strong></div>
+          <div class="stat-col"><span class="lbl">HAIR</span><strong>Auburn</strong></div>
+        </div>
+
+        <div class="agency-rep-row">
+          <span>PARIS: Elite Model Mgmt</span> &bull; 
+          <span>MILAN: Women Management</span> &bull; 
+          <span>NEW YORK: Ford Models</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Terminal Footer -->
-    <footer class="terminal-footer">
-      <div class="container term-footer-flex">
-        <span>portfolio-os v4.2.0-lts // &copy; <span id="term-year">2026</span> Seraphina Vance</span>
-        
+    <section class="compcard-lookbooks">
+      <div class="cc-section-head">
+        <h3>Runway Appearances &amp; High-Fashion Spreads</h3>
+      </div>
+      <div class="cc-cards-grid" id="cc-cards"></div>
+    </section>
+
+    <section class="compcard-booking-section" id="book">
+      <div class="cc-booking-card">
+        <h3>Commercial &amp; Editorial Booking Inquiries</h3>
+        <p>Available for Paris, Milan, and New York Fashion Weeks, global fragrance and beauty campaigns, and high-fashion editorial covers.</p>
+        <div class="cc-packages-grid" id="cc-packages"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="compcard-footer">
+    <div class="container">
+      <p>&copy; 2026 Seraphina Vance. Represented Worldwide by Elite, Women &amp; Ford.</p>
+      
   <div class="footer-backlink" id="infra-credit-wrap">
     <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
       <span class="badge-icon">⚡</span>
@@ -98,10 +97,9 @@
       <span class="badge-score">100</span>
     </a>
   </div>
-      </div>
-    </footer>
-  </div>
-
+    </div>
+  </footer>
+  <script src="data.json" type="application/json" id="portfolio-data"></script>
   <script src="app.js"></script>
 </body>
 </html>

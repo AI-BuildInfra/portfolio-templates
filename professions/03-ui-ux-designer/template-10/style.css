@@ -17,37 +17,54 @@
   .infra-trust-badge strong { color: #ffffff; }
   .badge-score { background: #10b981; color: #000000; font-weight: 800; font-size: 0.68rem; padding: 0.1rem 0.4rem; border-radius: 8px; }
   
-      body { background: #050505; color: #22c55e; font-family: 'Fira Code', 'JetBrains Mono', monospace; min-height: 100vh; padding: 2rem 1rem; }
-      .terminal-shell { max-width: 1000px; margin: 0 auto; }
-      .terminal-window { background: #0d1117; border: 1px solid #30363d; border-radius: 8px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9); overflow: hidden; }
-      .terminal-titlebar { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.65rem 1rem; display: flex; justify-content: space-between; align-items: center; }
-      .window-controls { display: flex; gap: 0.45rem; }
-      .w-btn { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
-      .w-close { background: #ff5f56; } .w-min { background: #ffbd2e; } .w-max { background: #27c93f; }
-      .window-title { font-size: 0.78rem; color: #8b949e; }
-      .window-status { font-size: 0.72rem; color: #22c55e; font-weight: 700; display: flex; align-items: center; gap: 0.35rem; }
-      .term-status-dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 6px #22c55e; }
-      .cli-shortcuts-bar { background: #11161d; border-bottom: 1px solid #21262d; padding: 0.5rem 1rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-      .shortcut-label { font-size: 0.72rem; color: #8b949e; font-weight: 700; margin-right: 0.3rem; }
-      .cli-btn { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; font-size: 0.72rem; padding: 0.25rem 0.65rem; border-radius: 4px; font-family: inherit; }
-      .cli-btn:hover { background: #30363d; color: #22c55e; border-color: #22c55e; }
-      .terminal-body { padding: 1.5rem; min-height: 520px; font-size: 0.88rem; line-height: 1.6; }
-      .ascii-art { font-size: 0.7rem; color: #22c55e; margin-bottom: 1rem; overflow-x: auto; }
-      .term-line { margin-bottom: 0.6rem; color: #e6edf3; }
-      .intro-line { color: #8b949e; }
-      .t-code { background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 0.1rem 0.3rem; border-radius: 3px; }
-      .t-prompt { color: #58a6ff; font-weight: 700; margin-right: 0.4rem; }
-      .prompt-demo { color: #8b949e; }
-      .response-line { color: #58a6ff; margin-bottom: 1.2rem; }
-      .terminal-input-row { display: flex; align-items: center; margin-top: 1rem; }
-      .terminal-input-field { flex: 1; background: transparent; border: none; color: #22c55e; font-family: inherit; font-size: 0.95rem; outline: none; }
-      .blinking-cursor { color: #22c55e; animation: blink 1s infinite; margin-left: 2px; }
-      @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
-      .term-cmd-echo { color: #e6edf3; margin-top: 0.8rem; }
-      .term-cmd-res { margin-bottom: 1rem; }
-      .cli-card-block { background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 0.8rem 1rem; margin: 0.5rem 0; color: #c9d1d9; }
-      .cli-card-title { color: #22c55e; font-weight: 700; }
-      .terminal-footer { margin-top: 1.5rem; font-size: 0.78rem; color: #6e7681; }
-      .term-footer-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; }
-      @media (max-width: 600px) { .ascii-art { display: none; } }
+      body.arch-figma-studio { background: #1e1e1e; color: #f5f5f5; font-family: 'Inter', -apple-system, sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+      .figma-top-bar { background: #2c2c2c; border-bottom: 1px solid #3c3c3c; padding: 0.65rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+      .figma-brand { display: flex; align-items: center; gap: 0.75rem; font-size: 0.85rem; font-weight: 600; }
+      .figma-icon { color: #0d99ff; font-size: 1.1rem; }
+      .figma-version-pill { background: #3c3c3c; font-size: 0.68rem; padding: 0.2rem 0.5rem; border-radius: 4px; color: #a1a1aa; }
+      .figma-viewport-controls { display: flex; gap: 0.4rem; }
+      .vp-btn { background: #3c3c3c; border: 1px solid #4a4a4a; color: #d4d4d8; font-size: 0.75rem; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; }
+      .vp-btn.active, .vp-btn:hover { background: #0d99ff; color: #ffffff; border-color: #0d99ff; }
+      .btn-share-spec { background: #0d99ff; color: #ffffff; font-weight: 700; font-size: 0.78rem; padding: 0.45rem 1rem; border-radius: 4px; text-decoration: none; }
+      .figma-workspace { display: flex; flex: 1; overflow: hidden; }
+      .figma-token-sidebar { width: 300px; background: #252525; border-right: 1px solid #3c3c3c; padding: 1.5rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1.8rem; font-size: 0.82rem; }
+      .token-sidebar-header { font-size: 0.7rem; font-weight: 700; color: #8e8e93; letter-spacing: 0.1em; }
+      .token-group { display: flex; flex-direction: column; gap: 0.6rem; }
+      .token-group-title { font-size: 0.68rem; font-weight: 700; color: #a1a1aa; text-transform: uppercase; }
+      .token-swatches { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+      .token-swatch { width: 44px; height: 32px; border-radius: 4px; display: flex; align-items: flex-end; padding: 2px; }
+      .token-swatch span { font-size: 0.5rem; background: rgba(0,0,0,0.6); color: #fff; padding: 1px 2px; border-radius: 2px; }
+      .token-text-scale { display: flex; flex-direction: column; gap: 0.35rem; }
+      .token-row { display: flex; justify-content: space-between; font-size: 0.72rem; color: #a1a1aa; }
+      .token-row strong { color: #ffffff; }
+      .interactive-sandbox-box { background: #1c1c1c; border: 1px solid #3c3c3c; border-radius: 6px; padding: 0.85rem; }
+      .sandbox-buttons { display: flex; gap: 0.4rem; margin-top: 0.5rem; }
+      .preview-btn { padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.75rem; border: none; cursor: pointer; }
+      .preview-btn.state-default { background: #0d99ff; color: #fff; }
+      .preview-btn.state-hover { background: #007be5; color: #fff; }
+      .preview-btn.state-active { background: #005bb5; color: #fff; }
+      .figma-canvas-viewport { flex: 1; background: #141414; background-image: radial-gradient(#2c2c2c 1px, transparent 1px); background-size: 24px 24px; padding: 3rem; overflow-y: auto; display: flex; justify-content: center; }
+      .artboard-frame { background: #ffffff; color: #000000; border-radius: 8px; box-shadow: 0 20px 70px rgba(0, 0, 0, 0.8); width: 100%; max-width: 1200px; transition: max-width 0.3s; overflow: hidden; }
+      .artboard-titlebar { background: #f3f4f6; border-bottom: 1px solid #e5e7eb; padding: 0.6rem 1.2rem; display: flex; justify-content: space-between; font-size: 0.75rem; color: #6b7280; font-family: monospace; }
+      .artboard-inner { padding: 3.5rem; }
+      .canvas-chip { background: #e0f2fe; color: #0284c7; font-weight: 700; font-size: 0.75rem; padding: 0.3rem 0.8rem; border-radius: 9999px; display: inline-block; margin-bottom: 1.2rem; }
+      .canvas-h1 { font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 800; line-height: 1.15; margin-bottom: 1rem; color: #111827; }
+      .canvas-bio { font-size: 1.1rem; color: #4b5563; line-height: 1.7; max-width: 800px; margin-bottom: 2rem; }
+      .canvas-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; border-top: 1px solid #e5e7eb; padding-top: 2rem; margin-bottom: 4rem; }
+      .c-stat-box strong { font-size: 2.2rem; font-weight: 800; color: #0d99ff; display: block; line-height: 1; }
+      .c-stat-box span { font-size: 0.75rem; color: #6b7280; font-weight: 600; text-transform: uppercase; }
+      .canvas-section-head { margin-bottom: 2rem; }
+      .canvas-section-head h2 { font-size: 1.8rem; font-weight: 800; color: #111827; }
+      .canvas-cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+      .canvas-case-card { border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; }
+      .canvas-case-card img { width: 100%; height: 220px; object-fit: cover; }
+      .case-content-box { padding: 1.6rem; }
+      .case-content-box h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+      .case-content-box p { font-size: 0.9rem; color: #4b5563; line-height: 1.6; margin-bottom: 1rem; }
+      .canvas-packages { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+      .canvas-pkg-card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.8rem; }
+      .canvas-pkg-card h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+      .canvas-pkg-card strong { font-size: 1.6rem; color: #0d99ff; display: block; margin-bottom: 0.8rem; }
+      .canvas-pkg-card ul { list-style: none; font-size: 0.85rem; color: #4b5563; display: flex; flex-direction: column; gap: 0.4rem; }
+      .figma-footer { background: #252525; border-top: 1px solid #3c3c3c; padding: 1.5rem 0; text-align: center; font-size: 0.78rem; color: #8e8e93; }
       

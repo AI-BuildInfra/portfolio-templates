@@ -17,37 +17,45 @@
   .infra-trust-badge strong { color: #ffffff; }
   .badge-score { background: #10b981; color: #000000; font-weight: 800; font-size: 0.68rem; padding: 0.1rem 0.4rem; border-radius: 8px; }
   
-      body { background: #050505; color: #22c55e; font-family: 'Fira Code', 'JetBrains Mono', monospace; min-height: 100vh; padding: 2rem 1rem; }
-      .terminal-shell { max-width: 1000px; margin: 0 auto; }
-      .terminal-window { background: #0d1117; border: 1px solid #30363d; border-radius: 8px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9); overflow: hidden; }
-      .terminal-titlebar { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.65rem 1rem; display: flex; justify-content: space-between; align-items: center; }
-      .window-controls { display: flex; gap: 0.45rem; }
-      .w-btn { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
-      .w-close { background: #ff5f56; } .w-min { background: #ffbd2e; } .w-max { background: #27c93f; }
-      .window-title { font-size: 0.78rem; color: #8b949e; }
-      .window-status { font-size: 0.72rem; color: #22c55e; font-weight: 700; display: flex; align-items: center; gap: 0.35rem; }
-      .term-status-dot { width: 6px; height: 6px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 6px #22c55e; }
-      .cli-shortcuts-bar { background: #11161d; border-bottom: 1px solid #21262d; padding: 0.5rem 1rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-      .shortcut-label { font-size: 0.72rem; color: #8b949e; font-weight: 700; margin-right: 0.3rem; }
-      .cli-btn { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; font-size: 0.72rem; padding: 0.25rem 0.65rem; border-radius: 4px; font-family: inherit; }
-      .cli-btn:hover { background: #30363d; color: #22c55e; border-color: #22c55e; }
-      .terminal-body { padding: 1.5rem; min-height: 520px; font-size: 0.88rem; line-height: 1.6; }
-      .ascii-art { font-size: 0.7rem; color: #22c55e; margin-bottom: 1rem; overflow-x: auto; }
-      .term-line { margin-bottom: 0.6rem; color: #e6edf3; }
-      .intro-line { color: #8b949e; }
-      .t-code { background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 0.1rem 0.3rem; border-radius: 3px; }
-      .t-prompt { color: #58a6ff; font-weight: 700; margin-right: 0.4rem; }
-      .prompt-demo { color: #8b949e; }
-      .response-line { color: #58a6ff; margin-bottom: 1.2rem; }
-      .terminal-input-row { display: flex; align-items: center; margin-top: 1rem; }
-      .terminal-input-field { flex: 1; background: transparent; border: none; color: #22c55e; font-family: inherit; font-size: 0.95rem; outline: none; }
-      .blinking-cursor { color: #22c55e; animation: blink 1s infinite; margin-left: 2px; }
-      @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
-      .term-cmd-echo { color: #e6edf3; margin-top: 0.8rem; }
-      .term-cmd-res { margin-bottom: 1rem; }
-      .cli-card-block { background: #161b22; border: 1px solid #30363d; border-radius: 4px; padding: 0.8rem 1rem; margin: 0.5rem 0; color: #c9d1d9; }
-      .cli-card-title { color: #22c55e; font-weight: 700; }
-      .terminal-footer { margin-top: 1.5rem; font-size: 0.78rem; color: #6e7681; }
-      .term-footer-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.8rem; }
-      @media (max-width: 600px) { .ascii-art { display: none; } }
+      body.arch-athletic { background: #0f1013; color: #f3f4f6; font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; min-height: 100vh; }
+      .athletic-header { background: #18191e; border-bottom: 2px solid #a3e635; padding: 1rem 0; }
+      .athletic-bar { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 1rem; }
+      .athletic-brand { display: flex; align-items: center; gap: 0.8rem; }
+      .ath-icon { font-size: 1.6rem; color: #a3e635; }
+      .athletic-brand h1 { font-size: 1.3rem; font-weight: 800; }
+      .ath-cert { font-size: 0.72rem; color: #a3e635; font-weight: 700; }
+      .athletic-links { display: flex; align-items: center; gap: 1.2rem; }
+      .athletic-links a { color: #d1d5db; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+      .btn-ath-cta { background: #a3e635; color: #000; font-weight: 800; padding: 0.5rem 1.2rem; border-radius: 4px; }
+      .athletic-main { padding: 3rem 0; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 3.5rem; }
+      .ath-hero-plate { background: #18191e; border: 1px solid #27272a; border-radius: 8px; padding: 3rem; }
+      .ath-kicker { font-size: 0.72rem; color: #a3e635; font-weight: 800; letter-spacing: 0.1em; display: block; margin-bottom: 0.8rem; }
+      .ath-headline { font-size: clamp(2rem, 3.8vw, 3.2rem); font-weight: 900; margin-bottom: 1rem; }
+      .ath-bio { font-size: 1.05rem; color: #9ca3af; line-height: 1.6; max-width: 800px; margin-bottom: 2rem; }
+      .ath-metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; border-top: 1px solid #27272a; padding-top: 1.5rem; }
+      .ath-metric-cell strong { font-size: 2.2rem; color: #a3e635; font-weight: 900; display: block; }
+      .ath-metric-cell span { font-size: 0.72rem; color: #6b7280; text-transform: uppercase; font-weight: 700; }
+      .ath-tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .tool-card { background: #18191e; border: 1px solid #27272a; border-radius: 8px; padding: 2rem; }
+      .tool-card h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 0.4rem; color: #fff; }
+      .tool-card p { font-size: 0.85rem; color: #9ca3af; margin-bottom: 1.5rem; }
+      .calc-inputs { display: flex; gap: 0.8rem; margin-bottom: 1rem; }
+      .calc-inputs input { background: #0f1013; border: 1px solid #374151; color: #fff; padding: 0.6rem 0.8rem; border-radius: 4px; width: 100%; font-family: inherit; }
+      .btn-calc { background: #a3e635; color: #000; font-weight: 800; border: none; padding: 0 1.2rem; border-radius: 4px; cursor: pointer; white-space: nowrap; }
+      .calc-result { background: #0f1013; border: 1px solid #a3e635; padding: 0.8rem; border-radius: 4px; text-align: center; color: #a3e635; font-size: 1rem; }
+      .macro-breakdown { display: flex; flex-direction: column; gap: 0.8rem; }
+      .macro-bar { display: flex; justify-content: space-between; background: #0f1013; border: 1px solid #27272a; padding: 0.8rem 1rem; border-radius: 4px; font-weight: 700; }
+      .split-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.8rem; }
+      .split-card { background: #18191e; border: 1px solid #27272a; border-radius: 8px; overflow: hidden; }
+      .split-card img { width: 100%; height: 200px; object-fit: cover; }
+      .split-body { padding: 1.4rem; }
+      .split-body h4 { font-size: 1.15rem; font-weight: 800; margin-bottom: 0.3rem; }
+      .split-body p { font-size: 0.85rem; color: #9ca3af; line-height: 1.5; margin-bottom: 0.8rem; }
+      .split-meta { font-size: 0.75rem; color: #a3e635; font-weight: 700; }
+      .ath-packages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+      .ath-pkg { background: #18191e; border: 1px solid #27272a; border-radius: 8px; padding: 1.8rem; }
+      .ath-pkg h4 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+      .ath-pkg strong { font-size: 1.6rem; color: #a3e635; display: block; margin-bottom: 0.8rem; }
+      .ath-pkg ul { list-style: none; font-size: 0.82rem; color: #9ca3af; display: flex; flex-direction: column; gap: 0.35rem; }
+      .athletic-footer { border-top: 1px solid #27272a; padding: 2rem 0; text-align: center; font-size: 0.8rem; color: #6b7280; }
       

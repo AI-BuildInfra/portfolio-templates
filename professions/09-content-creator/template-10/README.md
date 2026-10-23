@@ -1,4 +1,4 @@
-# Aria Thorne — Cinematic Travel & Tech Storyteller (Terminal / Monospace Pro)
+# Aria Thorne — Cinematic Travel & Tech Storyteller (Creator Media Kit & Brand Sponsorship Deck)
 
 An open-source, dynamic JSON-hydrated portfolio website template engineered with modern web architecture by [AI BuildInfra](https://aibuildinfra.com/). Explore our specialized [Web Development Services](https://aibuildinfra.com/services/web-development).
 
@@ -6,7 +6,7 @@ An open-source, dynamic JSON-hydrated portfolio website template engineered with
 
 ## ⚡ Features & Aesthetic
 
-- **Design Variant:** Terminal / Monospace Pro (Hacker / Developer Tech)
+- **Design Variant:** Creator Media Kit & Brand Sponsorship Deck (Creator Media Kit)
 - **100% Dynamic Content:** All text, services, packages, reviews, and images are powered dynamically via `data.json`.
 - **Zero Build Tools:** Runs instantly in any browser with zero `npm install` or compilation steps.
 - **Fail-Safe Loading:** Includes automated fallback data to avoid CORS errors when opening locally via `file://`.

@@ -1,4 +1,4 @@
-# Maya Lin — Staff Product & Design Systems Designer (Terminal / Monospace Pro)
+# Maya Lin — Staff Product & Design Systems Designer (Design System Token Studio & Component Sandbox)
 
 An open-source, dynamic JSON-hydrated portfolio website template engineered with modern web architecture by [AI BuildInfra](https://aibuildinfra.com/). Explore our specialized [Web Development Services](https://aibuildinfra.com/services/web-development).
 
@@ -6,7 +6,7 @@ An open-source, dynamic JSON-hydrated portfolio website template engineered with
 
 ## ⚡ Features & Aesthetic
 
-- **Design Variant:** Terminal / Monospace Pro (Hacker / Developer Tech)
+- **Design Variant:** Design System Token Studio & Component Sandbox (Design System Spec)
 - **100% Dynamic Content:** All text, services, packages, reviews, and images are powered dynamically via `data.json`.
 - **Zero Build Tools:** Runs instantly in any browser with zero `npm install` or compilation steps.
 - **Fail-Safe Loading:** Includes automated fallback data to avoid CORS errors when opening locally via `file://`.

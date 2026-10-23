@@ -23,74 +23,79 @@
     }
   }
   </script></head>
-<body class="arch-terminal">
-  <div class="terminal-shell">
-    <!-- Terminal Window Container -->
-    <div class="terminal-window">
-      <!-- Window Titlebar -->
-      <div class="terminal-titlebar">
-        <div class="window-controls">
-          <span class="w-btn w-close"></span>
-          <span class="w-btn w-min"></span>
-          <span class="w-btn w-max"></span>
-        </div>
-        <div class="window-title">bash &mdash; portfolio@doctor: ~ (80x24)</div>
-        <div class="window-status"><span class="term-status-dot"></span> LIVE</div>
-      </div>
-
-      <!-- Quick Command Bar -->
-      <div class="cli-shortcuts-bar">
-        <span class="shortcut-label">RUN:</span>
-        <button class="cli-btn" onclick="runCommand('help')">help</button>
-        <button class="cli-btn" onclick="runCommand('bio')">cat bio.txt</button>
-        <button class="cli-btn" onclick="runCommand('projects')">ls projects/</button>
-        <button class="cli-btn" onclick="runCommand('stats')">./get_metrics.sh</button>
-        <button class="cli-btn" onclick="runCommand('rates')">cat packages.json</button>
-        <button class="cli-btn" onclick="runCommand('contact')">./contact.sh</button>
-        <button class="cli-btn" onclick="runCommand('clear')">clear</button>
-      </div>
-
-      <!-- Terminal Output Canvas -->
-      <div class="terminal-body" id="terminal-screen">
-        <pre class="ascii-art">
-+----------------------------------------------------------+
-|  PORTFOLIO TERMINAL v4.2.0-LTS // ENVIRONMENT READY      |
-|  HOST: aibuildinfra.com  USER: doctor                    |
-+----------------------------------------------------------+
-        </pre>
-        <p class="term-line intro-line">System initialized. Type <code class="t-code">help</code> or click commands above to explore Dr. Marcus Chen's verified portfolio.</p>
-        <p class="term-line prompt-demo"><span class="t-prompt">$</span> whoami</p>
-        <p class="term-line response-line"><strong>Dr. Marcus Chen</strong> &mdash; MD, FACC • Interventional Cardiologist (New York, NY (Madison Ave))</p>
-        
-        <!-- Live Terminal History Log -->
-        <div id="terminal-history"></div>
-
-        <!-- Active Interactive Prompt Line -->
-        <div class="terminal-input-row">
-          <span class="t-prompt">$</span>
-          <input type="text" id="terminal-input" class="terminal-input-field" placeholder="Type command here (e.g. help, projects, bio)..." autocomplete="off" autofocus>
-          <span class="blinking-cursor">▋</span>
+<body class="arch-clinical">
+  <header class="clinical-header">
+    <div class="container clinical-header-inner">
+      <div class="clinical-id">
+        <span class="caduceus">🩺</span>
+        <div>
+          <h1>Dr. Marcus Chen</h1>
+          <span class="clinical-sub">MD, FACC • Interventional Cardiologist &bull; LICENSED ATTENDING PHYSICIAN</span>
         </div>
       </div>
-
-      <!-- Graphical Data Stores (Hidden / Hydrated for terminal commands) -->
-      <div id="brand-name" style="display:none;">Dr. Marcus Chen</div>
-      <div id="hero-headline" style="display:none;">Compassionate Heart Care Powered by Clinical Innovation</div>
-      <div id="hero-tagline" style="display:none;">MD, FACC • Interventional Cardiologist</div>
-      <div id="hero-bio" style="display:none;">Dr. Marcus Chen is a double board-certified Interventional Cardiologist with over 15 years of clinical practice. Having performed 3,200+ procedures, he specializes in complex coronary interventions and preventive cardiology.</div>
-      <div id="items-title" style="display:none;">Clinical Specialties & Interventions</div>
-      <div id="metrics-grid" style="display:none;"></div>
-      <div id="items-grid" style="display:none;"></div>
-      <div id="packages-grid" style="display:none;"></div>
-      <div id="reviews-grid" style="display:none;"></div>
-      <span id="year" style="display:none;"></span>
+      <div class="clinical-affiliations">
+        <span class="affil-tag">Mount Sinai Hospital</span>
+        <span class="affil-tag">NYU Langone Medical</span>
+        <a href="#requisition" class="btn-triage-book">Schedule Consultation</a>
+      </div>
     </div>
+  </header>
 
-    <!-- Terminal Footer -->
-    <footer class="terminal-footer">
-      <div class="container term-footer-flex">
-        <span>portfolio-os v4.2.0-lts // &copy; <span id="term-year">2026</span> Dr. Marcus Chen</span>
-        
+  <main class="container clinical-main">
+    <section class="clinical-memo-block">
+      <div class="memo-header">
+        <div class="memo-title">CLINICAL DOSSIER &bull; INTERVENTIONAL CARDIOLOGY DIVISION</div>
+        <div class="memo-meta">REF: NY-MED-CARD-2026 &bull; CONFIDENTIAL MEDICAL RECORD</div>
+      </div>
+      <div class="memo-body">
+        <div class="memo-lead">
+          <h2>Compassionate Heart Care Powered by Clinical Innovation</h2>
+          <p>Dr. Marcus Chen is a double board-certified Interventional Cardiologist with over 15 years of clinical practice. Having performed 3,200+ procedures, he specializes in complex coronary interventions and preventive cardiology.</p>
+        </div>
+        <div class="clinical-metrics-grid" id="clinical-metrics"></div>
+      </div>
+    </section>
+
+    <section class="clinical-registry-section">
+      <div class="section-badge-clinical">SECTION I &bull; PROCEDURAL SPECIALTIES &amp; INTERVENTIONS</div>
+      <div class="registry-grid" id="cases-grid"></div>
+    </section>
+
+    <section class="clinical-requisition-section" id="requisition">
+      <div class="requisition-card">
+        <div class="req-head">
+          <span class="req-seal">🏥</span>
+          <div>
+            <h3>Consultation Requisition &amp; Patient Triage Intake</h3>
+            <p>For urgent acute symptoms, please dial 911 immediately. For outpatient evaluations and elective cardiac catheterization second opinions, submit below.</p>
+          </div>
+        </div>
+        <div class="packages-clinical" id="clinical-packages"></div>
+        <form class="clinical-form" onsubmit="handleClinicalSubmit(event)">
+          <div class="c-row">
+            <input type="text" placeholder="Patient Full Legal Name" required>
+            <input type="tel" placeholder="Contact Phone Number" required>
+          </div>
+          <div class="c-row">
+            <input type="email" placeholder="Email Address" required>
+            <select required>
+              <option value="">Select Primary Clinical Indication</option>
+              <option value="coronary">Coronary Artery Disease / Angina</option>
+              <option value="prevention">Preventive Cardiac Risk &amp; Calcium Scoring</option>
+              <option value="valve">Structural Heart &amp; Valve Evaluation</option>
+              <option value="second-opinion">Catheterization Second Opinion</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-clinical-submit">Submit Formal Requisition &rarr;</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="clinical-footer">
+    <div class="container">
+      <p>&copy; 2026 Dr. Marcus Chen. Board Certified in Interventional Cardiology &bull; HIPAA Compliant.</p>
+      
   <div class="footer-backlink" id="infra-credit-wrap">
     <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
       <span class="badge-icon">⚡</span>
@@ -98,10 +103,9 @@
       <span class="badge-score">100</span>
     </a>
   </div>
-      </div>
-    </footer>
-  </div>
-
+    </div>
+  </footer>
+  <script src="data.json" type="application/json" id="portfolio-data"></script>
   <script src="app.js"></script>
 </body>
 </html>
