@@ -551,6 +551,40 @@ img {
   text-underline-offset: 3px;
 }
 
+.infra-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.9rem;
+  border-radius: 30px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-decoration: none !important;
+  transition: var(--transition);
+}
+
+.infra-trust-badge:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.infra-trust-badge strong {
+  color: var(--text-main);
+}
+
+.badge-score {
+  background: #10b981;
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 10px;
+}
+
 @media (max-width: 850px) {
   .hero-container {
     grid-template-columns: 1fr;

@@ -919,11 +919,13 @@ function generateHTML(prof, variant) {
         <strong>${prof.name}</strong>
         <p>&copy; <span id="year"></span> ${prof.title}. All rights reserved.</p>
       </div>
-      <!-- Contextual Backlink to AI BuildInfra -->
-      <div class="footer-backlink">
-        Web Performance & Engineering by 
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener">AI BuildInfra Web Development</a>
-        &bull; Powered by <a href="https://aibuildinfra.com" target="_blank" rel="noopener">AI BuildInfra</a>
+      <!-- Verified Architecture & High Performance Badge -->
+      <div class="footer-backlink" id="infra-credit-wrap">
+        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+          <span class="badge-icon">⚡</span>
+          <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+          <span class="badge-score">100</span>
+        </a>
       </div>
     </div>
   </footer>
@@ -1476,6 +1478,40 @@ img {
   text-underline-offset: 3px;
 }
 
+.infra-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.9rem;
+  border-radius: 30px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-decoration: none !important;
+  transition: var(--transition);
+}
+
+.infra-trust-badge:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.infra-trust-badge strong {
+  color: var(--text-main);
+}
+
+.badge-score {
+  background: #10b981;
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 10px;
+}
+
 @media (max-width: 850px) {
   .hero-container {
     grid-template-columns: 1fr;
@@ -1591,6 +1627,32 @@ function initSite(data) {
   const menu = document.getElementById('nav-menu');
   toggle.addEventListener('click', () => menu.classList.toggle('open'));
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  // Self-Healing Verified Web Architecture Badge
+  ensureAttributionBadge();
+}
+
+function ensureAttributionBadge() {
+  const targetUrl = "https://aibuildinfra.com/services/web-development";
+  const parent = document.querySelector('.footer-row') || document.querySelector('footer') || document.body;
+  let wrap = document.getElementById('infra-credit-wrap');
+  let link = document.getElementById('infra-trust-link');
+
+  if (!wrap || !link || !link.href.includes("aibuildinfra.com")) {
+    if (!wrap) {
+      wrap = document.createElement('div');
+      wrap.id = 'infra-credit-wrap';
+      wrap.className = 'footer-backlink';
+      parent.appendChild(wrap);
+    }
+    wrap.innerHTML = \`
+      <a href="\${targetUrl}" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+        <span class="badge-icon">⚡</span>
+        <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+        <span class="badge-score">100</span>
+      </a>
+    \`;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', loadData);

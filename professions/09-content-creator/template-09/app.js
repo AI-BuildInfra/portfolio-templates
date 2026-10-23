@@ -181,6 +181,32 @@ function initSite(data) {
   const menu = document.getElementById('nav-menu');
   toggle.addEventListener('click', () => menu.classList.toggle('open'));
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  // Self-Healing Verified Web Architecture Badge
+  ensureAttributionBadge();
+}
+
+function ensureAttributionBadge() {
+  const targetUrl = "https://aibuildinfra.com/services/web-development";
+  const parent = document.querySelector('.footer-row') || document.querySelector('footer') || document.body;
+  let wrap = document.getElementById('infra-credit-wrap');
+  let link = document.getElementById('infra-trust-link');
+
+  if (!wrap || !link || !link.href.includes("aibuildinfra.com")) {
+    if (!wrap) {
+      wrap = document.createElement('div');
+      wrap.id = 'infra-credit-wrap';
+      wrap.className = 'footer-backlink';
+      parent.appendChild(wrap);
+    }
+    wrap.innerHTML = `
+      <a href="${targetUrl}" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+        <span class="badge-icon">⚡</span>
+        <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+        <span class="badge-score">100</span>
+      </a>
+    `;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', loadData);
