@@ -129,30 +129,56 @@
     </div>
   </section>
 
-  <!-- Sticky Controls Bar & Profession Navigation Rail -->
+  <!-- Sticky Controls Bar & Dual-Axis Navigation Rail -->
   <nav class="sticky-controls-wrapper" id="sticky-controls" aria-label="Catalog Navigation">
     <div class="container">
-      <!-- Search & Status Row -->
+      <!-- Search, View Switcher & Status Row -->
       <div class="controls-toolbar">
         <div class="search-input-shell">
           <span class="search-icon">🔍</span>
           <input 
             type="text" 
             id="global-search-input" 
-            placeholder="Search by profession, archetype, persona, or keyword (e.g. Bento, Developer, Doctor, Brutalist)..."
+            placeholder="Search disciplines, archetypes, personas, keywords (e.g. Bento, Doctor, Developer)..."
             aria-label="Filter templates"
           >
         </div>
-        <div class="catalog-status-badge">
-          <span class="pulse-dot"></span>
-          <span id="catalog-counter-text">Loading 150 Templates...</span>
+
+        <div class="toolbar-right-actions">
+          <div class="view-mode-toggle" id="view-mode-toggle">
+            <button class="view-toggle-btn active" data-view="grid" title="Showcase Grid View">
+              <span>⊞ Grid</span>
+            </button>
+            <button class="view-toggle-btn" data-view="matrix" title="15x10 Architecture Matrix View">
+              <span>☷ 15×10 Matrix</span>
+            </button>
+          </div>
+
+          <div class="catalog-status-badge">
+            <span class="pulse-dot"></span>
+            <span id="catalog-counter-text">Loading 150 Templates...</span>
+          </div>
         </div>
       </div>
 
-      <!-- Horizontal Quick-Jump Profession Rail -->
-      <div class="nav-rail-outer">
-        <div class="nav-rail" id="professions-nav-rail">
-          <!-- Hydrated dynamically by portal.js -->
+      <!-- Dual-Axis Filter Rails -->
+      <!-- Axis 1: Archetypes Rail -->
+      <div class="nav-rail-outer rail-archetypes-outer">
+        <div class="rail-row-wrapper">
+          <span class="rail-axis-tag">STYLE</span>
+          <div class="nav-rail" id="archetypes-nav-rail">
+            <!-- Hydrated dynamically by portal.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Axis 2: Professions Rail -->
+      <div class="nav-rail-outer rail-professions-outer">
+        <div class="rail-row-wrapper">
+          <span class="rail-axis-tag">CAREER</span>
+          <div class="nav-rail" id="professions-nav-rail">
+            <!-- Hydrated dynamically by portal.js -->
+          </div>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 // Professional Catalog & UI Controller for 15 Professions x 10 Templates = 150 Templates
+// High-Contrast Monochrome Architecture with Dual-Axis Filtering & 15x10 Matrix View
 
 // 15 Canonical Professions Metadata with Icons & Badges
 const PROFESSIONS_META = [
@@ -21,20 +22,22 @@ const PROFESSIONS_META = [
 
 // 10 Design Archetypes Metadata
 const DESIGN_VARIANTS_INFO = {
-  "template-01": { label: "Obsidian Dark", badge: "Dark Minimalist" },
-  "template-02": { label: "Nordic Light", badge: "Clean Editorial" },
-  "template-03": { label: "Bento Grid", badge: "Asymmetric Bento" },
-  "template-04": { label: "Glassmorphic Aura", badge: "Translucent Glow" },
-  "template-05": { label: "Neo-Brutalist", badge: "High-Contrast Bold" },
-  "template-06": { label: "Split-Screen", badge: "Studio Dual Column" },
-  "template-07": { label: "Sidebar App", badge: "Dashboard Layout" },
-  "template-08": { label: "Magazine Serif", badge: "Publication Centered" },
-  "template-09": { label: "Kinetic Pulse", badge: "Vibrant Gradient" },
-  "template-10": { label: "Terminal Monospace", badge: "Developer CLI" }
+  "template-01": { label: "Obsidian Dark", badge: "Dark Minimalist", icon: "✦" },
+  "template-02": { label: "Nordic Light", badge: "Clean Editorial", icon: "☼" },
+  "template-03": { label: "Bento Grid", badge: "Asymmetric Bento", icon: "⊞" },
+  "template-04": { label: "Glassmorphic Aura", badge: "Translucent Glow", icon: "◈" },
+  "template-05": { label: "Neo-Brutalist", badge: "High-Contrast Bold", icon: "█" },
+  "template-06": { label: "Split-Screen", badge: "Studio Dual Column", icon: "◫" },
+  "template-07": { label: "Sidebar App", badge: "Dashboard Layout", icon: "☷" },
+  "template-08": { label: "Magazine Serif", badge: "Publication Centered", icon: "✦" },
+  "template-09": { label: "Kinetic Pulse", badge: "Vibrant Gradient", icon: "⚡" },
+  "template-10": { label: "Terminal Monospace", badge: "Developer CLI", icon: ">_" }
 };
 
 let activeProfessionFilter = "all";
+let activeArchetypeFilter = "all";
 let searchQuery = "";
+let currentViewMode = "grid"; // "grid" | "matrix"
 
 // Group all templates by profession
 function getGroupedTemplates() {
@@ -56,10 +59,130 @@ function getGroupedTemplates() {
   return groups;
 }
 
-// Render the entire profession-wise and template-wise layout
-function renderSections() {
-  const container = document.getElementById('professions-container');
-  const grouped = getGroupedTemplates();
+// Render the 15x10 Architecture Matrix View
+function renderMatrixView(grouped, container) {
+  let renderedCount = 0;
+  const filteredProfessions = PROFESSIONS_META.filter(p => {
+    if (activeProfessionFilter !== 'all' && activeProfessionFilter !== p.id) return false;
+    return true;
+  });
+
+  const variantsList = Object.entries(DESIGN_VARIANTS_INFO).filter(([vId]) => {
+    if (activeArchetypeFilter !== 'all' && activeArchetypeFilter !== vId) return false;
+    return true;
+  });
+
+  let matrixHtml = `
+    <div class="matrix-view-container">
+      <div class="matrix-header-info">
+        <h3>15 × 10 Cross-Discipline Architectural Matrix</h3>
+        <p>Direct architectural index: Compare all 15 professions against the 10 distinct design archetypes.</p>
+      </div>
+      <div class="matrix-table-wrapper">
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th class="matrix-th-prof">Profession</th>
+              ${variantsList.map(([vId, info]) => `
+                <th class="matrix-th-variant">
+                  <div class="matrix-col-header">
+                    <span class="m-col-num">${vId.toUpperCase()}</span>
+                    <span class="m-col-label">${info.label}</span>
+                    <span class="m-col-badge">${info.badge}</span>
+                  </div>
+                </th>
+              `).join('')}
+            </tr>
+          </thead>
+          <tbody>
+  `;
+
+  filteredProfessions.forEach(p => {
+    const group = grouped[p.id];
+    if (!group) return;
+
+    let rowMatches = false;
+    const rowCells = variantsList.map(([vId, info]) => {
+      const template = group.templates.find(t => t.variantId === vId);
+      if (!template) {
+        return `<td class="matrix-cell empty">—</td>`;
+      }
+
+      // Check search query
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase();
+        const matches = (
+          template.variantName.toLowerCase().includes(q) ||
+          template.variantType.toLowerCase().includes(q) ||
+          info.label.toLowerCase().includes(q) ||
+          p.title.toLowerCase().includes(q) ||
+          p.name.toLowerCase().includes(q) ||
+          p.tag.toLowerCase().includes(q)
+        );
+        if (!matches) {
+          return `<td class="matrix-cell dimmed">—</td>`;
+        }
+      }
+
+      rowMatches = true;
+      renderedCount++;
+      return `
+        <td class="matrix-cell">
+          <div class="matrix-cell-card">
+            <span class="cell-status-dot"></span>
+            <a href="${template.path}" target="_blank" rel="noopener" class="matrix-link-pill" title="Preview ${template.variantName}">
+              Demo &nearr;
+            </a>
+            <a href="https://github.com/AI-BuildInfra/portfolio-templates/tree/main/${template.folder}" target="_blank" rel="noopener" class="matrix-gh-link" title="Source">
+              📁
+            </a>
+          </div>
+        </td>
+      `;
+    });
+
+    if (searchQuery.trim() !== '' && !rowMatches) return;
+
+    matrixHtml += `
+      <tr>
+        <td class="matrix-prof-cell">
+          <div class="m-prof-info">
+            <span class="m-prof-icon">${p.icon}</span>
+            <div class="m-prof-text">
+              <strong>${p.num}. ${p.title.split('&')[0].trim()}</strong>
+              <span class="m-persona">${p.name} &bull; ${p.tag}</span>
+            </div>
+          </div>
+        </td>
+        ${rowCells.join('')}
+      </tr>
+    `;
+  });
+
+  matrixHtml += `
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+
+  if (renderedCount === 0) {
+    container.innerHTML = `
+      <div class="no-results-box">
+        <h3>No matching matrix entries found</h3>
+        <p>Try clearing filters or search terms to inspect the 150 combinations.</p>
+        <button class="btn btn-primary" onclick="resetSearch()">Clear Filters</button>
+      </div>
+    `;
+  } else {
+    container.innerHTML = matrixHtml;
+  }
+
+  updateCounter(renderedCount);
+}
+
+// Render the Showcase Grid View
+function renderGridView(grouped, container) {
   let html = '';
   let renderedCount = 0;
 
@@ -67,13 +190,20 @@ function renderSections() {
     const group = grouped[p.id];
     if (!group) return;
 
-    // Filter by active profession tab
+    // Filter by active profession
     if (activeProfessionFilter !== 'all' && activeProfessionFilter !== p.id) {
       return;
     }
 
-    // Filter templates within this group by search query
+    // Filter templates within this group by archetype & search query
     let filteredTemplates = group.templates;
+    
+    // Archetype filter
+    if (activeArchetypeFilter !== 'all') {
+      filteredTemplates = filteredTemplates.filter(t => t.variantId === activeArchetypeFilter);
+    }
+
+    // Search query filter
     if (searchQuery.trim() !== '') {
       const q = searchQuery.toLowerCase();
       filteredTemplates = filteredTemplates.filter(t => {
@@ -88,8 +218,9 @@ function renderSections() {
           p.tag.toLowerCase().includes(q)
         );
       });
-      if (filteredTemplates.length === 0) return;
     }
+
+    if (filteredTemplates.length === 0) return;
 
     renderedCount += filteredTemplates.length;
 
@@ -121,14 +252,14 @@ function renderSections() {
         <!-- Template-Wise Cards Grid for this Profession -->
         <div class="template-variants-grid">
           ${filteredTemplates.map(t => {
-            const vInfo = DESIGN_VARIANTS_INFO[t.variantId] || { label: t.variantName, badge: t.variantType };
+            const vInfo = DESIGN_VARIANTS_INFO[t.variantId] || { label: t.variantName, badge: t.variantType, icon: "✦" };
             return `
               <div class="template-variant-card archetype-${t.variantId}" id="card-${p.id}-${t.variantId}">
                 <div class="variant-media">
                   <img src="${t.image}" alt="${t.variantName}" loading="lazy">
                   <div class="variant-media-overlay">
                     <span class="variant-num-pill">${t.variantId.toUpperCase()}</span>
-                    <span class="variant-style-pill">${vInfo.badge}</span>
+                    <span class="variant-style-pill">${vInfo.icon} ${vInfo.badge}</span>
                   </div>
                 </div>
                 <div class="variant-body">
@@ -158,7 +289,7 @@ function renderSections() {
     container.innerHTML = `
       <div class="no-results-box">
         <h3>No matching templates found</h3>
-        <p>Try searching for a different keyword like "Bento", "Dark", "Doctor", or "Developer".</p>
+        <p>Try clearing your search or picking "All Archetypes" / "All Professions".</p>
         <button class="btn btn-primary" onclick="resetSearch()">Clear Filters</button>
       </div>
     `;
@@ -166,20 +297,39 @@ function renderSections() {
     container.innerHTML = html;
   }
 
-  const totalCount = (typeof TEMPLATES_CATALOG !== 'undefined') ? TEMPLATES_CATALOG.length : (window.TEMPLATES_CATALOG ? window.TEMPLATES_CATALOG.length : 150);
+  updateCounter(renderedCount);
+}
+
+function updateCounter(renderedCount) {
+  const catalog = (typeof TEMPLATES_CATALOG !== 'undefined') ? TEMPLATES_CATALOG : (window.TEMPLATES_CATALOG || []);
+  const totalCount = catalog.length || 150;
   const counterEl = document.getElementById('catalog-counter-text');
   if (counterEl) {
     counterEl.textContent = `Displaying ${renderedCount} of ${totalCount} Templates Across 15 Professions`;
   }
 }
 
+// Master Render Router
+function renderSections() {
+  const container = document.getElementById('professions-container');
+  const grouped = getGroupedTemplates();
+
+  if (currentViewMode === 'matrix') {
+    renderMatrixView(grouped, container);
+  } else {
+    renderGridView(grouped, container);
+  }
+}
+
 // Render the Sticky Nav Tabs for 15 Professions
-function renderNavRail() {
+function renderProfessionRail() {
   const rail = document.getElementById('professions-nav-rail');
+  if (!rail) return;
+
   rail.innerHTML = `
     <button class="rail-btn ${activeProfessionFilter === 'all' ? 'active' : ''}" data-prof="all">
       <span class="rail-icon">✦</span>
-      <span class="rail-text">All Professions (150)</span>
+      <span class="rail-text">All Careers (15)</span>
     </button>
     ${PROFESSIONS_META.map(p => `
       <button class="rail-btn ${activeProfessionFilter === p.id ? 'active' : ''}" data-prof="${p.id}">
@@ -196,8 +346,7 @@ function renderNavRail() {
       activeProfessionFilter = btn.dataset.prof;
       renderSections();
       
-      // If specific profession picked, smooth scroll into view
-      if (activeProfessionFilter !== 'all') {
+      if (activeProfessionFilter !== 'all' && currentViewMode === 'grid') {
         const targetSection = document.getElementById(`prof-${activeProfessionFilter}`);
         if (targetSection) {
           targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -207,8 +356,50 @@ function renderNavRail() {
   });
 }
 
+// Render the Archetypes Rail (Dual-Axis Axis 1)
+function renderArchetypeRail() {
+  const rail = document.getElementById('archetypes-nav-rail');
+  if (!rail) return;
+
+  rail.innerHTML = `
+    <button class="rail-btn ${activeArchetypeFilter === 'all' ? 'active' : ''}" data-archetype="all">
+      <span class="rail-icon">✦</span>
+      <span class="rail-text">All 10 Archetypes</span>
+    </button>
+    ${Object.entries(DESIGN_VARIANTS_INFO).map(([vId, info]) => `
+      <button class="rail-btn ${activeArchetypeFilter === vId ? 'active' : ''}" data-archetype="${vId}">
+        <span class="rail-icon">${info.icon}</span>
+        <span class="rail-text">${info.label}</span>
+      </button>
+    `).join('')}
+  `;
+
+  rail.querySelectorAll('.rail-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      rail.querySelectorAll('.rail-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeArchetypeFilter = btn.dataset.archetype;
+      renderSections();
+    });
+  });
+}
+
+// Initialize View Mode Toggle (Grid vs Matrix)
+function initViewToggle() {
+  const buttons = document.querySelectorAll('.view-toggle-btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentViewMode = btn.dataset.view;
+      renderSections();
+    });
+  });
+}
+
 function initSearch() {
   const input = document.getElementById('global-search-input');
+  if (!input) return;
   input.addEventListener('input', (e) => {
     searchQuery = e.target.value;
     renderSections();
@@ -218,13 +409,18 @@ function initSearch() {
 function resetSearch() {
   searchQuery = '';
   activeProfessionFilter = 'all';
-  document.getElementById('global-search-input').value = '';
-  renderNavRail();
+  activeArchetypeFilter = 'all';
+  const input = document.getElementById('global-search-input');
+  if (input) input.value = '';
+  renderProfessionRail();
+  renderArchetypeRail();
   renderSections();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderNavRail();
-  renderSections();
+  renderProfessionRail();
+  renderArchetypeRail();
+  initViewToggle();
   initSearch();
+  renderSections();
 });
