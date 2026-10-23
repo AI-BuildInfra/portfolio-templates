@@ -98,9 +98,9 @@
       <div class="hero-badge-wrap">
         <span class="hub-badge">✦ 15 PROFESSIONS &bull; 10 DESIGN ARCHETYPES EACH &bull; 150 TEMPLATES</span>
       </div>
-      <h1 class="hero-h1">Profession-Wise &amp; Template-Wise Portfolio Catalog</h1>
+      <h1 class="hero-h1">Curated Open-Source Portfolio Directory</h1>
       <p class="hero-desc">
-        Explore 15 distinct professions, each split into 10 unique design archetypes (Obsidian Dark, Nordic Light, Bento Grid, Neo-Brutalist, Glassmorphic Aura, and more). Non-coders simply edit <code>data.json</code> to personalize content in seconds.
+        15 curated career disciplines, each engineered with 10 structurally unique design archetypes (Bento Grid, Terminal CLI, Neo-Brutalist, Split Screen, Sidebar App, and more). Non-coders simply edit <code>data.json</code> for instant updates.
       </p>
 
       <!-- Key Metrics -->
@@ -129,6 +129,13 @@
     </div>
   </section>
 
+  <!-- Featured Spotlight Section (Top 6 Standouts) -->
+  <section class="spotlight-section">
+    <div class="container" id="spotlight-container">
+      <!-- Hydrated dynamically by portal.js -->
+    </div>
+  </section>
+
   <!-- Sticky Controls Bar & Dual-Axis Navigation Rail -->
   <nav class="sticky-controls-wrapper" id="sticky-controls" aria-label="Catalog Navigation">
     <div class="container">
@@ -146,8 +153,11 @@
 
         <div class="toolbar-right-actions">
           <div class="view-mode-toggle" id="view-mode-toggle">
-            <button class="view-toggle-btn active" data-view="grid" title="Showcase Grid View">
-              <span>⊞ Grid</span>
+            <button class="view-toggle-btn active" data-view="hubs" title="Browse by 15 Profession Hubs">
+              <span>🗂️ Hubs</span>
+            </button>
+            <button class="view-toggle-btn" data-view="catalog" title="Direct Catalog Explorer">
+              <span>⊞ Catalog</span>
             </button>
             <button class="view-toggle-btn" data-view="matrix" title="15x10 Architecture Matrix View">
               <span>☷ 15×10 Matrix</span>
@@ -284,6 +294,17 @@
       </p>
     </div>
   </footer>
+
+  <!-- Slide-Over Modal Drawer for Inspecting All 10 Archetypes of a Selected Profession -->
+  <div id="drawer-overlay" class="drawer-overlay" onclick="closeProfessionDrawer()"></div>
+  <aside id="profession-drawer" class="profession-drawer" aria-label="Profession Design Explorer">
+    <div class="drawer-header" id="drawer-header">
+      <!-- Hydrated by portal.js -->
+    </div>
+    <div class="drawer-body" id="drawer-body">
+      <!-- Hydrated by portal.js -->
+    </div>
+  </aside>
 
   <!-- Scripts: Catalog Data first, then UI Controller -->
   <script src="catalog-data.js"></script>

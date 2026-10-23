@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Structured Data Schema with Contextual Backlink -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,136 +22,94 @@
       "url": "https://aibuildinfra.com/services/web-development"
     }
   }
-  </script>
-</head>
-<body class="layout-split-screen">
-  <!-- Top Bar / Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand">
-        <span class="brand-name" id="brand-name">Alex Rivera</span>
-        <span class="brand-tagline">Rust • Go • TypeScript • Kubernetes</span>
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-btn">Get in Touch</a>
-      </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <span class="hero-kicker" id="hero-tagline">Senior Distributed Systems & Full-Stack Engineer</span>
-        <h1 class="hero-headline" id="hero-headline">Architecting Fault-Tolerant Microservices and High-Throughput Cloud Infrastructure</h1>
-        <p class="hero-bio" id="hero-bio">Software engineer with 8+ years building resilient event-driven microservices, developer tooling, and distributed pipelines. Passionate about system latency, concurrency, and open-source.</p>
-        <div class="hero-cta-group">
-          <a href="#portfolio" class="btn btn-primary">View Selected Work</a>
-          <a href="#contact" class="btn btn-secondary">Direct Inquiry</a>
+  </script></head>
+<body class="arch-split">
+  <div class="split-viewport">
+    <!-- Fixed Left Column (50% Desktop) -->
+    <aside class="split-left-pane">
+      <div class="left-pane-inner">
+        <div class="left-brand-block">
+          <h1 class="split-name" id="brand-name">Alex Rivera</h1>
+          <span class="split-kicker" id="hero-tagline">Senior Distributed Systems & Full-Stack Engineer</span>
         </div>
-      </div>
-      <div class="hero-media">
-        <div class="media-frame">
-          <img id="hero-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Alex Rivera" loading="lazy">
-          <div class="status-indicator-badge">
-            <span class="dot"></span>
-            <span>Available for New Projects</span>
+
+        <div class="left-avatar-card">
+          <img id="hero-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Alex Rivera">
+          <div class="split-status-beacon">
+            <span class="beacon-dot"></span>
+            <span>Direct Availability Active</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Metrics Strip -->
-  <section class="metrics-section">
-    <div class="container metrics-grid" id="metrics-grid">
-      <!-- Populated via JS -->
-    </div>
-  </section>
+        <p class="split-bio-summary" id="hero-bio">Software engineer with 8+ years building resilient event-driven microservices, developer tooling, and distributed pipelines. Passionate about system latency, concurrency, and open-source.</p>
 
-  <!-- Portfolio / Key Works -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">SHOWCASE</span>
-        <h2 class="section-title" id="items-title">Production Deployments & Open Source</h2>
-      </div>
-      <div class="items-grid" id="items-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+        <!-- Dynamic Scroll Spy Indicator -->
+        <nav class="split-spy-nav" id="split-spy">
+          <a href="#pane-headline" class="spy-item active" data-target="pane-headline">01. Overview</a>
+          <a href="#pane-works" class="spy-item" data-target="pane-works">02. Showcase</a>
+          <a href="#pane-packages" class="spy-item" data-target="pane-packages">03. Services</a>
+          <a href="#pane-contact" class="spy-item" data-target="pane-contact">04. Contact</a>
+        </nav>
 
-  <!-- Packages / Services -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENGAGEMENTS & RATES</span>
-        <h2 class="section-title">Cooperation Packages</h2>
+        <div class="left-pane-footer">
+          <p class="direct-email">alex@riveradev.io</p>
+          
+  <div class="footer-backlink" id="infra-credit-wrap">
+    <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+      <span class="badge-icon">⚡</span>
+      <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+      <span class="badge-score">100</span>
+    </a>
+  </div>
+        </div>
       </div>
-      <div class="packages-grid" id="packages-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+    </aside>
 
-  <!-- Testimonials -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENDORSEMENTS</span>
-        <h2 class="section-title">Client Feedback</h2>
-      </div>
-      <div class="reviews-grid" id="reviews-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+    <!-- Scrolling Right Column (50% Desktop) -->
+    <main class="split-right-pane" id="split-scroll-pane">
+      <div class="right-pane-inner">
+        <!-- Section 1: Headline & Metrics -->
+        <section class="split-content-section" id="pane-headline">
+          <span class="pane-sec-num">01 / OVERVIEW</span>
+          <h2 class="right-headline" id="hero-headline">Architecting Fault-Tolerant Microservices and High-Throughput Cloud Infrastructure</h2>
+          <div class="split-metrics-grid" id="metrics-grid"></div>
+        </section>
 
-  <!-- Contact Form -->
-  <section class="contact-section" id="contact">
-    <div class="container contact-container">
-      <div class="contact-box">
-        <span class="kicker">LET'S CONNECT</span>
-        <h2 class="section-title">Initiate a Collaboration</h2>
-        <p class="contact-sub">Direct submissions are reviewed within 24 hours. Confidential inquiries respected.</p>
-        
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message transmitted! You will receive a response shortly.'); this.reset();">
-          <div class="form-row">
+        <!-- Section 2: Showcase Works -->
+        <section class="split-content-section" id="pane-works">
+          <span class="pane-sec-num">02 / PORTFOLIO</span>
+          <h2 id="items-title">Production Deployments & Open Source</h2>
+          <div class="split-items-list" id="items-grid"></div>
+        </section>
+
+        <!-- Section 3: Packages -->
+        <section class="split-content-section" id="pane-packages">
+          <span class="pane-sec-num">03 / COOPERATION</span>
+          <h2>Service Packages</h2>
+          <div class="split-packages-list" id="packages-grid"></div>
+        </section>
+
+        <!-- Section 4: Reviews -->
+        <section class="split-content-section" id="pane-reviews">
+          <span class="pane-sec-num">CLIENT REVIEWS</span>
+          <div class="split-reviews-stack" id="reviews-grid"></div>
+        </section>
+
+        <!-- Section 5: Contact -->
+        <section class="split-content-section" id="pane-contact">
+          <span class="pane-sec-num">04 / CONNECT</span>
+          <h2>Initiate Engagement</h2>
+          <form class="split-form" onsubmit="event.preventDefault(); alert('Message transmitted to studio desk.'); this.reset();">
             <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email Address" required>
-          </div>
-          <input type="text" placeholder="Project Subject / Scope" required>
-          <textarea rows="4" placeholder="Briefly describe your goals, timeline, and requirements..." required></textarea>
-          <button type="submit" class="btn btn-primary btn-block">Transmit Inquiry &rarr;</button>
-        </form>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="4" placeholder="Project scope, timeline, goals..." required></textarea>
+            <button type="submit" class="btn-split-submit">Transmit to Studio &rarr;</button>
+          </form>
+          <p class="copyright-note">&copy; <span id="year"></span> Alex Rivera. Dual-Pane Studio Architecture.</p>
+        </section>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer with Contextual Backlink -->
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div class="footer-left">
-        <strong>Alex Rivera</strong>
-        <p>&copy; <span id="year"></span> Senior Distributed Systems & Full-Stack Engineer. All rights reserved.</p>
-      </div>
-      <!-- Verified Architecture & High Performance Badge -->
-      <div class="footer-backlink" id="infra-credit-wrap">
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
-          <span class="badge-icon">⚡</span>
-          <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
-          <span class="badge-score">100</span>
-        </a>
-      </div>
-    </div>
-  </footer>
+    </main>
+  </div>
 
   <script src="app.js"></script>
 </body>

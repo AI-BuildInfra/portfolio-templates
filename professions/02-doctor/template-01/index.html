@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Structured Data Schema with Contextual Backlink -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,136 +22,102 @@
       "url": "https://aibuildinfra.com/services/web-development"
     }
   }
-  </script>
-</head>
-<body class="layout-standard-dark">
-  <!-- Top Bar / Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand">
-        <span class="brand-name" id="brand-name">Dr. Marcus Chen</span>
-        <span class="brand-tagline">Cardiology • Preventive Medicine • Catheterization</span>
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-btn">Get in Touch</a>
+  </script></head>
+<body class="arch-obsidian">
+  <header class="obsidian-nav">
+    <div class="obsidian-dock">
+      <span class="dock-brand" id="brand-name">Dr. Marcus Chen</span>
+      <nav class="dock-links">
+        <a href="#hero">Overview</a>
+        <a href="#showcase">Works</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="dock-cta">Inquire</a>
       </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
-        <span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <span class="hero-kicker" id="hero-tagline">MD, FACC • Interventional Cardiologist</span>
-        <h1 class="hero-headline" id="hero-headline">Compassionate Heart Care Powered by Clinical Innovation</h1>
-        <p class="hero-bio" id="hero-bio">Dr. Marcus Chen is a double board-certified Interventional Cardiologist with over 15 years of clinical practice. Having performed 3,200+ procedures, he specializes in complex coronary interventions and preventive cardiology.</p>
-        <div class="hero-cta-group">
-          <a href="#portfolio" class="btn btn-primary">View Selected Work</a>
-          <a href="#contact" class="btn btn-secondary">Direct Inquiry</a>
+  <main>
+    <section class="obsidian-hero" id="hero">
+      <div class="hero-backdrop" style="background-image: linear-gradient(180deg, rgba(7,7,9,0.3) 0%, #070709 100%), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80');"></div>
+      <div class="obsidian-hero-content">
+        <span class="cinematic-kicker" id="hero-tagline">MD, FACC • Interventional Cardiologist</span>
+        <h1 class="cinematic-title" id="hero-headline">Compassionate Heart Care Powered by Clinical Innovation</h1>
+        <p class="cinematic-bio" id="hero-bio">Dr. Marcus Chen is a double board-certified Interventional Cardiologist with over 15 years of clinical practice. Having performed 3,200+ procedures, he specializes in complex coronary interventions and preventive cardiology.</p>
+        <div class="cinematic-stats" id="metrics-grid"></div>
+      </div>
+    </section>
+
+    <section class="obsidian-showcase" id="showcase">
+      <div class="container">
+        <div class="obsidian-section-head">
+          <span class="obsidian-num">01 / SELECTED WORKS</span>
+          <h2 id="items-title">Clinical Specialties & Interventions</h2>
+          <p class="obsidian-sub">Click any piece to inspect EXIF metadata & high-resolution plates.</p>
+        </div>
+        <div class="obsidian-gallery" id="items-grid"></div>
+      </div>
+    </section>
+
+    <section class="obsidian-services" id="services">
+      <div class="container">
+        <div class="obsidian-section-head">
+          <span class="obsidian-num">02 / ENGAGEMENTS</span>
+          <h2>Commission Packages</h2>
+        </div>
+        <div class="obsidian-packages-grid" id="packages-grid"></div>
+      </div>
+    </section>
+
+    <section class="obsidian-reviews">
+      <div class="container">
+        <div class="obsidian-reviews-grid" id="reviews-grid"></div>
+      </div>
+    </section>
+
+    <section class="obsidian-contact" id="contact">
+      <div class="container">
+        <div class="obsidian-contact-box">
+          <span class="obsidian-num">03 / INITIATE</span>
+          <h2>Direct Consultation</h2>
+          <form class="obsidian-form" onsubmit="event.preventDefault(); alert('Inquiry transmitted.'); this.reset();">
+            <div class="form-row">
+              <input type="text" placeholder="Your Name" required>
+              <input type="email" placeholder="Email Address" required>
+            </div>
+            <textarea rows="4" placeholder="Briefly describe project scope, requirements & timeline..." required></textarea>
+            <button type="submit" class="btn-obsidian-submit">Transmit Request &rarr;</button>
+          </form>
         </div>
       </div>
-      <div class="hero-media">
-        <div class="media-frame">
-          <img id="hero-avatar" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="Dr. Marcus Chen" loading="lazy">
-          <div class="status-indicator-badge">
-            <span class="dot"></span>
-            <span>Available for New Projects</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Metrics Strip -->
-  <section class="metrics-section">
-    <div class="container metrics-grid" id="metrics-grid">
-      <!-- Populated via JS -->
-    </div>
-  </section>
-
-  <!-- Portfolio / Key Works -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">SHOWCASE</span>
-        <h2 class="section-title" id="items-title">Clinical Specialties & Interventions</h2>
-      </div>
-      <div class="items-grid" id="items-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Packages / Services -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENGAGEMENTS & RATES</span>
-        <h2 class="section-title">Cooperation Packages</h2>
-      </div>
-      <div class="packages-grid" id="packages-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENDORSEMENTS</span>
-        <h2 class="section-title">Client Feedback</h2>
-      </div>
-      <div class="reviews-grid" id="reviews-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="contact-section" id="contact">
-    <div class="container contact-container">
-      <div class="contact-box">
-        <span class="kicker">LET'S CONNECT</span>
-        <h2 class="section-title">Initiate a Collaboration</h2>
-        <p class="contact-sub">Direct submissions are reviewed within 24 hours. Confidential inquiries respected.</p>
-        
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message transmitted! You will receive a response shortly.'); this.reset();">
-          <div class="form-row">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email Address" required>
-          </div>
-          <input type="text" placeholder="Project Subject / Scope" required>
-          <textarea rows="4" placeholder="Briefly describe your goals, timeline, and requirements..." required></textarea>
-          <button type="submit" class="btn btn-primary btn-block">Transmit Inquiry &rarr;</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer with Contextual Backlink -->
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div class="footer-left">
-        <strong>Dr. Marcus Chen</strong>
-        <p>&copy; <span id="year"></span> MD, FACC • Interventional Cardiologist. All rights reserved.</p>
-      </div>
-      <!-- Verified Architecture & High Performance Badge -->
-      <div class="footer-backlink" id="infra-credit-wrap">
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
-          <span class="badge-icon">⚡</span>
-          <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
-          <span class="badge-score">100</span>
-        </a>
-      </div>
+  <footer class="obsidian-footer">
+    <div class="container footer-flex">
+      <p>&copy; <span id="year"></span> Dr. Marcus Chen. MD, FACC • Interventional Cardiologist.</p>
+      
+  <div class="footer-backlink" id="infra-credit-wrap">
+    <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+      <span class="badge-icon">⚡</span>
+      <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+      <span class="badge-score">100</span>
+    </a>
+  </div>
     </div>
   </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox(event)">
+    <div class="lightbox-dialog" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <img id="lightbox-img" src="" alt="Enlarged view">
+      <div class="lightbox-meta">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-desc"></p>
+        <span id="lightbox-exif" class="exif-tag"></span>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>

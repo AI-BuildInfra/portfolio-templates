@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Structured Data Schema with Contextual Backlink -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,136 +22,102 @@
       "url": "https://aibuildinfra.com/services/web-development"
     }
   }
-  </script>
-</head>
-<body class="layout-bento-grid">
-  <!-- Top Bar / Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand">
-        <span class="brand-name" id="brand-name">Antoine Laurent</span>
-        <span class="brand-tagline">Modern French • Wild Terroir • Two Michelin Stars</span>
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-btn">Get in Touch</a>
-      </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <span class="hero-kicker" id="hero-tagline">Two-Michelin-Starred Executive Chef</span>
-        <h1 class="hero-headline" id="hero-headline">Reimagining Classical French Gastronomy Through Biodynamic Terroir and Ancestral Craft</h1>
-        <p class="hero-bio" id="hero-bio">Trained in Lyon and Tokyo before establishing Maison Laurent. Honored with Two Michelin Stars and a Green Star for sustainable gastronomy, Antoine champions zero-waste cooking and heirloom seeds.</p>
-        <div class="hero-cta-group">
-          <a href="#portfolio" class="btn btn-primary">View Selected Work</a>
-          <a href="#contact" class="btn btn-secondary">Direct Inquiry</a>
+  </script></head>
+<body class="arch-bento">
+  <div class="bento-screen-wrap">
+    <header class="bento-top-bar">
+      <div class="container top-bar-flex">
+        <div class="bento-brand">
+          <span class="bento-logo-icon">⊞</span>
+          <span class="bento-name" id="brand-name">Antoine Laurent</span>
+          <span class="bento-badge" id="hero-tagline">Two-Michelin-Starred Executive Chef</span>
+        </div>
+        <div class="bento-clock-pill">
+          <span class="clock-dot"></span>
+          <span id="live-clock">--:--:-- UTC</span>
         </div>
       </div>
-      <div class="hero-media">
-        <div class="media-frame">
-          <img id="hero-avatar" src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=800&q=80" alt="Antoine Laurent" loading="lazy">
-          <div class="status-indicator-badge">
-            <span class="dot"></span>
-            <span>Available for New Projects</span>
+    </header>
+
+    <main class="container bento-main-stage">
+      <div class="bento-grid-dashboard">
+        <!-- Cell 1: Main Persona Profile (2x2) -->
+        <div class="bento-card cell-hero-profile">
+          <div class="hero-top">
+            <img id="hero-avatar" src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=800&q=80" alt="Antoine Laurent" class="bento-avatar">
+            <div class="hero-status-pill">
+              <span class="status-pulse"></span>
+              <span>Available for Consultations</span>
+            </div>
+          </div>
+          <h1 class="bento-headline" id="hero-headline">Reimagining Classical French Gastronomy Through Biodynamic Terroir and Ancestral Craft</h1>
+          <p class="bento-bio" id="hero-bio">Trained in Lyon and Tokyo before establishing Maison Laurent. Honored with Two Michelin Stars and a Green Star for sustainable gastronomy, Antoine champions zero-waste cooking and heirloom seeds.</p>
+          <div class="bento-profile-actions">
+            <a href="#bento-contact" class="bento-btn-primary">Initiate Project</a>
+            <a href="#bento-work" class="bento-btn-secondary">Browse Work</a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Metrics Strip -->
-  <section class="metrics-section">
-    <div class="container metrics-grid" id="metrics-grid">
-      <!-- Populated via JS -->
-    </div>
-  </section>
+        <!-- Cell 2: Live Metrics Stats (2x1) -->
+        <div class="bento-card cell-metrics" id="metrics-grid"></div>
 
-  <!-- Portfolio / Key Works -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">SHOWCASE</span>
-        <h2 class="section-title" id="items-title">Autumn Degustation Tasting Courses</h2>
-      </div>
-      <div class="items-grid" id="items-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+        <!-- Cell 3: Flagship Showcase (2x2) -->
+        <div class="bento-card cell-showcase" id="bento-work">
+          <div class="bento-card-header">
+            <span class="bento-chip">FLAGSHIP MONOGRAPHS</span>
+            <h3 id="items-title">Autumn Degustation Tasting Courses</h3>
+          </div>
+          <div class="bento-items-grid" id="items-grid"></div>
+        </div>
 
-  <!-- Packages / Services -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENGAGEMENTS & RATES</span>
-        <h2 class="section-title">Cooperation Packages</h2>
-      </div>
-      <div class="packages-grid" id="packages-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+        <!-- Cell 4: Cooperation Tiers (2x1) -->
+        <div class="bento-card cell-services">
+          <div class="bento-card-header">
+            <span class="bento-chip">SERVICE TIERS</span>
+            <h3>Engagement Packages</h3>
+          </div>
+          <div class="bento-packages-row" id="packages-grid"></div>
+        </div>
 
-  <!-- Testimonials -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENDORSEMENTS</span>
-        <h2 class="section-title">Client Feedback</h2>
-      </div>
-      <div class="reviews-grid" id="reviews-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+        <!-- Cell 5: Reviews Widget (1x1) -->
+        <div class="bento-card cell-testimonials">
+          <div class="bento-card-header">
+            <span class="bento-chip">CLIENT VOICE</span>
+            <h3>Endorsements</h3>
+          </div>
+          <div class="bento-reviews-feed" id="reviews-grid"></div>
+        </div>
 
-  <!-- Contact Form -->
-  <section class="contact-section" id="contact">
-    <div class="container contact-container">
-      <div class="contact-box">
-        <span class="kicker">LET'S CONNECT</span>
-        <h2 class="section-title">Initiate a Collaboration</h2>
-        <p class="contact-sub">Direct submissions are reviewed within 24 hours. Confidential inquiries respected.</p>
-        
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message transmitted! You will receive a response shortly.'); this.reset();">
-          <div class="form-row">
+        <!-- Cell 6: Direct Connect Card (1x1) -->
+        <div class="bento-card cell-contact" id="bento-contact">
+          <div class="bento-card-header">
+            <span class="bento-chip">TRANSMIT</span>
+            <h3>Quick Inquiry</h3>
+          </div>
+          <form class="bento-mini-form" onsubmit="event.preventDefault(); alert('Transmission verified!'); this.reset();">
             <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email Address" required>
-          </div>
-          <input type="text" placeholder="Project Subject / Scope" required>
-          <textarea rows="4" placeholder="Briefly describe your goals, timeline, and requirements..." required></textarea>
-          <button type="submit" class="btn btn-primary btn-block">Transmit Inquiry &rarr;</button>
-        </form>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="2" placeholder="Brief scope..." required></textarea>
+            <button type="submit" class="bento-btn-send">Send &nearr;</button>
+          </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </main>
 
-  <!-- Footer with Contextual Backlink -->
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div class="footer-left">
-        <strong>Antoine Laurent</strong>
-        <p>&copy; <span id="year"></span> Two-Michelin-Starred Executive Chef. All rights reserved.</p>
+    <footer class="bento-footer">
+      <div class="container bento-footer-row">
+        <p>&copy; <span id="year"></span> Antoine Laurent. Engineered via Modular Bento Grid.</p>
+        
+  <div class="footer-backlink" id="infra-credit-wrap">
+    <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+      <span class="badge-icon">⚡</span>
+      <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+      <span class="badge-score">100</span>
+    </a>
+  </div>
       </div>
-      <!-- Verified Architecture & High Performance Badge -->
-      <div class="footer-backlink" id="infra-credit-wrap">
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
-          <span class="badge-icon">⚡</span>
-          <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
-          <span class="badge-score">100</span>
-        </a>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="app.js"></script>
 </body>

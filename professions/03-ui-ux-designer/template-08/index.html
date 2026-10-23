@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Structured Data Schema with Contextual Backlink -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,136 +22,103 @@
       "url": "https://aibuildinfra.com/services/web-development"
     }
   }
-  </script>
-</head>
-<body class="layout-magazine-serif">
-  <!-- Top Bar / Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand">
-        <span class="brand-name" id="brand-name">Maya Lin</span>
-        <span class="brand-tagline">Design Systems • Enterprise SaaS • Fintech</span>
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-btn">Get in Touch</a>
-      </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <span class="hero-kicker" id="hero-tagline">Staff Product & Design Systems Designer</span>
-        <h1 class="hero-headline" id="hero-headline">Crafting Resilient Digital Products and Scalable Multi-Brand Design Systems</h1>
-        <p class="hero-bio" id="hero-bio">Over 9 years architecting products for fintech unicorns, developer platforms, and enterprise SaaS. Bridging rigorous qualitative research with production token architecture.</p>
-        <div class="hero-cta-group">
-          <a href="#portfolio" class="btn btn-primary">View Selected Work</a>
-          <a href="#contact" class="btn btn-secondary">Direct Inquiry</a>
-        </div>
+  </script></head>
+<body class="arch-magazine">
+  <div class="magazine-frame">
+    <!-- Classical Masthead -->
+    <header class="magazine-masthead">
+      <div class="masthead-topline">
+        <span>EST. 2026 &bull; THE COUTURE MONOGRAPH</span>
+        <span>ISSUE NO. 08 &bull; ARCHIVAL PRINT EDITION</span>
+        <span>SEATTLE, WA & REMOTE</span>
       </div>
-      <div class="hero-media">
-        <div class="media-frame">
-          <img id="hero-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Maya Lin" loading="lazy">
-          <div class="status-indicator-badge">
-            <span class="dot"></span>
-            <span>Available for New Projects</span>
+      <h1 class="masthead-title" id="brand-name">Maya Lin</h1>
+      <div class="masthead-subline">
+        <span id="hero-tagline">Staff Product & Design Systems Designer</span>
+      </div>
+    </header>
+
+    <main class="magazine-body">
+      <!-- Chapter I: The Monograph -->
+      <section class="magazine-chapter" id="chapter-1">
+        <div class="chapter-header">
+          <span class="chap-num">CHAPTER I</span>
+          <h2 class="chap-title">THE MANIFESTO &amp; PHILOSOPHY</h2>
+        </div>
+        <div class="magazine-spread">
+          <div class="spread-left">
+            <img id="hero-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Maya Lin" class="plate-img">
+            <span class="plate-caption">FIG 1.0 &mdash; Official portraiture of Maya Lin.</span>
+          </div>
+          <div class="spread-right">
+            <h3 class="quote-headline" id="hero-headline">Crafting Resilient Digital Products and Scalable Multi-Brand Design Systems</h3>
+            <p class="drop-cap-p" id="hero-bio">Over 9 years architecting products for fintech unicorns, developer platforms, and enterprise SaaS. Bridging rigorous qualitative research with production token architecture.</p>
+            <div class="magazine-stats-bar" id="metrics-grid"></div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- Metrics Strip -->
-  <section class="metrics-section">
-    <div class="container metrics-grid" id="metrics-grid">
-      <!-- Populated via JS -->
-    </div>
-  </section>
+      <!-- Chapter II: The Selected Works -->
+      <section class="magazine-chapter" id="chapter-2">
+        <div class="chapter-header">
+          <span class="chap-num">CHAPTER II</span>
+          <h2 class="chap-title" id="items-title">Selected Product Case Studies</h2>
+        </div>
+        <div class="magazine-editorial-grid" id="items-grid"></div>
+      </section>
 
-  <!-- Portfolio / Key Works -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">SHOWCASE</span>
-        <h2 class="section-title" id="items-title">Selected Product Case Studies</h2>
-      </div>
-      <div class="items-grid" id="items-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+      <!-- Chapter III: The Engagements -->
+      <section class="magazine-chapter" id="chapter-3">
+        <div class="chapter-header">
+          <span class="chap-num">CHAPTER III</span>
+          <h2 class="chap-title">REPERTOIRE &amp; COMMISSIONS</h2>
+        </div>
+        <div class="magazine-rates-grid" id="packages-grid"></div>
+      </section>
 
-  <!-- Packages / Services -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENGAGEMENTS & RATES</span>
-        <h2 class="section-title">Cooperation Packages</h2>
-      </div>
-      <div class="packages-grid" id="packages-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+      <!-- Chapter IV: Testimonials -->
+      <section class="magazine-chapter" id="chapter-4">
+        <div class="chapter-header">
+          <span class="chap-num">CHAPTER IV</span>
+          <h2 class="chap-title">CRITICAL ACCLAIM</h2>
+        </div>
+        <div class="magazine-reviews-stream" id="reviews-grid"></div>
+      </section>
 
-  <!-- Testimonials -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENDORSEMENTS</span>
-        <h2 class="section-title">Client Feedback</h2>
-      </div>
-      <div class="reviews-grid" id="reviews-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+      <!-- Chapter V: The Dialogue -->
+      <section class="magazine-chapter" id="chapter-5">
+        <div class="chapter-header">
+          <span class="chap-num">CHAPTER V</span>
+          <h2 class="chap-title">CORRESPONDENCE</h2>
+        </div>
+        <div class="magazine-correspondence-box">
+          <p class="inquiry-lead">For editorial commissions, institutional engagements, or private consultations:</p>
+          <form class="magazine-form" onsubmit="event.preventDefault(); alert('Correspondence dispatched to private desk.'); this.reset();">
+            <div class="form-row">
+              <input type="text" placeholder="Signatory Name" required>
+              <input type="email" placeholder="Electronic Mail" required>
+            </div>
+            <textarea rows="4" placeholder="Detail the nature of your inquiry..." required></textarea>
+            <button type="submit" class="btn-magazine-send">Transmit Dispatch &rarr;</button>
+          </form>
+        </div>
+      </section>
+    </main>
 
-  <!-- Contact Form -->
-  <section class="contact-section" id="contact">
-    <div class="container contact-container">
-      <div class="contact-box">
-        <span class="kicker">LET'S CONNECT</span>
-        <h2 class="section-title">Initiate a Collaboration</h2>
-        <p class="contact-sub">Direct submissions are reviewed within 24 hours. Confidential inquiries respected.</p>
+    <footer class="magazine-footer">
+      <div class="mag-footer-inner">
+        <p>&copy; <span id="year"></span> Maya Lin. Classical Editorial Architecture.</p>
         
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message transmitted! You will receive a response shortly.'); this.reset();">
-          <div class="form-row">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email Address" required>
-          </div>
-          <input type="text" placeholder="Project Subject / Scope" required>
-          <textarea rows="4" placeholder="Briefly describe your goals, timeline, and requirements..." required></textarea>
-          <button type="submit" class="btn btn-primary btn-block">Transmit Inquiry &rarr;</button>
-        </form>
+  <div class="footer-backlink" id="infra-credit-wrap">
+    <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+      <span class="badge-icon">⚡</span>
+      <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+      <span class="badge-score">100</span>
+    </a>
+  </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer with Contextual Backlink -->
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div class="footer-left">
-        <strong>Maya Lin</strong>
-        <p>&copy; <span id="year"></span> Staff Product & Design Systems Designer. All rights reserved.</p>
-      </div>
-      <!-- Verified Architecture & High Performance Badge -->
-      <div class="footer-backlink" id="infra-credit-wrap">
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
-          <span class="badge-icon">⚡</span>
-          <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
-          <span class="badge-score">100</span>
-        </a>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="app.js"></script>
 </body>

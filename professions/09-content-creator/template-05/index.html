@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Structured Data Schema with Contextual Backlink -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,134 +22,101 @@
       "url": "https://aibuildinfra.com/services/web-development"
     }
   }
-  </script>
-</head>
-<body class="layout-neo-brutalist">
-  <!-- Top Bar / Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand">
-        <span class="brand-name" id="brand-name">Aria Thorne</span>
-        <span class="brand-tagline">Filmmaker • Tech Creator • Visual Nomad</span>
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-btn">Get in Touch</a>
+  </script></head>
+<body class="arch-brutalist">
+  <!-- Top Marquee Banner -->
+  <div class="brutalist-marquee-bar">
+    <div class="marquee-track">
+      <span>✦ ARIA THORNE ✦ CINEMATIC TRAVEL & TECH STORYTELLER ✦ AVAILABLE WORLDWIDE ✦ 100% VERIFIED WORK ✦ ARIA THORNE ✦ CINEMATIC TRAVEL & TECH STORYTELLER ✦ AVAILABLE WORLDWIDE ✦</span>
+    </div>
+  </div>
+
+  <header class="brutalist-header">
+    <div class="container brutalist-nav-box">
+      <div class="brutalist-brand-badge">
+        <h1 id="brand-name">Aria Thorne</h1>
+        <span class="brutalist-sub">Filmmaker • Tech Creator • Visual Nomad</span>
+      </div>
+      <nav class="brutalist-nav-links">
+        <a href="#about" class="b-link">ABOUT</a>
+        <a href="#works" class="b-link">WORKS</a>
+        <a href="#pricing" class="b-link">PRICING</a>
+        <a href="#contact" class="b-cta-btn">INQUIRE NOW !</a>
       </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
-        <span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <span class="hero-kicker" id="hero-tagline">Cinematic Travel & Tech Storyteller</span>
-        <h1 class="hero-headline" id="hero-headline">Crafting Cinematic Visual Narratives for a Global Community of 1.8M Explorers</h1>
-        <p class="hero-bio" id="hero-bio">Aria Thorne is an award-winning travel filmmaker and digital creator with 1.8M+ community followers. She partners with leading brands like Sony, DJI, and Airbnb to craft high-production human stories.</p>
-        <div class="hero-cta-group">
-          <a href="#portfolio" class="btn btn-primary">View Selected Work</a>
-          <a href="#contact" class="btn btn-secondary">Direct Inquiry</a>
+  <main class="container brutalist-main">
+    <section class="brutalist-hero-block" id="about">
+      <div class="hero-brutal-left">
+        <div class="sticker-badge sticker-1">★ TOP RATED ★</div>
+        <span class="raw-kicker" id="hero-tagline">Cinematic Travel & Tech Storyteller</span>
+        <h2 class="raw-h1" id="hero-headline">Crafting Cinematic Visual Narratives for a Global Community of 1.8M Explorers</h2>
+        <p class="raw-bio" id="hero-bio">Aria Thorne is an award-winning travel filmmaker and digital creator with 1.8M+ community followers. She partners with leading brands like Sony, DJI, and Airbnb to craft high-production human stories.</p>
+        <div class="raw-stats-row" id="metrics-grid"></div>
+      </div>
+      <div class="hero-brutal-right">
+        <div class="raw-img-frame">
+          <img id="hero-avatar" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Aria Thorne">
+          <div class="sticker-badge sticker-2">100% READY</div>
         </div>
       </div>
-      <div class="hero-media">
-        <div class="media-frame">
-          <img id="hero-avatar" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Aria Thorne" loading="lazy">
-          <div class="status-indicator-badge">
-            <span class="dot"></span>
-            <span>Available for New Projects</span>
+    </section>
+
+    <!-- Mid Marquee Accent -->
+    <div class="brutalist-tape">
+      <div class="tape-track">
+        <span>/// CASE STUDIES /// PORTFOLIO SHOWCASE /// REAL DELIVERABLES /// CLIENT IMPACT /// NO NONSENSE ///</span>
+      </div>
+    </div>
+
+    <section class="brutalist-section" id="works">
+      <div class="brutalist-section-title">
+        <h2 id="items-title">Featured Films & Brand Campaigns</h2>
+      </div>
+      <div class="brutalist-grid" id="items-grid"></div>
+    </section>
+
+    <section class="brutalist-section" id="pricing">
+      <div class="brutalist-section-title">
+        <h2>COOPERATION TIERS</h2>
+      </div>
+      <div class="brutalist-packages-grid" id="packages-grid"></div>
+    </section>
+
+    <section class="brutalist-section" id="reviews">
+      <div class="brutalist-section-title">
+        <h2>WHAT CLIENTS SAY</h2>
+      </div>
+      <div class="brutalist-reviews-grid" id="reviews-grid"></div>
+    </section>
+
+    <section class="brutalist-section" id="contact">
+      <div class="brutalist-contact-box">
+        <h2>READY TO WORK? GET IN TOUCH</h2>
+        <form class="brutalist-form" onsubmit="event.preventDefault(); alert('Message dispatched with brutal efficiency.'); this.reset();">
+          <div class="raw-form-row">
+            <input type="text" placeholder="NAME" required>
+            <input type="email" placeholder="EMAIL" required>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Metrics Strip -->
-  <section class="metrics-section">
-    <div class="container metrics-grid" id="metrics-grid">
-      <!-- Populated via JS -->
-    </div>
-  </section>
-
-  <!-- Portfolio / Key Works -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">SHOWCASE</span>
-        <h2 class="section-title" id="items-title">Featured Films & Brand Campaigns</h2>
-      </div>
-      <div class="items-grid" id="items-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Packages / Services -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENGAGEMENTS & RATES</span>
-        <h2 class="section-title">Cooperation Packages</h2>
-      </div>
-      <div class="packages-grid" id="packages-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENDORSEMENTS</span>
-        <h2 class="section-title">Client Feedback</h2>
-      </div>
-      <div class="reviews-grid" id="reviews-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="contact-section" id="contact">
-    <div class="container contact-container">
-      <div class="contact-box">
-        <span class="kicker">LET'S CONNECT</span>
-        <h2 class="section-title">Initiate a Collaboration</h2>
-        <p class="contact-sub">Direct submissions are reviewed within 24 hours. Confidential inquiries respected.</p>
-        
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message transmitted! You will receive a response shortly.'); this.reset();">
-          <div class="form-row">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email Address" required>
-          </div>
-          <input type="text" placeholder="Project Subject / Scope" required>
-          <textarea rows="4" placeholder="Briefly describe your goals, timeline, and requirements..." required></textarea>
-          <button type="submit" class="btn btn-primary btn-block">Transmit Inquiry &rarr;</button>
+          <textarea rows="4" placeholder="PROJECT DETAILS & BUDGET..." required></textarea>
+          <button type="submit" class="brutal-btn-submit">SUBMIT INQUIRY ➔</button>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer with Contextual Backlink -->
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div class="footer-left">
-        <strong>Aria Thorne</strong>
-        <p>&copy; <span id="year"></span> Cinematic Travel & Tech Storyteller. All rights reserved.</p>
-      </div>
-      <!-- Verified Architecture & High Performance Badge -->
-      <div class="footer-backlink" id="infra-credit-wrap">
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
-          <span class="badge-icon">⚡</span>
-          <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
-          <span class="badge-score">100</span>
-        </a>
-      </div>
+  <footer class="brutalist-footer">
+    <div class="container brutalist-footer-row">
+      <p>&copy; <span id="year"></span> Aria Thorne. NEO-BRUTALIST ARCHITECTURE.</p>
+      
+  <div class="footer-backlink" id="infra-credit-wrap">
+    <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+      <span class="badge-icon">⚡</span>
+      <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+      <span class="badge-score">100</span>
+    </a>
+  </div>
     </div>
   </footer>
 

@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Structured Data Schema with Contextual Backlink -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,134 +22,93 @@
       "url": "https://aibuildinfra.com/services/web-development"
     }
   }
-  </script>
-</head>
-<body class="layout-glassmorphism">
-  <!-- Top Bar / Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand">
-        <span class="brand-name" id="brand-name">Dr. Marcus Chen</span>
-        <span class="brand-tagline">Cardiology • Preventive Medicine • Catheterization</span>
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-btn">Get in Touch</a>
+  </script></head>
+<body class="arch-glass">
+  <div class="ambient-glow-sphere sphere-1"></div>
+  <div class="ambient-glow-sphere sphere-2"></div>
+  <div id="cursor-glow" class="cursor-glow"></div>
+
+  <header class="glass-header">
+    <div class="container glass-nav-shell">
+      <div class="glass-brand">
+        <span class="glass-orb">◈</span>
+        <span id="brand-name">Dr. Marcus Chen</span>
+      </div>
+      <nav class="glass-links">
+        <a href="#about">About</a>
+        <a href="#portfolio">Showcase</a>
+        <a href="#packages">Tiers</a>
+        <a href="#contact" class="glass-cta-pill">Contact</a>
       </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
-        <span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <span class="hero-kicker" id="hero-tagline">MD, FACC • Interventional Cardiologist</span>
-        <h1 class="hero-headline" id="hero-headline">Compassionate Heart Care Powered by Clinical Innovation</h1>
-        <p class="hero-bio" id="hero-bio">Dr. Marcus Chen is a double board-certified Interventional Cardiologist with over 15 years of clinical practice. Having performed 3,200+ procedures, he specializes in complex coronary interventions and preventive cardiology.</p>
-        <div class="hero-cta-group">
-          <a href="#portfolio" class="btn btn-primary">View Selected Work</a>
-          <a href="#contact" class="btn btn-secondary">Direct Inquiry</a>
+  <main class="container glass-stage">
+    <section class="glass-card hero-glass-card" id="about">
+      <div class="hero-glass-flex">
+        <div class="glass-text">
+          <span class="glass-aura-pill" id="hero-tagline">MD, FACC • Interventional Cardiologist</span>
+          <h1 class="glass-h1" id="hero-headline">Compassionate Heart Care Powered by Clinical Innovation</h1>
+          <p class="glass-p" id="hero-bio">Dr. Marcus Chen is a double board-certified Interventional Cardiologist with over 15 years of clinical practice. Having performed 3,200+ procedures, he specializes in complex coronary interventions and preventive cardiology.</p>
+          <div class="glass-metrics" id="metrics-grid"></div>
+        </div>
+        <div class="glass-avatar-frame">
+          <img id="hero-avatar" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="Dr. Marcus Chen">
         </div>
       </div>
-      <div class="hero-media">
-        <div class="media-frame">
-          <img id="hero-avatar" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="Dr. Marcus Chen" loading="lazy">
-          <div class="status-indicator-badge">
-            <span class="dot"></span>
-            <span>Available for New Projects</span>
-          </div>
+    </section>
+
+    <section class="glass-card" id="portfolio">
+      <div class="glass-card-title">
+        <span class="glass-mini-tag">LUMINOUS SHOWCASE</span>
+        <h2 id="items-title">Clinical Specialties & Interventions</h2>
+      </div>
+      <div class="glass-items-grid" id="items-grid"></div>
+    </section>
+
+    <section class="glass-card" id="packages">
+      <div class="glass-card-title">
+        <span class="glass-mini-tag">COLLABORATION TIERS</span>
+        <h2>Services & Rates</h2>
+      </div>
+      <div class="glass-packages-grid" id="packages-grid"></div>
+    </section>
+
+    <section class="glass-card" id="reviews">
+      <div class="glass-card-title">
+        <span class="glass-mini-tag">TESTIMONIALS</span>
+        <h2>Client Feedback</h2>
+      </div>
+      <div class="glass-reviews-grid" id="reviews-grid"></div>
+    </section>
+
+    <section class="glass-card contact-glass-card" id="contact">
+      <div class="glass-card-title">
+        <span class="glass-mini-tag">TRANSLUCENT CHANNEL</span>
+        <h2>Initiate Dialogue</h2>
+      </div>
+      <form class="glass-form" onsubmit="event.preventDefault(); alert('Message reflected & logged.'); this.reset();">
+        <div class="form-row">
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
         </div>
-      </div>
-    </div>
-  </section>
+        <textarea rows="4" placeholder="Your requirements..." required></textarea>
+        <button type="submit" class="btn-glass-submit">Transmit Message ◈</button>
+      </form>
+    </section>
+  </main>
 
-  <!-- Metrics Strip -->
-  <section class="metrics-section">
-    <div class="container metrics-grid" id="metrics-grid">
-      <!-- Populated via JS -->
-    </div>
-  </section>
-
-  <!-- Portfolio / Key Works -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">SHOWCASE</span>
-        <h2 class="section-title" id="items-title">Clinical Specialties & Interventions</h2>
-      </div>
-      <div class="items-grid" id="items-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Packages / Services -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENGAGEMENTS & RATES</span>
-        <h2 class="section-title">Cooperation Packages</h2>
-      </div>
-      <div class="packages-grid" id="packages-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENDORSEMENTS</span>
-        <h2 class="section-title">Client Feedback</h2>
-      </div>
-      <div class="reviews-grid" id="reviews-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="contact-section" id="contact">
-    <div class="container contact-container">
-      <div class="contact-box">
-        <span class="kicker">LET'S CONNECT</span>
-        <h2 class="section-title">Initiate a Collaboration</h2>
-        <p class="contact-sub">Direct submissions are reviewed within 24 hours. Confidential inquiries respected.</p>
-        
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message transmitted! You will receive a response shortly.'); this.reset();">
-          <div class="form-row">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email Address" required>
-          </div>
-          <input type="text" placeholder="Project Subject / Scope" required>
-          <textarea rows="4" placeholder="Briefly describe your goals, timeline, and requirements..." required></textarea>
-          <button type="submit" class="btn btn-primary btn-block">Transmit Inquiry &rarr;</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer with Contextual Backlink -->
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div class="footer-left">
-        <strong>Dr. Marcus Chen</strong>
-        <p>&copy; <span id="year"></span> MD, FACC • Interventional Cardiologist. All rights reserved.</p>
-      </div>
-      <!-- Verified Architecture & High Performance Badge -->
-      <div class="footer-backlink" id="infra-credit-wrap">
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
-          <span class="badge-icon">⚡</span>
-          <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
-          <span class="badge-score">100</span>
-        </a>
-      </div>
+  <footer class="glass-footer">
+    <div class="container glass-footer-flex">
+      <p>&copy; <span id="year"></span> Dr. Marcus Chen. Glassmorphic Aura Architecture.</p>
+      
+  <div class="footer-backlink" id="infra-credit-wrap">
+    <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+      <span class="badge-icon">⚡</span>
+      <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+      <span class="badge-score">100</span>
+    </a>
+  </div>
     </div>
   </footer>
 

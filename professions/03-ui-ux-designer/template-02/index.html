@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Structured Data Schema with Contextual Backlink -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,134 +22,102 @@
       "url": "https://aibuildinfra.com/services/web-development"
     }
   }
-  </script>
-</head>
-<body class="layout-editorial-light">
-  <!-- Top Bar / Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand">
-        <span class="brand-name" id="brand-name">Maya Lin</span>
-        <span class="brand-tagline">Design Systems • Enterprise SaaS • Fintech</span>
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-btn">Get in Touch</a>
-      </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
-        <span></span><span></span>
-      </button>
+  </script></head>
+<body class="arch-nordic">
+  <div class="nordic-masthead">
+    <div class="container masthead-inner">
+      <span class="coords">SEATTLE, WA & REMOTE &bull; MONOGRAPH INDEX 2026</span>
+      <span class="issue">VOL. XII &bull; EDITION 01</span>
+    </div>
+  </div>
+
+  <header class="nordic-header">
+    <div class="container header-flex">
+      <h1 class="nordic-logo" id="brand-name">Maya Lin</h1>
+      <span class="nordic-role" id="hero-tagline">Staff Product & Design Systems Designer</span>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <span class="hero-kicker" id="hero-tagline">Staff Product & Design Systems Designer</span>
-        <h1 class="hero-headline" id="hero-headline">Crafting Resilient Digital Products and Scalable Multi-Brand Design Systems</h1>
-        <p class="hero-bio" id="hero-bio">Over 9 years architecting products for fintech unicorns, developer platforms, and enterprise SaaS. Bridging rigorous qualitative research with production token architecture.</p>
-        <div class="hero-cta-group">
-          <a href="#portfolio" class="btn btn-primary">View Selected Work</a>
-          <a href="#contact" class="btn btn-secondary">Direct Inquiry</a>
+  <main class="container monograph-layout">
+    <!-- Left Column: Navigation & Indices -->
+    <aside class="monograph-sidebar">
+      <div class="sidebar-sticky">
+        <div class="portrait-card">
+          <img id="hero-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Maya Lin">
+          <span class="portrait-caption">Maya Lin &bull; Practice Archive</span>
+        </div>
+        <nav class="monograph-nav">
+          <a href="#about"><span class="roman">I.</span> The Ethos</a>
+          <a href="#metrics"><span class="roman">II.</span> Verified Ledger</a>
+          <a href="#works"><span class="roman">III.</span> Case Studies</a>
+          <a href="#rates"><span class="roman">IV.</span> Engagements</a>
+          <a href="#dialogue"><span class="roman">V.</span> Dialogue</a>
+        </nav>
+        <div class="sidebar-contact-info">
+          <p><strong>Direct Desk</strong><br>hello@mayalinux.design</p>
+          <p><strong>Office Hours</strong><br>Mon &ndash; Fri / 09:00 &ndash; 18:00</p>
         </div>
       </div>
-      <div class="hero-media">
-        <div class="media-frame">
-          <img id="hero-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Maya Lin" loading="lazy">
-          <div class="status-indicator-badge">
-            <span class="dot"></span>
-            <span>Available for New Projects</span>
-          </div>
+    </aside>
+
+    <!-- Right Column: Flowing Monograph Content -->
+    <section class="monograph-stream">
+      <article class="stream-block" id="about">
+        <span class="section-roman">I. THE ETHOS</span>
+        <h2 class="editorial-headline" id="hero-headline">Crafting Resilient Digital Products and Scalable Multi-Brand Design Systems</h2>
+        <div class="editorial-copy">
+          <p class="lead-paragraph" id="hero-bio">Over 9 years architecting products for fintech unicorns, developer platforms, and enterprise SaaS. Bridging rigorous qualitative research with production token architecture.</p>
         </div>
-      </div>
-    </div>
-  </section>
+      </article>
 
-  <!-- Metrics Strip -->
-  <section class="metrics-section">
-    <div class="container metrics-grid" id="metrics-grid">
-      <!-- Populated via JS -->
-    </div>
-  </section>
+      <article class="stream-block" id="metrics">
+        <span class="section-roman">II. VERIFIED LEDGER</span>
+        <div class="nordic-metrics-grid" id="metrics-grid"></div>
+      </article>
 
-  <!-- Portfolio / Key Works -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">SHOWCASE</span>
-        <h2 class="section-title" id="items-title">Selected Product Case Studies</h2>
-      </div>
-      <div class="items-grid" id="items-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+      <article class="stream-block" id="works">
+        <span class="section-roman">III. SELECTED ARCHIVE</span>
+        <h3 id="items-title">Selected Product Case Studies</h3>
+        <div class="nordic-items-stream" id="items-grid"></div>
+      </article>
 
-  <!-- Packages / Services -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENGAGEMENTS & RATES</span>
-        <h2 class="section-title">Cooperation Packages</h2>
-      </div>
-      <div class="packages-grid" id="packages-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+      <article class="stream-block" id="rates">
+        <span class="section-roman">IV. ENGAGEMENT TIERS</span>
+        <div class="nordic-packages-list" id="packages-grid"></div>
+      </article>
 
-  <!-- Testimonials -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENDORSEMENTS</span>
-        <h2 class="section-title">Client Feedback</h2>
-      </div>
-      <div class="reviews-grid" id="reviews-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+      <article class="stream-block" id="reviews">
+        <span class="section-roman">V. ENDORSEMENTS</span>
+        <div class="nordic-reviews-flow" id="reviews-grid"></div>
+      </article>
 
-  <!-- Contact Form -->
-  <section class="contact-section" id="contact">
-    <div class="container contact-container">
-      <div class="contact-box">
-        <span class="kicker">LET'S CONNECT</span>
-        <h2 class="section-title">Initiate a Collaboration</h2>
-        <p class="contact-sub">Direct submissions are reviewed within 24 hours. Confidential inquiries respected.</p>
-        
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message transmitted! You will receive a response shortly.'); this.reset();">
-          <div class="form-row">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email Address" required>
-          </div>
-          <input type="text" placeholder="Project Subject / Scope" required>
-          <textarea rows="4" placeholder="Briefly describe your goals, timeline, and requirements..." required></textarea>
-          <button type="submit" class="btn btn-primary btn-block">Transmit Inquiry &rarr;</button>
-        </form>
-      </div>
-    </div>
-  </section>
+      <article class="stream-block" id="dialogue">
+        <span class="section-roman">VI. DIALOGUE</span>
+        <div class="nordic-contact-card">
+          <h3>Initiate Inquiry</h3>
+          <p>Confidential submissions reviewed within one business day.</p>
+          <form class="nordic-form" onsubmit="event.preventDefault(); alert('Inquiry recorded.'); this.reset();">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Professional Email" required>
+            <textarea rows="4" placeholder="Scope & Objectives..." required></textarea>
+            <button type="submit" class="btn-nordic">Submit Protocol &rarr;</button>
+          </form>
+        </div>
+      </article>
+    </section>
+  </main>
 
-  <!-- Footer with Contextual Backlink -->
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div class="footer-left">
-        <strong>Maya Lin</strong>
-        <p>&copy; <span id="year"></span> Staff Product & Design Systems Designer. All rights reserved.</p>
-      </div>
-      <!-- Verified Architecture & High Performance Badge -->
-      <div class="footer-backlink" id="infra-credit-wrap">
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
-          <span class="badge-icon">⚡</span>
-          <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
-          <span class="badge-score">100</span>
-        </a>
-      </div>
+  <footer class="nordic-footer">
+    <div class="container footer-flex">
+      <p>&copy; <span id="year"></span> Maya Lin. Monograph layout.</p>
+      
+  <div class="footer-backlink" id="infra-credit-wrap">
+    <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+      <span class="badge-icon">⚡</span>
+      <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+      <span class="badge-score">100</span>
+    </a>
+  </div>
     </div>
   </footer>
 

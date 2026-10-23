@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Structured Data Schema with Contextual Backlink -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,136 +22,85 @@
       "url": "https://aibuildinfra.com/services/web-development"
     }
   }
-  </script>
-</head>
-<body class="layout-terminal-tech">
-  <!-- Top Bar / Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand">
-        <span class="brand-name" id="brand-name">Kai 'ViperX' Thorne</span>
-        <span class="brand-tagline">Valorant • Apex Legends • Esports Captain</span>
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-btn">Get in Touch</a>
-      </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <span class="hero-kicker" id="hero-tagline">Pro Esports Athlete & Twitch Partner</span>
-        <h1 class="hero-headline" id="hero-headline">Dominating FPS Arenas with Aggressive Tactical Mastery and Live Broadcasts</h1>
-        <p class="hero-bio" id="hero-bio">Top 10 Radiant FPS athlete and Team Phantom captain. Over 850k followers across Twitch & YouTube with 4 Major Championship MVP titles.</p>
-        <div class="hero-cta-group">
-          <a href="#portfolio" class="btn btn-primary">View Selected Work</a>
-          <a href="#contact" class="btn btn-secondary">Direct Inquiry</a>
+  </script></head>
+<body class="arch-terminal">
+  <div class="terminal-shell">
+    <!-- Terminal Window Container -->
+    <div class="terminal-window">
+      <!-- Window Titlebar -->
+      <div class="terminal-titlebar">
+        <div class="window-controls">
+          <span class="w-btn w-close"></span>
+          <span class="w-btn w-min"></span>
+          <span class="w-btn w-max"></span>
         </div>
+        <div class="window-title">bash &mdash; portfolio@gamer: ~ (80x24)</div>
+        <div class="window-status"><span class="term-status-dot"></span> LIVE</div>
       </div>
-      <div class="hero-media">
-        <div class="media-frame">
-          <img id="hero-avatar" src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=800&q=80" alt="Kai 'ViperX' Thorne" loading="lazy">
-          <div class="status-indicator-badge">
-            <span class="dot"></span>
-            <span>Available for New Projects</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Metrics Strip -->
-  <section class="metrics-section">
-    <div class="container metrics-grid" id="metrics-grid">
-      <!-- Populated via JS -->
-    </div>
-  </section>
+      <!-- Quick Command Bar -->
+      <div class="cli-shortcuts-bar">
+        <span class="shortcut-label">RUN:</span>
+        <button class="cli-btn" onclick="runCommand('help')">help</button>
+        <button class="cli-btn" onclick="runCommand('bio')">cat bio.txt</button>
+        <button class="cli-btn" onclick="runCommand('projects')">ls projects/</button>
+        <button class="cli-btn" onclick="runCommand('stats')">./get_metrics.sh</button>
+        <button class="cli-btn" onclick="runCommand('rates')">cat packages.json</button>
+        <button class="cli-btn" onclick="runCommand('contact')">./contact.sh</button>
+        <button class="cli-btn" onclick="runCommand('clear')">clear</button>
+      </div>
 
-  <!-- Portfolio / Key Works -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">SHOWCASE</span>
-        <h2 class="section-title" id="items-title">Championship Highlights & Tournaments</h2>
-      </div>
-      <div class="items-grid" id="items-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Packages / Services -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENGAGEMENTS & RATES</span>
-        <h2 class="section-title">Cooperation Packages</h2>
-      </div>
-      <div class="packages-grid" id="packages-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENDORSEMENTS</span>
-        <h2 class="section-title">Client Feedback</h2>
-      </div>
-      <div class="reviews-grid" id="reviews-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="contact-section" id="contact">
-    <div class="container contact-container">
-      <div class="contact-box">
-        <span class="kicker">LET'S CONNECT</span>
-        <h2 class="section-title">Initiate a Collaboration</h2>
-        <p class="contact-sub">Direct submissions are reviewed within 24 hours. Confidential inquiries respected.</p>
+      <!-- Terminal Output Canvas -->
+      <div class="terminal-body" id="terminal-screen">
+        <pre class="ascii-art">
++----------------------------------------------------------+
+|  PORTFOLIO TERMINAL v4.2.0-LTS // ENVIRONMENT READY      |
+|  HOST: aibuildinfra.com  USER: gamer                    |
++----------------------------------------------------------+
+        </pre>
+        <p class="term-line intro-line">System initialized. Type <code class="t-code">help</code> or click commands above to explore Kai 'ViperX' Thorne's verified portfolio.</p>
+        <p class="term-line prompt-demo"><span class="t-prompt">$</span> whoami</p>
+        <p class="term-line response-line"><strong>Kai 'ViperX' Thorne</strong> &mdash; Pro Esports Athlete & Twitch Partner (Los Angeles, CA)</p>
         
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message transmitted! You will receive a response shortly.'); this.reset();">
-          <div class="form-row">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email Address" required>
-          </div>
-          <input type="text" placeholder="Project Subject / Scope" required>
-          <textarea rows="4" placeholder="Briefly describe your goals, timeline, and requirements..." required></textarea>
-          <button type="submit" class="btn btn-primary btn-block">Transmit Inquiry &rarr;</button>
-        </form>
-      </div>
-    </div>
-  </section>
+        <!-- Live Terminal History Log -->
+        <div id="terminal-history"></div>
 
-  <!-- Footer with Contextual Backlink -->
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div class="footer-left">
-        <strong>Kai 'ViperX' Thorne</strong>
-        <p>&copy; <span id="year"></span> Pro Esports Athlete & Twitch Partner. All rights reserved.</p>
+        <!-- Active Interactive Prompt Line -->
+        <div class="terminal-input-row">
+          <span class="t-prompt">$</span>
+          <input type="text" id="terminal-input" class="terminal-input-field" placeholder="Type command here (e.g. help, projects, bio)..." autocomplete="off" autofocus>
+          <span class="blinking-cursor">▋</span>
+        </div>
       </div>
-      <!-- Verified Architecture & High Performance Badge -->
-      <div class="footer-backlink" id="infra-credit-wrap">
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
-          <span class="badge-icon">⚡</span>
-          <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
-          <span class="badge-score">100</span>
-        </a>
-      </div>
+
+      <!-- Graphical Data Stores (Hidden / Hydrated for terminal commands) -->
+      <div id="brand-name" style="display:none;">Kai 'ViperX' Thorne</div>
+      <div id="hero-headline" style="display:none;">Dominating FPS Arenas with Aggressive Tactical Mastery and Live Broadcasts</div>
+      <div id="hero-tagline" style="display:none;">Pro Esports Athlete & Twitch Partner</div>
+      <div id="hero-bio" style="display:none;">Top 10 Radiant FPS athlete and Team Phantom captain. Over 850k followers across Twitch & YouTube with 4 Major Championship MVP titles.</div>
+      <div id="items-title" style="display:none;">Championship Highlights & Tournaments</div>
+      <div id="metrics-grid" style="display:none;"></div>
+      <div id="items-grid" style="display:none;"></div>
+      <div id="packages-grid" style="display:none;"></div>
+      <div id="reviews-grid" style="display:none;"></div>
+      <span id="year" style="display:none;"></span>
     </div>
-  </footer>
+
+    <!-- Terminal Footer -->
+    <footer class="terminal-footer">
+      <div class="container term-footer-flex">
+        <span>portfolio-os v4.2.0-lts // &copy; <span id="term-year">2026</span> Kai 'ViperX' Thorne</span>
+        
+  <div class="footer-backlink" id="infra-credit-wrap">
+    <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+      <span class="badge-icon">⚡</span>
+      <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+      <span class="badge-score">100</span>
+    </a>
+  </div>
+      </div>
+    </footer>
+  </div>
 
   <script src="app.js"></script>
 </body>

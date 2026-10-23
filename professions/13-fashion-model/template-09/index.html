@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Structured Data Schema with Contextual Backlink -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,134 +22,95 @@
       "url": "https://aibuildinfra.com/services/web-development"
     }
   }
-  </script>
-</head>
-<body class="layout-kinetic-pulse">
-  <!-- Top Bar / Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand">
-        <span class="brand-name" id="brand-name">Seraphina Vance</span>
-        <span class="brand-tagline">High Fashion • Runway • Commercial Editorial</span>
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-btn">Get in Touch</a>
-      </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
-        <span></span><span></span>
-      </button>
+  </script></head>
+<body class="arch-kinetic">
+  <!-- Kinetic Ticker Strip -->
+  <div class="kinetic-ticker">
+    <div class="ticker-content">
+      <span>⚡ LIVE ARCHIVE &bull; SERAPHINA VANCE &bull; INTERNATIONAL FASHION MODEL & EDITORIAL STYLIST &bull; 100% FLUID RESPONSIVE &bull; ⚡ LIVE ARCHIVE &bull; SERAPHINA VANCE &bull; INTERNATIONAL FASHION MODEL & EDITORIAL STYLIST &bull;</span>
+    </div>
+  </div>
+
+  <header class="kinetic-header">
+    <div class="container kinetic-nav-bar">
+      <h1 class="kinetic-logo" id="brand-name">Seraphina Vance</h1>
+      <div class="kinetic-pulse-badge">
+        <span class="k-pulse-dot"></span>
+        <span id="hero-tagline">International Fashion Model & Editorial Stylist</span>
+      </div>
+      <a href="#kinetic-contact" class="btn-kinetic-cta">CONNECT NOW</a>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <span class="hero-kicker" id="hero-tagline">International Fashion Model & Editorial Stylist</span>
-        <h1 class="hero-headline" id="hero-headline">Elegance in Motion Across Paris, Milan, and New York Runways</h1>
-        <p class="hero-bio" id="hero-bio">Represented by premier agencies across Paris, Milan, and New York. Seraphina has walked for top European couture houses and starred in luxury beauty and magazine cover campaigns.</p>
-        <div class="hero-cta-group">
-          <a href="#portfolio" class="btn btn-primary">View Selected Work</a>
-          <a href="#contact" class="btn btn-secondary">Direct Inquiry</a>
+  <main class="container kinetic-main">
+    <section class="kinetic-hero">
+      <h2 class="kinetic-mega-headline" id="hero-headline">Elegance in Motion Across Paris, Milan, and New York Runways</h2>
+      <p class="kinetic-bio" id="hero-bio">Represented by premier agencies across Paris, Milan, and New York. Seraphina has walked for top European couture houses and starred in luxury beauty and magazine cover campaigns.</p>
+      <div class="kinetic-stats-deck" id="metrics-grid"></div>
+    </section>
+
+    <!-- Interactive Horizontal Carousel Section -->
+    <section class="kinetic-carousel-section" id="portfolio">
+      <div class="carousel-header">
+        <div>
+          <span class="kinetic-kicker">INTERACTIVE REEL</span>
+          <h2 id="items-title">Editorial Campaigns & Runway Shows</h2>
+        </div>
+        <div class="carousel-controls">
+          <button class="c-btn" id="c-prev" aria-label="Previous">&larr;</button>
+          <button class="c-btn" id="c-next" aria-label="Next">&rarr;</button>
         </div>
       </div>
-      <div class="hero-media">
-        <div class="media-frame">
-          <img id="hero-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Seraphina Vance" loading="lazy">
-          <div class="status-indicator-badge">
-            <span class="dot"></span>
-            <span>Available for New Projects</span>
+      <div class="kinetic-carousel-wrapper" id="carousel-wrapper">
+        <div class="kinetic-carousel-track" id="items-grid"></div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="kinetic-services-section">
+      <div class="kinetic-sec-head">
+        <span class="kinetic-kicker">CAPACITIES</span>
+        <h2>Commission Packages</h2>
+      </div>
+      <div class="kinetic-packages-grid" id="packages-grid"></div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="kinetic-reviews-section">
+      <div class="kinetic-sec-head">
+        <span class="kinetic-kicker">FEEDBACK</span>
+        <h2>Client Endorsements</h2>
+      </div>
+      <div class="kinetic-reviews-grid" id="reviews-grid"></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="kinetic-contact-section" id="kinetic-contact">
+      <div class="kinetic-contact-card">
+        <h2>TRANSMIT INQUIRY ⚡</h2>
+        <form class="kinetic-form" onsubmit="event.preventDefault(); alert('Transmission locked and received.'); this.reset();">
+          <div class="k-form-row">
+            <input type="text" placeholder="YOUR NAME" required>
+            <input type="email" placeholder="YOUR EMAIL" required>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Metrics Strip -->
-  <section class="metrics-section">
-    <div class="container metrics-grid" id="metrics-grid">
-      <!-- Populated via JS -->
-    </div>
-  </section>
-
-  <!-- Portfolio / Key Works -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">SHOWCASE</span>
-        <h2 class="section-title" id="items-title">Editorial Campaigns & Runway Shows</h2>
-      </div>
-      <div class="items-grid" id="items-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Packages / Services -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENGAGEMENTS & RATES</span>
-        <h2 class="section-title">Cooperation Packages</h2>
-      </div>
-      <div class="packages-grid" id="packages-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENDORSEMENTS</span>
-        <h2 class="section-title">Client Feedback</h2>
-      </div>
-      <div class="reviews-grid" id="reviews-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="contact-section" id="contact">
-    <div class="container contact-container">
-      <div class="contact-box">
-        <span class="kicker">LET'S CONNECT</span>
-        <h2 class="section-title">Initiate a Collaboration</h2>
-        <p class="contact-sub">Direct submissions are reviewed within 24 hours. Confidential inquiries respected.</p>
-        
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message transmitted! You will receive a response shortly.'); this.reset();">
-          <div class="form-row">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email Address" required>
-          </div>
-          <input type="text" placeholder="Project Subject / Scope" required>
-          <textarea rows="4" placeholder="Briefly describe your goals, timeline, and requirements..." required></textarea>
-          <button type="submit" class="btn btn-primary btn-block">Transmit Inquiry &rarr;</button>
+          <textarea rows="4" placeholder="PROJECT OUTLINE & TIMELINE..." required></textarea>
+          <button type="submit" class="btn-k-submit">DISPATCH MESSAGE &rarr;</button>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer with Contextual Backlink -->
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div class="footer-left">
-        <strong>Seraphina Vance</strong>
-        <p>&copy; <span id="year"></span> International Fashion Model & Editorial Stylist. All rights reserved.</p>
-      </div>
-      <!-- Verified Architecture & High Performance Badge -->
-      <div class="footer-backlink" id="infra-credit-wrap">
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
-          <span class="badge-icon">⚡</span>
-          <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
-          <span class="badge-score">100</span>
-        </a>
-      </div>
+  <footer class="kinetic-footer">
+    <div class="container k-footer-row">
+      <p>&copy; <span id="year"></span> Seraphina Vance. Kinetic Motion Engine.</p>
+      
+  <div class="footer-backlink" id="infra-credit-wrap">
+    <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+      <span class="badge-icon">⚡</span>
+      <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+      <span class="badge-score">100</span>
+    </a>
+  </div>
     </div>
   </footer>
 

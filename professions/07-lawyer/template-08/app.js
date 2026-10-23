@@ -1,4 +1,5 @@
-// Dynamic Hydration Engine for Victoria Sterling, Esq.
+
+// Universal Data Hydration Engine with File:// Fallback
 const FALLBACK_DATA = {
   "id": "07-lawyer",
   "name": "Victoria Sterling, Esq.",
@@ -110,7 +111,7 @@ const FALLBACK_DATA = {
 async function loadData() {
   try {
     const res = await fetch('./data.json');
-    if (!res.ok) throw new Error('Cannot load data.json');
+    if (!res.ok) throw new Error('data.json fetch failed');
     const data = await res.json();
     initSite(data);
   } catch (err) {
@@ -119,76 +120,52 @@ async function loadData() {
   }
 }
 
+
 function initSite(data) {
   document.getElementById('brand-name').textContent = data.name;
-  document.getElementById('hero-headline').textContent = data.headline;
   document.getElementById('hero-tagline').textContent = data.title;
+  document.getElementById('hero-headline').textContent = data.headline;
   document.getElementById('hero-bio').textContent = data.bio;
-  document.getElementById('hero-avatar').src = data.avatar;
   document.getElementById('items-title').textContent = data.itemsTitle;
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Metrics
-  const metricsBox = document.getElementById('metrics-grid');
-  metricsBox.innerHTML = data.stats.map(s => `
-    <div class="metric-card">
+  document.getElementById('metrics-grid').innerHTML = data.stats.map(s => `
+    <div class="mag-stat">
       <strong>${s.val}</strong>
       <span>${s.label}</span>
     </div>
   `).join('');
 
-  // Items
-  const itemsBox = document.getElementById('items-grid');
-  itemsBox.innerHTML = data.items.map(item => `
-    <article class="item-card">
-      <div class="item-thumb">
-        <img src="${item.img}" alt="${item.title}" loading="lazy">
-      </div>
-      <div class="item-info">
-        <span class="item-tag">${item.tag}</span>
-        <h3 class="item-title">${item.title}</h3>
-        <p class="item-desc">${item.desc}</p>
-        <span class="item-meta">${item.meta}</span>
-      </div>
+  document.getElementById('items-grid').innerHTML = data.items.map(item => `
+    <article class="mag-work-plate">
+      <img src="${item.img}" alt="${item.title}" loading="lazy">
+      <h3>${item.title}</h3>
+      <p>${item.desc}</p>
     </article>
   `).join('');
 
-  // Packages
-  const pkgBox = document.getElementById('packages-grid');
-  pkgBox.innerHTML = data.packages.map(p => `
-    <div class="package-card">
-      <h3 class="pkg-name">${p.name}</h3>
-      <div class="pkg-price">${p.price}</div>
-      <ul class="pkg-features">
-        ${p.features.map(f => `<li>${f}</li>`).join('')}
-      </ul>
-      <a href="#contact" class="btn btn-primary btn-block">Inquire &gt;</a>
+  document.getElementById('packages-grid').innerHTML = data.packages.map(p => `
+    <div class="mag-pkg">
+      <h3>${p.name}</h3>
+      <div class="mag-price">${p.price}</div>
+      <p style="font-size:0.85rem; color:#a8a096;">${p.features.join(' &bull; ')}</p>
     </div>
   `).join('');
 
-  // Reviews
-  const revBox = document.getElementById('reviews-grid');
-  revBox.innerHTML = data.reviews.map(r => `
-    <div class="review-card">
-      <p class="review-quote">"${r.quote}"</p>
-      <div class="review-author">${r.author}</div>
-      <div class="review-role">${r.role}</div>
+  document.getElementById('reviews-grid').innerHTML = data.reviews.map(r => `
+    <div class="mag-rev">
+      <p class="mag-quote">"${r.quote}"</p>
+      <span style="font-size:0.85rem; color:#e2b17a; font-weight:700;">— ${r.author}, ${r.role}</span>
     </div>
   `).join('');
 
-  // Mobile nav toggle
-  const toggle = document.getElementById('nav-toggle');
-  const menu = document.getElementById('nav-menu');
-  toggle.addEventListener('click', () => menu.classList.toggle('open'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
-
-  // Self-Healing Verified Web Architecture Badge
   ensureAttributionBadge();
 }
 
+
 function ensureAttributionBadge() {
   const targetUrl = "https://aibuildinfra.com/services/web-development";
-  const parent = document.querySelector('.footer-row') || document.querySelector('footer') || document.body;
+  const parent = document.querySelector('.footer-flex') || document.querySelector('.masthead-inner') || document.querySelector('.bento-footer-row') || document.querySelector('.glass-footer-flex') || document.querySelector('.brutalist-footer-row') || document.querySelector('.left-pane-footer') || document.querySelector('.app-footer') || document.querySelector('.mag-footer-inner') || document.querySelector('.k-footer-row') || document.querySelector('.term-footer-flex') || document.body;
   let wrap = document.getElementById('infra-credit-wrap');
   let link = document.getElementById('infra-trust-link');
 

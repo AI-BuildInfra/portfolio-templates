@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { getArchetypeHTML, getArchetypeCSS, getArchetypeJS } = require('./archetype-generators.js');
 
 const ROOT_DIR = __dirname;
 const PROFESSIONS_DIR = path.join(ROOT_DIR, 'professions');
@@ -1762,14 +1763,10 @@ Engineered by [AI BuildInfra](https://aibuildinfra.com) — [Web Development Ser
       fs.mkdirSync(templateDir, { recursive: true });
     }
 
-    // Write index.html
-    fs.writeFileSync(path.join(templateDir, 'index.html'), generateHTML(prof, variant), 'utf8');
-    
-    // Write style.css
-    fs.writeFileSync(path.join(templateDir, 'style.css'), generateCSS(variant), 'utf8');
-
-    // Write app.js
-    fs.writeFileSync(path.join(templateDir, 'app.js'), generateJS(prof), 'utf8');
+    // Write distinct architectural HTML, CSS, and JS for each of the 10 Archetypes
+    fs.writeFileSync(path.join(templateDir, 'index.html'), getArchetypeHTML(prof, variant), 'utf8');
+    fs.writeFileSync(path.join(templateDir, 'style.css'), getArchetypeCSS(variant), 'utf8');
+    fs.writeFileSync(path.join(templateDir, 'app.js'), getArchetypeJS(prof, variant), 'utf8');
 
     // Write data.json
     fs.writeFileSync(path.join(templateDir, 'data.json'), JSON.stringify(prof, null, 2), 'utf8');

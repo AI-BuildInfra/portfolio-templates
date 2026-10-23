@@ -1,4 +1,5 @@
-// Dynamic Hydration Engine for Aria Thorne
+
+// Universal Data Hydration Engine with File:// Fallback
 const FALLBACK_DATA = {
   "id": "09-content-creator",
   "name": "Aria Thorne",
@@ -110,7 +111,7 @@ const FALLBACK_DATA = {
 async function loadData() {
   try {
     const res = await fetch('./data.json');
-    if (!res.ok) throw new Error('Cannot load data.json');
+    if (!res.ok) throw new Error('data.json fetch failed');
     const data = await res.json();
     initSite(data);
   } catch (err) {
@@ -119,76 +120,81 @@ async function loadData() {
   }
 }
 
+
 function initSite(data) {
   document.getElementById('brand-name').textContent = data.name;
-  document.getElementById('hero-headline').textContent = data.headline;
   document.getElementById('hero-tagline').textContent = data.title;
+  document.getElementById('hero-headline').textContent = data.headline;
   document.getElementById('hero-bio').textContent = data.bio;
-  document.getElementById('hero-avatar').src = data.avatar;
   document.getElementById('items-title').textContent = data.itemsTitle;
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Metrics
-  const metricsBox = document.getElementById('metrics-grid');
-  metricsBox.innerHTML = data.stats.map(s => `
-    <div class="metric-card">
+  document.getElementById('metrics-grid').innerHTML = data.stats.map(s => `
+    <div class="app-stat-tile">
       <strong>${s.val}</strong>
       <span>${s.label}</span>
     </div>
   `).join('');
 
-  // Items
-  const itemsBox = document.getElementById('items-grid');
-  itemsBox.innerHTML = data.items.map(item => `
-    <article class="item-card">
-      <div class="item-thumb">
-        <img src="${item.img}" alt="${item.title}" loading="lazy">
-      </div>
-      <div class="item-info">
-        <span class="item-tag">${item.tag}</span>
-        <h3 class="item-title">${item.title}</h3>
-        <p class="item-desc">${item.desc}</p>
-        <span class="item-meta">${item.meta}</span>
+  document.getElementById('items-grid').innerHTML = data.items.map(item => `
+    <article class="app-proj-card">
+      <img src="${item.img}" alt="${item.title}" loading="lazy">
+      <div class="app-proj-body">
+        <h3>${item.title}</h3>
+        <p>${item.desc}</p>
       </div>
     </article>
   `).join('');
 
-  // Packages
-  const pkgBox = document.getElementById('packages-grid');
-  pkgBox.innerHTML = data.packages.map(p => `
-    <div class="package-card">
-      <h3 class="pkg-name">${p.name}</h3>
-      <div class="pkg-price">${p.price}</div>
-      <ul class="pkg-features">
-        ${p.features.map(f => `<li>${f}</li>`).join('')}
+  document.getElementById('packages-grid').innerHTML = data.packages.map(p => `
+    <div class="app-pkg">
+      <h3>${p.name}</h3>
+      <div class="app-pkg-price">${p.price}</div>
+      <ul style="list-style:none; font-size:0.85rem; color:#94a3b8; margin-bottom:1rem;">
+        ${p.features.map(f => `<li>&bull; ${f}</li>`).join('')}
       </ul>
-      <a href="#contact" class="btn btn-primary btn-block">Inquire &gt;</a>
+      <button class="btn-app-action" onclick="switchAppTab('tab-contact')">Inquire</button>
     </div>
   `).join('');
 
-  // Reviews
-  const revBox = document.getElementById('reviews-grid');
-  revBox.innerHTML = data.reviews.map(r => `
-    <div class="review-card">
-      <p class="review-quote">"${r.quote}"</p>
-      <div class="review-author">${r.author}</div>
-      <div class="review-role">${r.role}</div>
+  document.getElementById('reviews-grid').innerHTML = data.reviews.map(r => `
+    <div class="app-rev">
+      <p>"${r.quote}"</p>
+      <span style="color:#38bdf8; font-weight:700; margin-top:0.4rem; display:block;">${r.author} &bull; ${r.role}</span>
     </div>
   `).join('');
 
-  // Mobile nav toggle
-  const toggle = document.getElementById('nav-toggle');
-  const menu = document.getElementById('nav-menu');
-  toggle.addEventListener('click', () => menu.classList.toggle('open'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+  // Setup tab buttons
+  document.querySelectorAll('.dock-tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => switchAppTab(btn.dataset.tab));
+  });
 
-  // Self-Healing Verified Web Architecture Badge
   ensureAttributionBadge();
 }
 
+function switchAppTab(tabId) {
+  document.querySelectorAll('.app-viewport').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.dock-tab-btn').forEach(b => b.classList.remove('active'));
+  
+  const targetView = document.getElementById(tabId);
+  const targetBtn = document.querySelector(`[data-tab="${tabId}"]`);
+  if (targetView) targetView.classList.add('active');
+  if (targetBtn) targetBtn.classList.add('active');
+
+  const labelMap = {
+    'tab-overview': 'Overview',
+    'tab-works': 'Projects',
+    'tab-services': 'Services & Rates',
+    'tab-contact': 'Contact'
+  };
+  const labelEl = document.getElementById('app-view-label');
+  if (labelEl) labelEl.textContent = labelMap[tabId] || 'Workspace';
+}
+
+
 function ensureAttributionBadge() {
   const targetUrl = "https://aibuildinfra.com/services/web-development";
-  const parent = document.querySelector('.footer-row') || document.querySelector('footer') || document.body;
+  const parent = document.querySelector('.footer-flex') || document.querySelector('.masthead-inner') || document.querySelector('.bento-footer-row') || document.querySelector('.glass-footer-flex') || document.querySelector('.brutalist-footer-row') || document.querySelector('.left-pane-footer') || document.querySelector('.app-footer') || document.querySelector('.mag-footer-inner') || document.querySelector('.k-footer-row') || document.querySelector('.term-footer-flex') || document.body;
   let wrap = document.getElementById('infra-credit-wrap');
   let link = document.getElementById('infra-trust-link');
 

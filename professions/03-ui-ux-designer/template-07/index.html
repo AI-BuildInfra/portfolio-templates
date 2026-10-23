@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Structured Data Schema with Contextual Backlink -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,136 +22,131 @@
       "url": "https://aibuildinfra.com/services/web-development"
     }
   }
-  </script>
-</head>
-<body class="layout-sidebar-app">
-  <!-- Top Bar / Nav -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#hero" class="brand">
-        <span class="brand-name" id="brand-name">Maya Lin</span>
-        <span class="brand-tagline">Design Systems • Enterprise SaaS • Fintech</span>
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-btn">Get in Touch</a>
+  </script></head>
+<body class="arch-app">
+  <div class="app-workspace">
+    <!-- Left Navigation Dock (64px icon dock) -->
+    <aside class="app-dock">
+      <div class="dock-top-logo" title="Maya Lin">
+        <span>⚡</span>
+      </div>
+
+      <nav class="dock-tabs">
+        <button class="dock-tab-btn active" data-tab="tab-overview" title="Overview">
+          <span class="dock-tab-icon">⊞</span>
+          <span class="dock-tab-tooltip">Overview</span>
+        </button>
+        <button class="dock-tab-btn" data-tab="tab-works" title="Showcase">
+          <span class="dock-tab-icon">📁</span>
+          <span class="dock-tab-tooltip">Projects</span>
+        </button>
+        <button class="dock-tab-btn" data-tab="tab-services" title="Services">
+          <span class="dock-tab-icon">⚡</span>
+          <span class="dock-tab-tooltip">Services</span>
+        </button>
+        <button class="dock-tab-btn" data-tab="tab-contact" title="Inquire">
+          <span class="dock-tab-icon">✉️</span>
+          <span class="dock-tab-tooltip">Contact</span>
+        </button>
       </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section" id="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <span class="hero-kicker" id="hero-tagline">Staff Product & Design Systems Designer</span>
-        <h1 class="hero-headline" id="hero-headline">Crafting Resilient Digital Products and Scalable Multi-Brand Design Systems</h1>
-        <p class="hero-bio" id="hero-bio">Over 9 years architecting products for fintech unicorns, developer platforms, and enterprise SaaS. Bridging rigorous qualitative research with production token architecture.</p>
-        <div class="hero-cta-group">
-          <a href="#portfolio" class="btn btn-primary">View Selected Work</a>
-          <a href="#contact" class="btn btn-secondary">Direct Inquiry</a>
-        </div>
+      <div class="dock-bottom-avatar">
+        <img id="hero-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Maya Lin" title="Maya Lin">
       </div>
-      <div class="hero-media">
-        <div class="media-frame">
-          <img id="hero-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Maya Lin" loading="lazy">
-          <div class="status-indicator-badge">
-            <span class="dot"></span>
-            <span>Available for New Projects</span>
+    </aside>
+
+    <!-- Main Application Stage -->
+    <div class="app-stage-wrapper">
+      <!-- App Topbar -->
+      <header class="app-topbar">
+        <div class="topbar-left">
+          <span class="app-path-crumb">Maya Lin</span>
+          <span class="path-sep">/</span>
+          <span class="app-current-view" id="app-view-label">Overview</span>
+        </div>
+        <div class="topbar-right">
+          <span class="app-badge" id="hero-tagline">Staff Product & Design Systems Designer</span>
+          <button class="btn-app-action" onclick="switchAppTab('tab-contact')">Direct Message &nearr;</button>
+        </div>
+      </header>
+
+      <!-- App Viewport Container -->
+      <main class="app-viewport-container">
+        <!-- Viewport 1: Overview -->
+        <div class="app-viewport active" id="tab-overview">
+          <div class="app-hero-panel">
+            <h1 class="app-h1" id="hero-headline">Crafting Resilient Digital Products and Scalable Multi-Brand Design Systems</h1>
+            <p class="app-bio" id="hero-bio">Over 9 years architecting products for fintech unicorns, developer platforms, and enterprise SaaS. Bridging rigorous qualitative research with production token architecture.</p>
+          </div>
+          <div class="app-stats-row" id="metrics-grid"></div>
+          <div class="app-quick-cards-grid">
+            <div class="app-card" onclick="switchAppTab('tab-works')">
+              <span class="app-card-tag">DIRECTORY</span>
+              <h3>Selected Works 📁</h3>
+              <p>Explore production case studies & deliverables.</p>
+            </div>
+            <div class="app-card" onclick="switchAppTab('tab-services')">
+              <span class="app-card-tag">CAPACITIES</span>
+              <h3>Service Packages ⚡</h3>
+              <p>Review cooperation tiers, deliverables & rates.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Metrics Strip -->
-  <section class="metrics-section">
-    <div class="container metrics-grid" id="metrics-grid">
-      <!-- Populated via JS -->
-    </div>
-  </section>
+        <!-- Viewport 2: Projects Showcase -->
+        <div class="app-viewport" id="tab-works">
+          <div class="viewport-header">
+            <h2 id="items-title">Selected Product Case Studies</h2>
+            <p>Production releases and creative monograph plates.</p>
+          </div>
+          <div class="app-projects-grid" id="items-grid"></div>
+        </div>
 
-  <!-- Portfolio / Key Works -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">SHOWCASE</span>
-        <h2 class="section-title" id="items-title">Selected Product Case Studies</h2>
-      </div>
-      <div class="items-grid" id="items-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+        <!-- Viewport 3: Services -->
+        <div class="app-viewport" id="tab-services">
+          <div class="viewport-header">
+            <h2>Cooperation Tiers & Rates</h2>
+            <p>Predictable deliverables and transparent agreements.</p>
+          </div>
+          <div class="app-services-grid" id="packages-grid"></div>
+          <div class="app-reviews-box" style="margin-top: 2rem;">
+            <h3>Verified Testimonials</h3>
+            <div class="app-reviews-grid" id="reviews-grid"></div>
+          </div>
+        </div>
 
-  <!-- Packages / Services -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENGAGEMENTS & RATES</span>
-        <h2 class="section-title">Cooperation Packages</h2>
-      </div>
-      <div class="packages-grid" id="packages-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
+        <!-- Viewport 4: Contact -->
+        <div class="app-viewport" id="tab-contact">
+          <div class="viewport-header">
+            <h2>Direct Communications Channel</h2>
+            <p>Fast-track project intake with immediate desk notification.</p>
+          </div>
+          <div class="app-contact-card">
+            <form class="app-form" onsubmit="event.preventDefault(); alert('Message dispatched to application inbox.'); this.reset();">
+              <div class="form-row">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Professional Email" required>
+              </div>
+              <textarea rows="4" placeholder="Describe scope, objectives and desired start date..." required></textarea>
+              <button type="submit" class="btn-app-submit">Transmit Ticket ⚡</button>
+            </form>
+          </div>
+        </div>
+      </main>
 
-  <!-- Testimonials -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="kicker">ENDORSEMENTS</span>
-        <h2 class="section-title">Client Feedback</h2>
-      </div>
-      <div class="reviews-grid" id="reviews-grid">
-        <!-- Populated via JS -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Form -->
-  <section class="contact-section" id="contact">
-    <div class="container contact-container">
-      <div class="contact-box">
-        <span class="kicker">LET'S CONNECT</span>
-        <h2 class="section-title">Initiate a Collaboration</h2>
-        <p class="contact-sub">Direct submissions are reviewed within 24 hours. Confidential inquiries respected.</p>
+      <footer class="app-footer">
+        <p>&copy; <span id="year"></span> Maya Lin. Application Shell Layout.</p>
         
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message transmitted! You will receive a response shortly.'); this.reset();">
-          <div class="form-row">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email Address" required>
-          </div>
-          <input type="text" placeholder="Project Subject / Scope" required>
-          <textarea rows="4" placeholder="Briefly describe your goals, timeline, and requirements..." required></textarea>
-          <button type="submit" class="btn btn-primary btn-block">Transmit Inquiry &rarr;</button>
-        </form>
-      </div>
+  <div class="footer-backlink" id="infra-credit-wrap">
+    <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
+      <span class="badge-icon">⚡</span>
+      <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
+      <span class="badge-score">100</span>
+    </a>
+  </div>
+      </footer>
     </div>
-  </section>
-
-  <!-- Footer with Contextual Backlink -->
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <div class="footer-left">
-        <strong>Maya Lin</strong>
-        <p>&copy; <span id="year"></span> Staff Product & Design Systems Designer. All rights reserved.</p>
-      </div>
-      <!-- Verified Architecture & High Performance Badge -->
-      <div class="footer-backlink" id="infra-credit-wrap">
-        <a href="https://aibuildinfra.com/services/web-development" target="_blank" rel="noopener" class="infra-trust-badge" id="infra-trust-link">
-          <span class="badge-icon">⚡</span>
-          <span class="badge-text">Web Architecture by <strong>AI BuildInfra</strong></span>
-          <span class="badge-score">100</span>
-        </a>
-      </div>
-    </div>
-  </footer>
+  </div>
 
   <script src="app.js"></script>
 </body>
